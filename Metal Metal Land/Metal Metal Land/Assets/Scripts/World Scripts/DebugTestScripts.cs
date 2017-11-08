@@ -9,9 +9,9 @@ public class DebugTestScripts : MonoBehaviour {
     bool faceLeft;
     public Vector2 initialPos;
 
-    string[] weapons = new string[] { "Pistol", "AK-47", "Minigun", "Shotgun", "Rocket Launcher", "Sword", "Axe" };
-    string currentWeapon;
-    int weaponLoaded;
+    //string[] weapons = new string[] { "Pistol", "AK-47", "Minigun", "Shotgun", "Rocket Launcher", "Sword", "Axe" };
+    //string currentWeapon;
+    //int weaponLoaded;
 
     // Use this for initialization
     void Start () {
@@ -19,13 +19,14 @@ public class DebugTestScripts : MonoBehaviour {
         rigBod = playerCharacter.GetComponent<Rigidbody2D>();
         faceLeft = true;
         initialPos = this.transform.position;
-        weaponLoaded = 0;
-        currentWeapon = weapons[weaponLoaded];
+        //weaponLoaded = 0;
+        //currentWeapon = weapons[weaponLoaded];
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
+        /* SEE "PlayerMovement.cs"
         if (Input.GetKeyDown("w") || Input.GetKeyDown("space"))
         {
             Debug.Log("kbm jump");
@@ -33,13 +34,13 @@ public class DebugTestScripts : MonoBehaviour {
 
         }//end else if
 
-        /*          OLD MOVEMENT CODE
+        OLD MOVEMENT CODE
         Vector3 moveDir = Vector3.zero;
         moveDir.x = Input.GetAxis("Horizontal");
         //moveDir.y = Input.GetAxis("Vertical");
         playerCharacter.transform.position += (moveDir * speed * Time.deltaTime);
 
-        */
+        
         // NEW MOVEMENT CODE
         float dir = Input.GetAxis("Horizontal");
         Vector2 maxSpeed = new Vector2(10.0f, 0.0f);
@@ -53,9 +54,7 @@ public class DebugTestScripts : MonoBehaviour {
         //Debug.Log("Abs Vel: " + Mathf.Abs(rigBod.velocity.x));
         //Debug.Log("Base Vel: " + rigBod.velocity);
         //Debug.Log("Max Speed: " + maxSpeed.x);
-
-
-
+        
         if (Input.GetKeyUp("a")||Input.GetKeyUp("d"))
         {
             //rigBod.velocity.x= rigBod.velocity.x*0.2f;
@@ -63,7 +62,7 @@ public class DebugTestScripts : MonoBehaviour {
             modVelocity.x = (modVelocity.x * 0.2f);
             rigBod.velocity = modVelocity;
 
-        }
+        }//end if
         
         if (Input.GetKeyDown("a"))
         {
@@ -85,45 +84,18 @@ public class DebugTestScripts : MonoBehaviour {
         {
             faceLeft = false;
             Debug.Log("kbm going right");
-/*            Vector3 moveDir = Vector3.zero;
+            Vector3 moveDir = Vector3.zero;
             moveDir.x = Input.GetAxis("Horizontal");
             this.gameObject.transform.position += moveDir + speed * Time.deltaTime;
-            */
+      
             //use for dash code later on
             //playerCharacter.GetComponent<Rigidbody2D>().AddForce(new Vector2(15, 0), ForceMode2D.Impulse);
 
         }//end else if kbm right
+    */
+       
 
-        
-
-        else if (Input.GetKeyDown("down"))
-        {
-            Debug.Log("Weapon picked up");
-
-        }//end else if
-
-        else if (Input.GetKeyDown("left"))
-        {
-            Debug.Log("Weapon fired");
-
-        }//end else if
-
-        else if (Input.GetButtonDown("Jump"))
-        {
-            Debug.Log("Controller Jump Detected");
-
-        }//end if
-        else if (Input.GetButtonDown("Horizontal"))
-        {
-            Debug.Log("controller going horizontal");
-        }
-        else if (Input.GetButtonDown("Vertical"))
-        {
-            Debug.Log("controller Going vertical");
-
-        }
-
-        else if (Input.GetKeyDown("g"))
+        if (Input.GetKeyDown("g"))
         {
             respawn();
 
@@ -140,7 +112,7 @@ public class DebugTestScripts : MonoBehaviour {
 
 
         }
-        else if (Input.GetKeyDown("x"))
+        /*else if (Input.GetKeyDown("x"))
         {
             Debug.Log("Previous Weapon: " + currentWeapon);
             weaponLoaded += 1;
@@ -153,11 +125,7 @@ public class DebugTestScripts : MonoBehaviour {
             }//end if
 
         }//end else if x
-    
-        //x = x * Input.GetAxis("Mouse X");
-        //y = y * Input.GetAxis("Mouse Y");
-
-        //Debug.Log("X val: " + x + "\tY val: " + y);
+        */
 	}
 
     public void fireBullet(bool faceLeft)
@@ -173,34 +141,49 @@ public class DebugTestScripts : MonoBehaviour {
             dir = 1;
 
         }//end else
-        Debug.Log(dir);
+        //Debug.Log(dir);
 
-        if(1==1)
+        /*if(currentWeapon == "Pistol")
         {
+            Debug.Log("Bullet Fired");
             GameObject bullet;
             Vector3 offset = new Vector3(dir, 0);
-            bullet = (GameObject) Instantiate(Resources.Load("BulletPrefab"), transform.position+offset, transform.rotation);
-            bullet.GetComponent<BulletScript>().setDir(dir);
+            //accuracy offset
+            float scatter = Random.Range(-5.0f, 5.0f);
+            bullet = (GameObject) Instantiate(Resources.Load("BulletPrefab"), transform.position+offset, Quaternion.Euler(0,0,scatter));
+            
             
         }
-       /* if (2 == 2)
+        else if(currentWeapon == "Shotgun")
         {
+            Debug.Log("Shotgun Shell fired");
             GameObject bullet;
             Vector3 offset = new Vector3(dir, 0);
+            for(int i = 0; i < 8; i++)
+            {
+                
+                float scatter = Random.Range(-30.0f, 30.0f);
+                bullet = (GameObject)Instantiate(Resources.Load("BulletPrefab"), transform.position + offset, Quaternion.Euler(0, 0, scatter));
+                bullet.GetComponent<BulletScript>().setDir(dir);
+                bullet.GetComponent<BulletScript>().setTimeToLive(0.1f);
+            }
             
-            //bullet = (Instantiate(Resources.Load("BulletPrefab", transform.position, transform.rotation)) as GameObject;
-          
-            bullet = (GameObject)Instantiate(Resources.Load("BulletPrefab"), transform.position + offset, transform.rotation*=Quaternion.AngleAxis(45,transform.position));
-            Debug.Log(transform.rotation *= Quaternion.Euler(45, 0, 0));
-            Debug.Log(transform.rotation);
-            bullet.GetComponent<BulletScript>().setDir(dir);
 
-        }*/
-        
+        }
+        */
+        /*if (2 == 2)
+         {
+            GameObject bullet; 
+            Vector3 offset = new Vector3(dir, 0);
+             bullet = (GameObject)Instantiate(Resources.Load("BulletPrefab"), transform.position + offset, Quaternion.Euler(0,0,45));
+             bullet.GetComponent<BulletScript>().setDir(dir);
+
+         }*/
+
 
 
     }//end fireBullet
-    
+
     public void respawn()
     {
         this.transform.position = initialPos;

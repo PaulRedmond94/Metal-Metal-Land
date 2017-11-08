@@ -2,47 +2,147 @@
 using System.Collections;
 
 public class BulletScript : MonoBehaviour {
-    float lifetime = 1.0f;
+
+    float timeToLive;
     bool faceLeft = true;
-    int dir = 0;
-	// Use this for initialization
-	void Start () {
+    int dir = 1;
+    // Use this for initialization
+    void Start()
+    {
         Rigidbody2D rb;
         rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(transform.right * (100*dir));
+        rb.AddForce(transform.right * (100 * dir));
+        Debug.Log(transform.right * (100 * dir));
         Debug.Log("Bullet Created");
 
     }//end start
 
-    void Awake()
+    // Update is called once per frame
+    void Update()
     {
-        Destroy(this.gameObject, lifetime);
+        Destroy(this.gameObject, timeToLive);
 
-    }//end awake
-	
-	// Update is called once per frame
-	void Update () {
-	
-
-	}//end update
+    }//end update
 
     public void setDir(int dir)
     {
         this.dir = dir;
 
     }//end sayHello
-    
+
     public int getDir()
     {
         return this.dir;
 
     }
 
+    public void setTimeToLive(string weapon)
+    {
+        if (weapon.ToLower() == "pistol")
+        {
+            Debug.Log("You are pistol fan");
+            this.timeToLive = 1.0f;
+
+        }//end if
+        else if (weapon.ToLower() == "shotgun")
+        {
+            this.timeToLive = 0.2f;
+
+        }//end if
+        else if(weapon.ToLower() == "m16")
+        {
+            this.timeToLive = 0.75f;
+
+        }
+
+    }//end setTimeToLive
+
+    /*public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag != "Ammunition")
+        {
+            //Destroy(this.gameObject);
+        }//end if
+        Debug.Log("Hit: " + collision.tag);
+    }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*float timeToLive;
+    bool faceLeft = true;
+    Vector3 dir = new Vector3(0,0 , 0);
+	// Use this for initialization
+	void Start () {
+        Rigidbody2D rb;
+        rb = GetComponent<Rigidbody2D>();
+        Debug.Log(Vector2.right + " " + this.gameObject.transform.position);
+        rb.AddForce( (this.transform.position * 10.0f));
+        Debug.Log("Bullet Created");
+
+    }//end start
+	
+	// Update is called once per frame
+	void Update () {
+        
+
+	}//end update
+
+    public void setDir(Vector3 dir)
+    {
+        this.dir = dir;
+
+    }//end setDir
+
+    
+    public Vector3 getDir()
+    {
+        return this.dir;
+
+    }
+    /*
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Bullet Hit");
-        Destroy(this.gameObject);
+        if (collision.gameObject.tag == "Ammunition")
+        {
+            Physics2D.IgnoreCollision(collision.collider, this.GetComponent<Collider2D>());
 
+        }//end if object is ammunition
+
+        else
+        {
+            Debug.Log("Bullet Hit");
+            //Destroy(this.gameObject);
+
+        }//end else
     }//end onCollisionEnter
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag != "Ammunition")
+        {
+            //Destroy(this.gameObject);
+        }//end if
+    }
+
+    */
+
+
 
 }
