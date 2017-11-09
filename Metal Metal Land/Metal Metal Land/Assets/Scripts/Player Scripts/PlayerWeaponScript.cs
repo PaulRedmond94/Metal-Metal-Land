@@ -36,13 +36,13 @@ void Update () {
                 firingEnabled = true;
             }//end else
         }//end if
+
+        //TODO Remove this statement as it is a debug statement that isn't really needed
         if (Input.GetKeyDown("x"))
         {
-            Debug.Log("Previous Weapon: " + currentWeapon);
             weaponLoaded += 1;
             currentWeapon = weapons[weaponLoaded];
             Debug.Log("Current Weapon: " + currentWeapon);
-            Debug.Log("\nWeaponLoaded Val: " + weaponLoaded + "\t" + weapons.Length);
             if (weaponLoaded >= weapons.Length - 1)
             {
                 weaponLoaded = -1;
@@ -53,15 +53,11 @@ void Update () {
         {
             if (firingEnabled)
             {
-                Debug.Log(getCurrentDir());
                 Debug.Log(currentWeapon + " fired");
                 if (currentWeapon.ToLower() == "pistol")
                 {
                     if (semiAutoFire)
                     {
-                        Debug.Log("BANG");
-                        //delete me
-                        ExecuteAfterTime(5.0f);
                         //set semiAutoFire to false to ensure user can't spam fire
                         semiAutoFire = false;
 
@@ -75,6 +71,7 @@ void Update () {
                         float angularOffset = Random.Range(-5.0f, 5.0f);
                         Vector3 positionOffset = new Vector3(2.0f, 0, 0);
                         fireBullet(angularOffset, positionOffset);
+
                     }//end if
                  
                 }//end if weapon is currently the pistol
@@ -121,7 +118,7 @@ void Update () {
 
                             //generate a knockback from firing the pistol
                             generateKnockback(0.5f);
-
+ 
                             //fix this so that it also depends on time since last bullet fired
                             float angularOffset = Random.Range(-15.0f, 15.0f);
                             Vector3 positionOffset = new Vector3(2.0f, 0, 0);
@@ -130,9 +127,7 @@ void Update () {
                         }//end for
                         
                     }//end if semiAutoFire
-                }//end if m16
-
-                Debug.Log(currentWeapon + " curr");
+                }//end if m16                
 
             }//end if firingEnabled
 
@@ -146,12 +141,29 @@ void Update () {
 
     }//end update
 
+    void resetCap(float fireRateTimer, float fireRateCap)
+    {
+        firingEnabled = false;
+        this.fireRateTimer = fireRateTimer;
+        this.fireRateCap = fireRateCap;
+
+    }//end resetCap
+
+    void generateKnockback(float force)
+    {
+        float knockbackMod = this.gameObject.GetComponent<PlayerMovement>().getKnockbackModifier();
+        force = force * knockbackMod;
+        Rigidbody2D playerRigBod2d = this.gameObject.GetComponent<Rigidbody2D>();
+        playerRigBod2d.AddForce(new Vector2((force* (-getCurrentDir())),force*0.4f),ForceMode2D.Impulse);
+
+    }//end generateKnockback
+    
     void fireBullet(float angularOffset, Vector3 positionOffset)
     {
         //position is off
         positionOffset = this.gameObject.transform.GetChild(0).transform.position;
 
-        bullet = (GameObject)Instantiate(Resources.Load("BulletPrefab"), /*this.gameObject.transform.position +*/ positionOffset, Quaternion.Euler(0, 0, angularOffset));
+        bullet = (GameObject)Instantiate(Resources.Load("BulletPrefab"), positionOffset, Quaternion.Euler(0, 0, angularOffset));
         bullet.GetComponent<BulletScript>().setDir(getCurrentDir());
         bullet.GetComponent<BulletScript>().setTimeToLive(currentWeapon);
     }//end fireBullet
@@ -171,37 +183,12 @@ void Update () {
         }//end else
     }//end getCurrentDir
 
-    void resetCap(float fireRateTimer, float fireRateCap)
-    {
-        firingEnabled = false;
-        this.fireRateTimer = fireRateTimer;
-        this.fireRateCap = fireRateCap;
-
-    }//end resetCap
-
-    void generateKnockback(float force)
-    {
-        float knockbackMod = this.gameObject.GetComponent<PlayerMovement>().getKnockbackModifier();
-        force = force * knockbackMod;
-        Rigidbody2D playerRigBod2d = this.gameObject.GetComponent<Rigidbody2D>();
-        playerRigBod2d.AddForce(new Vector2((force* (-getCurrentDir())),force*0.4f),ForceMode2D.Impulse);
-
-    }//end generateKnockback
-
+    
     public void setCurrentWeapon(string currentWeapon)
     {
         this.currentWeapon = currentWeapon;
+
     }//end setCurrentWeapon
+    
 
-    //SOURCED function format (Function declaration and return value) from: https://answers.unity.com/questions/796881/c-how-can-i-let-something-happen-after-a-small-del.html
-    IEnumerator ExecuteAfterTime(float time)
-    {
-        Debug.Log("Before delay");
-        yield return new WaitForSeconds(time);
-
-        // Code to execute after the delay
-        Debug.Log("Delay activated");
-    }
-
-
-}
+}//end class

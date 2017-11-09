@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/*
+    This is a script which determines bullet behaviour such as velocity and time to live
+
+*/
+
+using UnityEngine;
 using System.Collections;
 
 public class BulletScript : MonoBehaviour {
@@ -49,13 +54,29 @@ public class BulletScript : MonoBehaviour {
             this.timeToLive = 0.2f;
 
         }//end if
-        else if(weapon.ToLower() == "m16")
+        else if (weapon.ToLower() == "m16")
         {
             this.timeToLive = 0.75f;
 
         }
+    }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ammunition")
+        {
+            Physics2D.IgnoreCollision(collision.collider, this.GetComponent<Collider2D>());
 
-    }//end setTimeToLive
+        }//end if object is ammunition
+
+        else
+        {
+            Debug.Log("Bullet Hit");
+            //Destroy(this.gameObject);
+
+        }//end else
+    }//end onCollisionEnter
+
+}//end setTimeToLive
 
     /*public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -145,4 +166,4 @@ public class BulletScript : MonoBehaviour {
 
 
 
-}
+
