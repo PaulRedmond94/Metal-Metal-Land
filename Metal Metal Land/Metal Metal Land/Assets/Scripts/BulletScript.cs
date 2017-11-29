@@ -45,13 +45,12 @@ public class BulletScript : MonoBehaviour {
     {
         if (weapon.ToLower() == "pistol")
         {
-            Debug.Log("You are pistol fan");
             this.timeToLive = 1.0f;
 
         }//end if
         else if (weapon.ToLower() == "shotgun")
         {
-            this.timeToLive = 0.2f;
+            this.timeToLive = 0.25f;
 
         }//end if
         else if (weapon.ToLower() == "m16")
@@ -59,6 +58,11 @@ public class BulletScript : MonoBehaviour {
             this.timeToLive = 0.75f;
 
         }
+        else if(weapon.ToLower() == "minigun")
+        {
+            this.timeToLive = 0.75f;
+            
+        }//end else if
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {

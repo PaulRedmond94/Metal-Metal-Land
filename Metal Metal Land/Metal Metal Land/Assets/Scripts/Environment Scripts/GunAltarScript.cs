@@ -59,8 +59,10 @@ public class GunAltarScript : MonoBehaviour {
             {
                 try
                 {
+                    Sprite newSprite = Resources.Load<Sprite>("GunStandIn");
                     collision.gameObject.GetComponent<PlayerWeaponScript>().setCurrentWeapon(strGunOffering);
                     Debug.Log("Player has now equipped: " + strGunOffering);
+                    collision.gameObject.GetComponentInChildren<GunLoader>().updateSprite(newSprite);
                     Destroy(gunOffering.gameObject);
                     gunSpawned = false;
                 }//end try

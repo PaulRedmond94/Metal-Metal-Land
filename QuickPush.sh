@@ -1,6 +1,3 @@
-MESSAGE ="Quick update from script - "
-DATE=`date '+%d-%m-%Y %H:%M:%S'`
-
 git add .
-git commit -m $MESSAGE$DATE
+git commit -m "Quick fix to small errors."
 git push

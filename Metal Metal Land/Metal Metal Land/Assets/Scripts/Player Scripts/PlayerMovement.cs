@@ -22,8 +22,11 @@ public class PlayerMovement : MonoBehaviour {
 
     }//end start
 	
+    //TODO modify jumping controls so that they 
+
 	// Update is called once per frame
 	void Update () {
+        /* Old jump code*/
         if (grounded && (Input.GetKeyDown("w") || Input.GetKeyDown("space")))
         {
             Debug.Log("kbm jump");
@@ -34,13 +37,31 @@ public class PlayerMovement : MonoBehaviour {
 
         }//end else if
 
-        // NEW MOVEMENT CODE
-        float dir = Input.GetAxis("Horizontal");
-        if (maxSpeed.x > Mathf.Abs(playerRigBod2d.velocity.x))
+        //check to see if on the ground
+        if (!grounded)
         {
-            playerRigBod2d.AddForce((Vector2.right * acceleration * dir)*speedModifier);
+            if (playerRigBod2d.velocity.y == 0)
+            {
+                Debug.Log("Can jump again");
+                grounded = true;
+                knockbackModifier = 1.0f;
+            }//end if
+        }// end if not grounded
+        
 
-        }//end if
+        //new jump code
+        /*if(grounded && (Input.GetKey("w")|| Input.GetKey("space")))
+        {
+            if (playerRigBod2d.velocity.y < 5.0f) {
+                playerRigBod2d.AddForce(new Vector2(0, 1), ForceMode2D.Impulse);
+
+            }//end if
+            
+            //grounded = false;
+            knockbackModifier = 1.5f;
+            Debug.Log("Can't jump");
+
+        }//end if*/
 
         //check to see if on the ground
         if (!grounded)
@@ -51,7 +72,18 @@ public class PlayerMovement : MonoBehaviour {
                 grounded = true;
                 knockbackModifier = 1.0f;
             }//end if
-        }
+        }// end if not grounded
+
+
+
+
+
+        float dir = Input.GetAxis("Horizontal");
+        if (maxSpeed.x > Mathf.Abs(playerRigBod2d.velocity.x))
+        {
+            playerRigBod2d.AddForce((Vector2.right * acceleration * dir)*speedModifier);
+
+        }//end if
 
         //Debug messages for speed
         //Debug.Log("Abs Vel: " + Mathf.Abs(rigBod.velocity.x));

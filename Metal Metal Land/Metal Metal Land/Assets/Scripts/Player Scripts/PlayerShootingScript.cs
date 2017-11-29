@@ -20,29 +20,4 @@ public class PlayerShootingScript : MonoBehaviour {
 	
 	}
 
-    void fireBullet(string currentWeapon, float angularOffset, Vector3 positionOffset)
-    {
-        //position is off
-        positionOffset = this.gameObject.transform.GetChild(0).transform.position;
-
-        bullet = (GameObject)Instantiate(Resources.Load("BulletPrefab"), /*this.gameObject.transform.position +*/ positionOffset, Quaternion.Euler(0, 0, angularOffset));
-        bullet.GetComponent<BulletScript>().setDir(getCurrentDir());
-        bullet.GetComponent<BulletScript>().setTimeToLive(currentWeapon);
-    }//end fireBullet
-
-    int getCurrentDir()
-    {
-        bool isLeft = this.gameObject.GetComponent<PlayerMovement>().getFaceLeft();
-        if (isLeft)
-        {
-            return -1;
-
-        }//end if
-        else
-        {
-            return 1;
-
-        }//end else
-    }//end getCurrentDir
-
 }

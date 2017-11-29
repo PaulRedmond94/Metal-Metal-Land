@@ -20,7 +20,7 @@ public class HitDetectionScript : MonoBehaviour {
             Debug.Log("D. Env. Hit");
             if (collision.gameObject.tag == "Player")
             {
-                collision.gameObject.GetComponent<DebugTestScripts>().respawn();
+                collision.gameObject.GetComponent<SpawnerScript>().respawn();
 
             }//end if
 

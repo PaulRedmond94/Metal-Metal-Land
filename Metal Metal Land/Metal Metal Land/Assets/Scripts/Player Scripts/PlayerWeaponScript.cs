@@ -7,10 +7,12 @@ public class PlayerWeaponScript : MonoBehaviour {
     string[] weapons = new string[] { "Pistol", "m16", "Minigun", "Shotgun", "Rocket Launcher", "Sword", "Axe" };
     string currentWeapon;
     int weaponLoaded;
-    float fireRateTimer, fireRateCap;
+    float fireRateTimer, fireRateCap, minigunSpoolCap;
     bool firingEnabled;
     bool semiAutoFire;
     GameObject bullet;
+
+    int bulletsFired;
 
     // Use this for initialization
     void Start () {
@@ -20,6 +22,7 @@ public class PlayerWeaponScript : MonoBehaviour {
         fireRateTimer = 0.0f;
         fireRateCap = 0.0f;
         semiAutoFire = true;
+        bulletsFired = 0;
         
     }//end start
 
@@ -90,7 +93,7 @@ void Update () {
                         generateKnockback(4.0f);
                         for (int i = 0; i < 8; i++)
                         {
-                            float angularOffset = Random.Range(-30.0f, 30.0f);
+                            float angularOffset = (Random.Range(-30.0f, 30.0f) * 0.8f) ;
                             Vector3 positionOffset = new Vector3(2.0f, 0, 0);
                             fireBullet(angularOffset, positionOffset);
 
@@ -108,26 +111,25 @@ void Update () {
                         semiAutoFire = false;
 
                         //function to stall firing of gun
-                        resetCap(0, 0.75f);
+                        resetCap(0, 0.85f);
 
-                        float burstCap = 0.5f, burstTimer;
-                        
-                        for (int i = 0; i< 3; i++){
-                            //reset burstTime
-                            burstTimer = 0.0f;
+                        //float burstCap = 0.5f, burstTimer;
 
-                            //generate a knockback from firing the pistol
-                            generateKnockback(0.5f);
- 
-                            //fix this so that it also depends on time since last bullet fired
-                            float angularOffset = Random.Range(-15.0f, 15.0f);
-                            Vector3 positionOffset = new Vector3(2.0f, 0, 0);
-                            fireBullet(angularOffset, positionOffset);
+                        for (int i = 0; i < 3; i++) {
+                            Invoke("autoBurstFire", (0.25f * i));
 
                         }//end for
                         
                     }//end if semiAutoFire
+
                 }//end if m16                
+
+                if(currentWeapon.ToLower() == "minigun")
+                {
+                    resetCap(0, 0.1f);
+                    Invoke("autoFire", 0.2f);
+
+                }//end if
 
             }//end if firingEnabled
 
@@ -140,6 +142,31 @@ void Update () {
         }//end if user lets go of fire weapon
 
     }//end update
+
+    void autoBurstFire()
+    {
+        //generate a knockback from firing the pistol
+        generateKnockback(0.5f);
+
+        //fix this so that it also depends on time since last bullet fired
+        float angularOffset = Random.Range(-15.0f, 15.0f);
+        Vector3 positionOffset = new Vector3(2.0f, 0, 0);
+        fireBullet(angularOffset, positionOffset);
+
+    }//end autoBurstFire
+
+    void autoFire()
+    {
+        bulletsFired++;
+
+        Debug.Log("autofire bang: " + bulletsFired);
+        float angularOffset = Random.Range(-20.0f, 20.0f);
+        Vector3 positionOffset = new Vector3(2.0f, 0, 0);
+        fireBullet(angularOffset, positionOffset);
+
+        generateKnockback(0.8f);
+
+    }//end autoFire
 
     void resetCap(float fireRateTimer, float fireRateCap)
     {
