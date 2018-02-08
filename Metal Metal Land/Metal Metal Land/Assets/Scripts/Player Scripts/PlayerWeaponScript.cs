@@ -6,23 +6,28 @@ public class PlayerWeaponScript : MonoBehaviour {
     //declare variables
     string[] weapons = new string[] { "Pistol", "m16", "Minigun", "Shotgun", "Rocket Launcher", "Sword", "Axe" };
     string currentWeapon;
-    int weaponLoaded;
-    float fireRateTimer, fireRateCap, minigunSpoolCap;
+    int weaponLoaded, frameCount;
+    float fireRateTimer, fireRateCap, minigunSpoolTime;
     bool firingEnabled;
     bool semiAutoFire;
+    bool isKamikazee;
     GameObject bullet;
+
 
     int bulletsFired;
 
     // Use this for initialization
     void Start () {
         weaponLoaded = 0;
+        frameCount = 0;
         currentWeapon = weapons[weaponLoaded];
         firingEnabled = true;
         fireRateTimer = 0.0f;
         fireRateCap = 0.0f;
         semiAutoFire = true;
         bulletsFired = 0;
+        minigunSpoolTime = 0.0f;
+        isKamikazee = false;
         
     }//end start
 
@@ -79,7 +84,7 @@ void Update () {
                  
                 }//end if weapon is currently the pistol
 
-                if (currentWeapon.ToLower() == "shotgun")
+                else if (currentWeapon.ToLower() == "shotgun")
                 {
                     if (semiAutoFire)
                     {
@@ -103,7 +108,7 @@ void Update () {
 
                 }//end if
 
-                if(currentWeapon.ToLower() == "m16")
+                else if(currentWeapon.ToLower() == "m16")
                 {
                     if (semiAutoFire)
                     {
@@ -111,12 +116,12 @@ void Update () {
                         semiAutoFire = false;
 
                         //function to stall firing of gun
-                        resetCap(0, 0.85f);
+                        resetCap(0, 0.5f);
 
                         //float burstCap = 0.5f, burstTimer;
 
                         for (int i = 0; i < 3; i++) {
-                            Invoke("autoBurstFire", (0.25f * i));
+                            Invoke("autoBurstFire", (0.2f * i));
 
                         }//end for
                         
@@ -124,12 +129,73 @@ void Update () {
 
                 }//end if m16                
 
-                if(currentWeapon.ToLower() == "minigun")
+                else if(currentWeapon.ToLower() == "minigun")
                 {
-                    resetCap(0, 0.1f);
-                    Invoke("autoFire", 0.2f);
+                    frameCount++;
 
-                }//end if
+                    if (frameCount == 30)
+                    {
+                        resetCap(0, 0.0f);
+                        Invoke("autoFire", 0.2f);
+
+                    }//end if fire has been held for 1 second
+
+                    else if (frameCount == 75)
+                    {
+                        resetCap(0, 0.0f);
+                        Invoke("autoFire", 0.2f);
+
+                    }//end if fire has been held for almost 2 seconds
+
+                    else if (frameCount == 105)
+                    {
+                        resetCap(0, 0.0f);
+                        Invoke("autoFire", 0.2f);
+
+                    }//end if fire has been held for 160 frames
+
+                    else if (frameCount == 125)
+                    {
+                        resetCap(0, 0.0f);
+                        Invoke("autoFire", 0.2f);
+
+                    }//end else if
+
+                    else if(frameCount == 140)
+                    {
+                        resetCap(0, 0.0f);
+                        Invoke("autoFire", 0.2f);
+
+                    }
+                    //fire at full speed
+                    if(frameCount >= 160)
+                    {
+                        resetCap(0, 0.125f);
+                        Invoke("autoFire", 0.2f);
+
+                    }//end if
+
+                    Debug.Log("Frame count " + frameCount);
+
+                }//end else if minigun
+
+                else if(currentWeapon.ToLower() == "axe")
+                {
+                    /*isKamikazee = true;
+                    while (isKamikazee)
+                    {
+                        this.getC
+                        if (this.GetComponent<Rigidbody2D>().velocity == new Vector2(0,0))
+                        {
+                            this.GetComponent<SpawnerScript>().respawn();
+                            isKamikazee = false;
+
+                        }//end if
+
+                    }//end while
+                    */
+
+                }//end else if axe*/
 
             }//end if firingEnabled
 
@@ -138,6 +204,8 @@ void Update () {
         if (Input.GetKeyUp("z"))
         {
             semiAutoFire = true;
+            minigunSpoolTime = 0.0f;
+            frameCount = 0;
 
         }//end if user lets go of fire weapon
 

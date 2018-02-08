@@ -13,7 +13,11 @@ public class SpawnerScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown("g"))
+        {
+            respawn();
 
+        }
     }
 
     public void respawn()
