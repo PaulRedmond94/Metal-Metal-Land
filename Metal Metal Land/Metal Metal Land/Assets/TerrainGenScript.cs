@@ -60,10 +60,8 @@ public class TerrainGenScript : MonoBehaviour {
 
     void genTerrain(GameObject[,] terrainArray)
     {
-        Debug.Log("function entered");
         //procedural Generation algorithm goes here
-        if (test == 0)
-            Debug.Log("for loop finished");
+
 
         //update sprites for the cells based on their terrain type
         GameObject currentCell;    
@@ -73,15 +71,9 @@ public class TerrainGenScript : MonoBehaviour {
             for(int j = 0; j< terrXLength; j++)
             {
                 currentCell = terrainArray[j, i];
-                Debug.Log("Cell text" + currentCell.GetComponentInChildren<TextMesh>().text);
-                //Debug.Log("new cell loaded");
-                Debug.Log("Current Cell Type: " + currentCell.GetComponent<CellBehaviourScript>().getCellTerrainType());
-                Debug.Log("Compare to: Ground");
-                Debug.Log("" + currentCell.GetComponent<SpriteRenderer>().color);
                 //determine terrain type
                 if (currentCell.GetComponent<CellBehaviourScript>().getCellTerrainType().ToLower() == "ground")
                 {
-                    Debug.Log("we got a match");
                     currentCell.GetComponent<SpriteRenderer>().color = Color.grey;
 
                 }//end if
