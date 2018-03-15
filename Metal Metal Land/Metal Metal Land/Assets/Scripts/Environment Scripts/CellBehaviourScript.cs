@@ -34,7 +34,8 @@ public class CellBehaviourScript : MonoBehaviour {
     void OnMouseDown()
     {
         Debug.Log("Clicked on");
-        Destroy(this.gameObject);
+        explode();
+        
 
     }// end OnMouseDown
 
@@ -48,4 +49,10 @@ public class CellBehaviourScript : MonoBehaviour {
         this.cellTerrainType = cellTerrainType;
 
     }
+    public void explode()
+    {
+        Debug.Log("Kaboom!");
+        Destroy(this.gameObject);
+        
+    }//end detonate
 }
