@@ -1,14 +1,11 @@
-﻿
-using System.Collections;
-
-public class Character {
+﻿public class Character {
 
     private string name;
     private string nationality;
     private string bio;
     private string age;
 
-    Character(string name, string nationality, string bio, string age)
+    public Character(string name, string nationality, string bio, string age)
     {
         this.name = name;
         this.nationality = nationality;
@@ -65,6 +62,12 @@ public class Character {
         return age;
 
     }//end getAge
+
+    public string toString()
+    {
+        return "Name: " + name + ", Bio: " + bio + ", Nationality: " + nationality + ", Age: " + age;
+
+    }//end toString
 
 
 }
