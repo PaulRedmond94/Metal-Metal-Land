@@ -2,43 +2,149 @@
 using System.Collections;
 using System.IO;
 using System.Collections.Generic;
+using UnityEngine.UI;
+using System.Linq;
 
 public class CharacterSelect : MonoBehaviour {
 
-    //Stream reader for reading character details
-    StreamReader streamReader = new StreamReader("Assets/Resources/TextFiles/characterDetails.txt");
-
-    //List to hold character objects
+    //List to hold character objects so their data can be displayed
     List<Character> characters = new List<Character>();
 
-    //array to hold character game object positions
-    Transform[] guiCharacters;
-    int curCharacter;
+    //public to directly load in images
+    public List<Sprite> characterProfileImages;
+
+    //List to hold character game object positions
+    List<GameObject> charIcons;
+
+    //variables which hold the current position of the users cursor
+    int p1CurrentCharacter;
+    int p2CurrentCharacter;
+
+    //lists to hold the x axis position of where the players icon should move to
+    List<float> p1IconXAxis;
+    List<float> p2IconXAxis;
+
+    //variables to access and manipulate each players character profile game object and descriptions
+    GameObject p1Image, p1Icon, p1DescText;
+    GameObject p2Image, p2Icon, p2DescText;
 
 	// Use this for initialization
 	void Start () {
-        guiCharacters = this.gameObject.GetComponentsInChildren<Transform>();
-        curCharacter = 0;
+        p1IconXAxis = new List<float>();
+        p2IconXAxis = new List<float>();
+
+        charIcons = GameObject.FindGameObjectsWithTag("CharacterIcon").ToList();
+        charIcons.Sort(delegate (GameObject originalObject, GameObject comparingObject)
+        {
+            return (originalObject.transform.position.x).CompareTo(comparingObject.transform.position.x);
+
+        });//end sort
+
+        //for loop to populate the P1Icon and P2Icon XAxis Lists
+
+        foreach (GameObject charIconPos in charIcons)
+        {
+            p1IconXAxis.Add((charIconPos.GetComponent<RectTransform>().position.x) - 20);
+            p2IconXAxis.Add((charIconPos.GetComponent<RectTransform>().position.x) + 30);
+
+        }//end foreach 
+
+        p1CurrentCharacter = 0;
+        p2CurrentCharacter = 7;
+        p1Image = GameObject.Find("Player1Image");
+        p2Image = GameObject.Find("Player2Image");
+        p1Icon = GameObject.Find("Player1Icon");
+        p2Icon = GameObject.Find("Player2Icon");
+
+
         readInCharacterData();
 
-	}//end start
-	
-	// Update is called once per frame
-	void Update () {
-        if (curCharacter < 0)
-            curCharacter = 7;
-        else if (curCharacter > 7)
-            curCharacter = 0;
+        p1DescText = GameObject.Find("p1DescText");
+        p2DescText = GameObject.Find("p2DescText");
 
-        if (Input.GetKey("right"))
-            curCharacter++;
-        else if (Input.GetKey("left"))
-            curCharacter--;
+        //load in initial values
+        p1DescText.GetComponent<Text>().text =
+            "Name: " + characters[p1CurrentCharacter].getName() +
+            "\nBio: " + characters[p1CurrentCharacter].getBio() +
+            "\nNationality: " + characters[p1CurrentCharacter].getNationality() +
+            "\nAge: " + characters[p1CurrentCharacter].getAge();
 
+        p2DescText.GetComponent<Text>().text =
+            "Name: " + characters[p2CurrentCharacter].getName() +
+            "\nBio: " + characters[p2CurrentCharacter].getBio() +
+            "\nNationality: " + characters[p2CurrentCharacter].getNationality() +
+            "\nAge: " + characters[p2CurrentCharacter].getAge();
+
+
+    }//end start
+
+    // Update is called once per frame
+    void Update() {
+        bool p1Change = false;
+        bool p2Change = false;
+
+        // handle player 1's input
+        if (Input.GetKeyDown("right"))
+        {
+            p1CurrentCharacter++;
+            if (p1CurrentCharacter > 7)
+                p1CurrentCharacter = 0;
+
+            p1Change = true;
+
+        }//end if input is right
+
+        else if (Input.GetKeyDown("left"))
+        {
+            p1CurrentCharacter--;
+            if (p1CurrentCharacter < 0)
+                p1CurrentCharacter = 7;
+
+            p1Change = true;
+
+        }//end p1 input
+
+        // handle player 2's input
+        if (Input.GetKeyDown("up"))
+        {
+            p2CurrentCharacter++;
+            if (p2CurrentCharacter > 7)
+                p2CurrentCharacter = 0;
+
+            p2Change = true;
+
+        }//end if input is right
+
+        else if (Input.GetKeyDown("down"))
+        {
+            p2CurrentCharacter--;
+            if (p2CurrentCharacter < 0)
+                p2CurrentCharacter = 7;
+
+            p2Change = true;
+
+        }//end p2 input
+
+        if (p1Change)
+        {
+            updateProfileImages(p1Image, p1Icon, p1DescText, p1CurrentCharacter);
+
+        }//end if p1Change
+
+        if (p2Change)
+        {
+            updateProfileImages(p2Image, p2Icon, p1DescText, p2CurrentCharacter);
+
+        }//end if p2Change
+
+        
 	}//end update
 
     void readInCharacterData()
     {
+        //Stream reader for reading character details
+        StreamReader streamReader = new StreamReader("Assets/Resources/TextFiles/characterDetails.txt");
+
         string text = streamReader.ReadToEnd();
         //split text into lines
         string[] fileLines = text.Split('\r');
@@ -49,15 +155,36 @@ public class CharacterSelect : MonoBehaviour {
             string[] attributes = line.Split('#');
             characters.Add(new Character(attributes[0], attributes[1], attributes[2], attributes[3]));            
 
-
-
         }//end foreach
 
-        //debug to determine if all data came through okay
-        foreach(Character character in characters)
-        {
-            Debug.Log(character.toString());
-        }
-
     }//end readInCharacterData
+
+    void updateProfileImages(GameObject img, GameObject pIcon, GameObject pDesc, int currChar)
+    {
+        img.GetComponent<Image>().sprite = characterProfileImages[currChar];
+        if (pIcon.name == "Player1Icon")
+        {
+            pIcon.gameObject.transform.position = new Vector3(p1IconXAxis[currChar], p1Icon.gameObject.transform.position.y);
+            pDesc.GetComponent<Text>().text =
+            "Name: " + characters[currChar].getName() +
+            "\nBio: " + characters[currChar].getBio() +
+            "\nNationality: " + characters[currChar].getNationality() +
+            "\nAge: " + characters[currChar].getAge();
+
+        }//end if
+
+        else
+        {
+            pIcon.gameObject.transform.position = new Vector3(p2IconXAxis[currChar], p1Icon.gameObject.transform.position.y);
+            pDesc.GetComponent<Text>().text =
+                "Name: " + characters[currChar].getName() +
+                "\nBio: " + characters[currChar].getBio() +
+                "\nNationality: " + characters[currChar].getNationality() +
+                "\nAge: " + characters[currChar].getAge();
+        }//end else
+        Debug.Log(pIcon.GetComponent<RectTransform>().position);
+
+
+    }//end updateProfileImages
+
 }
