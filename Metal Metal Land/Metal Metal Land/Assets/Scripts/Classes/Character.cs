@@ -3,14 +3,14 @@
     private string name;
     private string nationality;
     private string bio;
-    private string age;
+    private string genre;
 
-    public Character(string name, string nationality, string bio, string age)
+    public Character(string name, string nationality, string bio, string genre)
     {
         this.name = name;
         this.nationality = nationality;
         this.bio = bio;
-        this.age = age;
+        this.genre = genre;
 
     }//end constructor
 
@@ -51,21 +51,21 @@
 
     }//end getBio
 
-    public void setAge(string age)
+    public void setgenre(string genre)
     {
-        this.age = age;
+        this.genre = genre;
 
-    }//end setAge
+    }//end setgenre
 
-    public string getAge()
+    public string getGenre()
     {
-        return age;
+        return genre;
 
-    }//end getAge
+    }//end getgenre
 
     public string toString()
     {
-        return "Name: " + name + ", Bio: " + bio + ", Nationality: " + nationality + ", Age: " + age;
+        return "Name: " + name + ", Bio: " + bio + ", Nationality: " + nationality + ", Genre: " + genre;
 
     }//end toString
 

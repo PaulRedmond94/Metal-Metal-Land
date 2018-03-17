@@ -67,13 +67,13 @@ public class CharacterSelect : MonoBehaviour {
             "Name: " + characters[p1CurrentCharacter].getName() +
             "\nBio: " + characters[p1CurrentCharacter].getBio() +
             "\nNationality: " + characters[p1CurrentCharacter].getNationality() +
-            "\nAge: " + characters[p1CurrentCharacter].getAge();
+            "\nGenre: " + characters[p1CurrentCharacter].getGenre();
 
         p2DescText.GetComponent<Text>().text =
             "Name: " + characters[p2CurrentCharacter].getName() +
             "\nBio: " + characters[p2CurrentCharacter].getBio() +
             "\nNationality: " + characters[p2CurrentCharacter].getNationality() +
-            "\nAge: " + characters[p2CurrentCharacter].getAge();
+            "\nGenre: " + characters[p2CurrentCharacter].getGenre();
 
 
     }//end start
@@ -169,7 +169,7 @@ public class CharacterSelect : MonoBehaviour {
             "Name: " + characters[currChar].getName() +
             "\nBio: " + characters[currChar].getBio() +
             "\nNationality: " + characters[currChar].getNationality() +
-            "\nAge: " + characters[currChar].getAge();
+            "\nAge: " + characters[currChar].getGenre();
 
         }//end if
 
@@ -180,7 +180,7 @@ public class CharacterSelect : MonoBehaviour {
                 "Name: " + characters[currChar].getName() +
                 "\nBio: " + characters[currChar].getBio() +
                 "\nNationality: " + characters[currChar].getNationality() +
-                "\nAge: " + characters[currChar].getAge();
+                "\nAge: " + characters[currChar].getGenre();
         }//end else
         Debug.Log(pIcon.GetComponent<RectTransform>().position);
 
