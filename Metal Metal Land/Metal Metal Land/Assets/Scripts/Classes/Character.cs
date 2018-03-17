@@ -2,14 +2,14 @@
 
     private string name;
     private string nationality;
-    private string bio;
+    //private string bio;
     private string genre;
 
-    public Character(string name, string nationality, string bio, string genre)
+    public Character(string name, string nationality, /*string bio,*/ string genre)
     {
         this.name = name;
         this.nationality = nationality;
-        this.bio = bio;
+        //this.bio = bio;
         this.genre = genre;
 
     }//end constructor
@@ -38,7 +38,7 @@
         return nationality;
 
     }//end string
-
+    /*
     public void setBio(string bio)
     {
         this.bio = bio;
@@ -50,7 +50,7 @@
         return bio;
 
     }//end getBio
-
+    */
     public void setgenre(string genre)
     {
         this.genre = genre;
@@ -65,7 +65,7 @@
 
     public string toString()
     {
-        return "Name: " + name + ", Bio: " + bio + ", Nationality: " + nationality + ", Genre: " + genre;
+        return "Name: " + name + /*", Bio: " + bio +*/ ", Nationality: " + nationality + ", Genre: " + genre;
 
     }//end toString
 

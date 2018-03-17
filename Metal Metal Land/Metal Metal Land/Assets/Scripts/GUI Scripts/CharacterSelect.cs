@@ -4,6 +4,7 @@ using System.IO;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class CharacterSelect : MonoBehaviour {
 
@@ -28,6 +29,10 @@ public class CharacterSelect : MonoBehaviour {
     GameObject p1Image, p1Icon, p1DescText;
     GameObject p2Image, p2Icon, p2DescText;
 
+    //boolean variables to determine if either player has picked their character 
+    bool p1Confirm;
+    bool p2Confirm;
+
 	// Use this for initialization
 	void Start () {
         p1IconXAxis = new List<float>();
@@ -49,29 +54,33 @@ public class CharacterSelect : MonoBehaviour {
 
         }//end foreach 
 
+        //assign variables
         p1CurrentCharacter = 0;
         p2CurrentCharacter = 7;
         p1Image = GameObject.Find("Player1Image");
         p2Image = GameObject.Find("Player2Image");
         p1Icon = GameObject.Find("Player1Icon");
         p2Icon = GameObject.Find("Player2Icon");
-
-
-        readInCharacterData();
-
         p1DescText = GameObject.Find("p1DescText");
         p2DescText = GameObject.Find("p2DescText");
+        p1Confirm = false;
+        p2Confirm = false;
+
+        //call function to read in character details from text file 
+        readInCharacterData();
+
+
 
         //load in initial values
         p1DescText.GetComponent<Text>().text =
             "Name: " + characters[p1CurrentCharacter].getName() +
-            "\nBio: " + characters[p1CurrentCharacter].getBio() +
+            //"\nBio: " + characters[p1CurrentCharacter].getBio() +
             "\nNationality: " + characters[p1CurrentCharacter].getNationality() +
             "\nGenre: " + characters[p1CurrentCharacter].getGenre();
 
         p2DescText.GetComponent<Text>().text =
             "Name: " + characters[p2CurrentCharacter].getName() +
-            "\nBio: " + characters[p2CurrentCharacter].getBio() +
+            //"\nBio: " + characters[p2CurrentCharacter].getBio() +
             "\nNationality: " + characters[p2CurrentCharacter].getNationality() +
             "\nGenre: " + characters[p2CurrentCharacter].getGenre();
 
@@ -103,6 +112,12 @@ public class CharacterSelect : MonoBehaviour {
             p1Change = true;
 
         }//end p1 input
+        else if (Input.GetKeyDown("space")&& p1Confirm != true)
+        {
+            p1Confirm = true;
+            p1Icon.GetComponent<RectTransform>().position += new Vector3(0, -10.0f, 0);
+
+        }//end else if
 
         // handle player 2's input
         if (Input.GetKeyDown("up"))
@@ -125,17 +140,34 @@ public class CharacterSelect : MonoBehaviour {
 
         }//end p2 input
 
+        else if (Input.GetKeyDown("return") && p2Confirm != true)
+        {
+            p2Confirm = true;
+            p2Icon.GetComponent<RectTransform>().position += new Vector3(0,-10.0f,0);
+
+
+        }//end else if
+
         if (p1Change)
         {
-            updateProfileImages(p1Image, p1Icon, p1DescText, p1CurrentCharacter);
+            updateProfiles(p1Image, p1Icon, p1DescText, p1CurrentCharacter);
 
         }//end if p1Change
 
         if (p2Change)
         {
-            updateProfileImages(p2Image, p2Icon, p1DescText, p2CurrentCharacter);
+            updateProfiles(p2Image, p2Icon, p2DescText, p2CurrentCharacter);
 
         }//end if p2Change
+
+        //if both players characters are confirmed
+        if(p1Confirm && p2Confirm)
+        {
+            Debug.Log("Both players ready to go, load scene here");
+            StaticScript.nextSceneToLoad = "Scenes/GameOptions";
+            SceneManager.LoadScene("Scenes/LoadingManager", LoadSceneMode.Single);
+
+        }//end if
 
         
 	}//end update
@@ -153,23 +185,23 @@ public class CharacterSelect : MonoBehaviour {
         {
             //seperate each line based on hash marks
             string[] attributes = line.Split('#');
-            characters.Add(new Character(attributes[0], attributes[1], attributes[2], attributes[3]));            
+            characters.Add(new Character(attributes[0], attributes[2], attributes[3]));            
 
         }//end foreach
 
     }//end readInCharacterData
 
-    void updateProfileImages(GameObject img, GameObject pIcon, GameObject pDesc, int currChar)
+    void updateProfiles(GameObject img, GameObject pIcon, GameObject pDesc, int currChar)
     {
         img.GetComponent<Image>().sprite = characterProfileImages[currChar];
         if (pIcon.name == "Player1Icon")
         {
             pIcon.gameObject.transform.position = new Vector3(p1IconXAxis[currChar], p1Icon.gameObject.transform.position.y);
             pDesc.GetComponent<Text>().text =
-            "Name: " + characters[currChar].getName() +
-            "\nBio: " + characters[currChar].getBio() +
-            "\nNationality: " + characters[currChar].getNationality() +
-            "\nAge: " + characters[currChar].getGenre();
+                "Name: " + characters[currChar].getName() +
+                //"\nBio: " + characters[currChar].getBio() +
+                "\nNationality: " + characters[currChar].getNationality() +
+                "\nGenre: " + characters[currChar].getGenre();
 
         }//end if
 
@@ -178,7 +210,7 @@ public class CharacterSelect : MonoBehaviour {
             pIcon.gameObject.transform.position = new Vector3(p2IconXAxis[currChar], p1Icon.gameObject.transform.position.y);
             pDesc.GetComponent<Text>().text =
                 "Name: " + characters[currChar].getName() +
-                "\nBio: " + characters[currChar].getBio() +
+                //"\nBio: " + characters[currChar].getBio() +
                 "\nNationality: " + characters[currChar].getNationality() +
                 "\nAge: " + characters[currChar].getGenre();
         }//end else

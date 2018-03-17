@@ -29,7 +29,7 @@ public class EventScript : MonoBehaviour {
     void playFunction()
     {
         Debug.Log("Play Button Clicked");
-        StaticScript.nextSceneToLoad = "Scenes/procGenScene";
+        StaticScript.nextSceneToLoad = "Scenes/CharacterSelect";
         SceneManager.LoadScene("Scenes/LoadingManager", LoadSceneMode.Single);
 
     }//end playFuncton
