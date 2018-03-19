@@ -93,60 +93,69 @@ public class CharacterSelect : MonoBehaviour {
         bool p2Change = false;
 
         // handle player 1's input
-        if (Input.GetKeyDown("right"))
+        if (!p1Confirm)
         {
-            p1CurrentCharacter++;
-            if (p1CurrentCharacter > 7)
-                p1CurrentCharacter = 0;
+            if (Input.GetKeyDown("right"))
+            {
+                p1CurrentCharacter++;
+                if (p1CurrentCharacter > 7)
+                    p1CurrentCharacter = 0;
 
-            p1Change = true;
+                p1Change = true;
 
-        }//end if input is right
+            }//end if input is right
 
-        else if (Input.GetKeyDown("left"))
-        {
-            p1CurrentCharacter--;
-            if (p1CurrentCharacter < 0)
-                p1CurrentCharacter = 7;
+            else if (Input.GetKeyDown("left"))
+            {
+                p1CurrentCharacter--;
+                if (p1CurrentCharacter < 0)
+                    p1CurrentCharacter = 7;
 
-            p1Change = true;
+                p1Change = true;
 
-        }//end p1 input
-        else if (Input.GetKeyDown("space")&& p1Confirm != true)
-        {
-            p1Confirm = true;
-            p1Icon.GetComponent<RectTransform>().position += new Vector3(0, -10.0f, 0);
+            }//end p1 input
+            else if (Input.GetKeyDown("space") && p1Confirm != true)
+            {
+                p1Confirm = true;
+                p1Icon.GetComponent<RectTransform>().position += new Vector3(0, -10.0f, 0);
 
-        }//end else if
+            }//end else if
+
+        }//end if !p1Confirm 
+
 
         // handle player 2's input
-        if (Input.GetKeyDown("up"))
+        if (!p2Confirm)
         {
-            p2CurrentCharacter++;
-            if (p2CurrentCharacter > 7)
-                p2CurrentCharacter = 0;
+            if (Input.GetKeyDown("up"))
+            {
+                p2CurrentCharacter++;
+                if (p2CurrentCharacter > 7)
+                    p2CurrentCharacter = 0;
 
-            p2Change = true;
+                p2Change = true;
 
-        }//end if input is right
+            }//end if input is right
 
-        else if (Input.GetKeyDown("down"))
-        {
-            p2CurrentCharacter--;
-            if (p2CurrentCharacter < 0)
-                p2CurrentCharacter = 7;
+            else if (Input.GetKeyDown("down"))
+            {
+                p2CurrentCharacter--;
+                if (p2CurrentCharacter < 0)
+                    p2CurrentCharacter = 7;
 
-            p2Change = true;
+                p2Change = true;
 
-        }//end p2 input
+            }//end p2 input
 
-        else if (Input.GetKeyDown("return") && p2Confirm != true)
-        {
-            p2Confirm = true;
-            p2Icon.GetComponent<RectTransform>().position += new Vector3(0,-10.0f,0);
+            else if (Input.GetKeyDown("return") && p2Confirm != true)
+            {
+                p2Confirm = true;
+                p2Icon.GetComponent<RectTransform>().position += new Vector3(0, -10.0f, 0);
 
 
-        }//end else if
+            }//end else if
+
+        }//end if !p2Confirm
 
         if (p1Change)
         {
@@ -161,7 +170,7 @@ public class CharacterSelect : MonoBehaviour {
         }//end if p2Change
 
         //if both players characters are confirmed
-        if(p1Confirm && p2Confirm)
+        if (p1Confirm && p2Confirm)
         {
             Debug.Log("Both players ready to go, load scene here");
             StaticScript.nextSceneToLoad = "Scenes/MatchOptions";
@@ -212,7 +221,7 @@ public class CharacterSelect : MonoBehaviour {
                 "Name: " + characters[currChar].getName() +
                 //"\nBio: " + characters[currChar].getBio() +
                 "\nNationality: " + characters[currChar].getNationality() +
-                "\nAge: " + characters[currChar].getGenre();
+                "\nGenre: " + characters[currChar].getGenre();
         }//end else
         Debug.Log(pIcon.GetComponent<RectTransform>().position);
 
