@@ -22,7 +22,7 @@ public class BeginGameScript : MonoBehaviour {
     void beginGame()
     {
         Debug.Log("Play Button Clicked");
-        StaticScript.nextSceneToLoad = "Scenes/procGenTest";
+        StaticScript.nextSceneToLoad = "Scenes/procGenScene";
         SceneManager.LoadScene("Scenes/LoadingManager", LoadSceneMode.Single);
 
     }//end beginGame

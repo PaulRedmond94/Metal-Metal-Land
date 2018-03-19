@@ -164,7 +164,7 @@ public class CharacterSelect : MonoBehaviour {
         if(p1Confirm && p2Confirm)
         {
             Debug.Log("Both players ready to go, load scene here");
-            StaticScript.nextSceneToLoad = "Scenes/GameOptions";
+            StaticScript.nextSceneToLoad = "Scenes/MatchOptions";
             SceneManager.LoadScene("Scenes/LoadingManager", LoadSceneMode.Single);
 
         }//end if
