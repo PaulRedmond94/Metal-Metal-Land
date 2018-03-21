@@ -27,9 +27,6 @@ public class ProceduralGenScript : MonoBehaviour
     int maxVoronoiPoints;
     int currVPoints = 0;
 
-
-
-
     // Use this for initialization
     void Start()
     {
@@ -75,25 +72,9 @@ public class ProceduralGenScript : MonoBehaviour
         //procedural Generation algorithm goes here
         vPoints = new VoronoiPoint[maxVoronoiPoints];
         generateVoronoiPoints();
-        
-        //Pseudo Code steps defined by PC:: at start of comment, [./] defines that the task is complete, [X] defines it is not currently complete
-
-
-        //PC:: create reference to terrain cell object [./]
-        //landCell = Resources.Load("LandCell", typeof(GameObject)) as GameObject;
-        //airCell = Resources.Load("AirCell", typeof(GameObject)) as GameObject;
-
-        //PC:: create empty 2d GameObject array to hold each terrainCell [./]
-        //PC:: get public array dimensions and create the new array based on these dimensions[./]
         terrainArray = new GameObject[terrXLength, terrYLength];
 
-        generateVoronoiPoints();
 
-        GameObject prevObject = null;
-
-        //PC:: move through gameobject array and instantiate objects based on what their closest voronoi point is.         
-        //PC:: use manhatten distance algorithm to determine the nearest point
-        //PC:: (Depending on terrain gen type specified by user, choose whether to prioritize air or land)
         for (int i = 0; i < terrXLength; i++)
         {
             for(int j =0; j < terrYLength; j++)
@@ -140,12 +121,6 @@ public class ProceduralGenScript : MonoBehaviour
 
                 }//end if terrain of current cell is land
 
-                else if(terrainType == "air")
-                {
-
-
-                }//end else if
-
                 else
                 {
 
@@ -155,6 +130,8 @@ public class ProceduralGenScript : MonoBehaviour
             }//end for
 
         }//end outer for loop
+
+        updateTerrainArt();
         
     }
 
@@ -177,10 +154,6 @@ public class ProceduralGenScript : MonoBehaviour
             //set upper y to be at 20% height
             upperY = (int)(terrYLength * 0.2);
             lowerY = (int)(terrYLength *0.8);
-
-            //Debug.Log("Upper y: " + upperY);
-            //Debug.Log("Mid y: " + midY);
-            //Debug.Log("Lower y: " + lowerY);
 
             if (y <= upperY)
             {
@@ -229,6 +202,48 @@ public class ProceduralGenScript : MonoBehaviour
         }//end for
 
     }//end generateVoronoiPoints
+
+    void updateTerrainArt()
+    {
+        Sprite terrainTop =  Resources.Load("Images/EnvironmentArt/BlockSprites/TerrainATop", typeof(Sprite)) as Sprite;
+        Sprite terrainBelow = Resources.Load("Images/EnvironmentArt/BlockSprites/TerrainAInterior", typeof(Sprite)) as Sprite;
+
+        for(int i = 0; i < terrXLength; i++)
+        {
+            for(int j = 0; j < terrYLength; j++)
+            {
+                if(terrainArray[i,j] != null)
+                {
+                    try
+                    {
+                        if (terrainArray[i, j - 1] == null)
+                        {
+                            terrainArray[i, j].GetComponent<SpriteRenderer>().sprite = terrainTop;
+
+                        }
+
+                        else
+                        {
+                            terrainArray[i, j].GetComponent<SpriteRenderer>().sprite = terrainBelow;
+                        }
+
+
+                    }
+                    catch(System.IndexOutOfRangeException ioe)
+                    {
+                        Debug.Log("boop");
+                    }
+
+
+
+                }//end if
+
+            }//end for
+
+        }//end for
+
+
+    }//end updateTerrainArt
 
 }//end main class
 
