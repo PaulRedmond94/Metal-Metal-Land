@@ -6,7 +6,7 @@ public class TerrainGenScript : MonoBehaviour {
     int terrXLength = 30;
     int terrYLength = 10;
     int cellCount = 0;
-    int test = 4;
+
     //declare a 2d array of gameobjects to represent each cell 
     GameObject[,] terrainArray;
     GameObject terrainCell; 
@@ -15,7 +15,7 @@ public class TerrainGenScript : MonoBehaviour {
     // Use this for initialization
 	void Start () {
         terrainArray = new GameObject[terrXLength, terrYLength];
-        terrainCell = Resources.Load("LandCell", typeof(GameObject)) as GameObject;
+        terrainCell = Resources.Load("TerrainCell", typeof(GameObject)) as GameObject;
 
         GameObject prevObject;
         float dimX = terrainCell.GetComponent<SpriteRenderer>().bounds.size.x;
@@ -44,8 +44,6 @@ public class TerrainGenScript : MonoBehaviour {
                 terrainArray[j, i] = prevObject;
 
             }//end for
-
-            test = 0;
 
         }//end for
         

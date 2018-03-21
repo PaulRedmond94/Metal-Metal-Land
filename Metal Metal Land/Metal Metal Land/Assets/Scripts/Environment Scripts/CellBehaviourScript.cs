@@ -7,6 +7,7 @@ public class CellBehaviourScript : MonoBehaviour {
     string cellTerrainType;
     int test = 0;
     
+    
 	// Use this for initialization
 	void Awake () {
         mySpriteRenderer = this.GetComponent<SpriteRenderer>();
@@ -24,11 +25,7 @@ public class CellBehaviourScript : MonoBehaviour {
 
     void Update()
     {
-        /*if (test == 0)
-            Debug.Log("boop");
 
-        test++;
-        */
     }//end update
     
     void OnMouseDown()
