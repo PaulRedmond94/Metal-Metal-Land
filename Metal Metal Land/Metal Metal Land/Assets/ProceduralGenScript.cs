@@ -229,9 +229,10 @@ public class ProceduralGenScript : MonoBehaviour
 
 
                     }
+                    //used in the event that a cell is in the top row and is land
                     catch(System.IndexOutOfRangeException ioe)
                     {
-                        Debug.Log("boop");
+                        terrainArray[i, j].GetComponent<SpriteRenderer>().sprite = terrainTop;
                     }
 
 
