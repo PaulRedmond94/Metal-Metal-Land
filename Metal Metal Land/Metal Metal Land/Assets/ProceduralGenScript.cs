@@ -7,42 +7,33 @@ using System.Collections;
 
 public class ProceduralGenScript : MonoBehaviour
 {
+    //declare a 2d array of gameobjects to represent each cell 
+    GameObject[,] terrainArray;
+    GameObject landCell;
+
     //variables for determining the x and y dimensions of the world 
-    public int terrXLength = 30;
+    public int terrXLength = 25;
     public int terrYLength = 10;
 
 
     //debug variable, delete later
-    public bool staticTerrainDispersal;
+    public int terrainType;
 
     //array of voronoi points
     VoronoiPoint[] vPoints;
 
     //variables for counting the amount of cells and for holding the max num of cells
-    int cellCount = 0;
-    public int maxCellCount = 0;
-
-    int landCellCount;
-    int airCellCount;
 
     int maxVoronoiPoints;
     int currVPoints = 0;
 
-    //declare a 2d array of gameobjects to represent each cell 
-    GameObject[,] terrainArray;
-    GameObject landCell;
-    //GameObject airCell;
+
 
 
     // Use this for initialization
     void Start()
     {
-        landCellCount = 0;
-        airCellCount = 0;
         maxVoronoiPoints = (int)((terrYLength * terrXLength) * 0.1);
-
-        cellCount = landCellCount + airCellCount;
-
         genTerrain();
 
 
@@ -145,30 +136,7 @@ public class ProceduralGenScript : MonoBehaviour
                     cellPos = cellPos + objRight * i;
 
                     GameObject newCell = Instantiate(terrainCell, cellPos, this.transform.rotation) as GameObject;
-                    cellCount++;
-                    terrainArray[i, j] = newCell;
-
-
-                    /*if(j == 0)
-                    {
-                        prevObject = Instantiate(terrainCell, this.transform.position - (objDown * i), this.transform.rotation) as GameObject;
-                        cellCount++;
-                        string textMeshVal = "Cell Num: \n" + cellCount + "\nPos: " + 0 + " " + i;
-                        prevObject.GetComponentInChildren<TextMesh>().text = textMeshVal;
-                        terrainArray[0, i] = prevObject;
-                        
-
-                    }
-                    else
-                    {
-                        prevObject = Instantiate(terrainCell, prevObject.transform.position + objRight, this.transform.rotation) as GameObject;
-                        cellCount++;
-                        string textMeshVal = "Cell Num: \n" + cellCount + "\nPos: " + j + " " + i;
-                        prevObject.GetComponentInChildren<TextMesh>().text = textMeshVal;
-                        terrainArray[j, i] = prevObject;
-
-                    }*/
-                    
+                    terrainArray[i, j] = newCell;                    
 
                 }//end if terrain of current cell is land
 
@@ -187,88 +155,10 @@ public class ProceduralGenScript : MonoBehaviour
             }//end for
 
         }//end outer for loop
-
-
-        //PC:: end for loop
-
-        //PC:: For loop
-
-        //PC:: Instantiate special objects (Item boxes, traps, platforms etc. based on generated terrain)
-
-        //PC:: End For loop
-
-        //PC:: For loop
-
-        //PC:: Instantiate player spawns
-
-        //PC:: End For loop
-
-
-
-
-
-
-
-
-
-        //old terrain gen below this
-        /*
-        float dimX = terrainCell.GetComponent<SpriteRenderer>().bounds.size.x;
-        float dimY = terrainCell.GetComponent<SpriteRenderer>().bounds.size.y;
-
-        Vector3 objDown = new Vector3(0, dimY);
-        Vector3 objRight = new Vector3(dimX, 0);
-
-        GameObject prevObject;
-        //for loops to generate terrain on the y axis
-        for (int i = 0; i < terrYLength; i++)
-        {
-            prevObject = Instantiate(terrainCell, this.transform.position - (objDown * i), this.transform.rotation) as GameObject;
-            cellCount++;
-            string textMeshVal = "Cell Num: \n" + cellCount + "\nPos: " + 0 + " " + i;
-            prevObject.GetComponentInChildren<TextMesh>().text = textMeshVal;
-            terrainArray[0, i] = prevObject;
-
-            for (int j = 1; j < terrXLength; j++)
-            {
-                prevObject = Instantiate(terrainCell, prevObject.transform.position + objRight, this.transform.rotation) as GameObject;
-                cellCount++;
-                textMeshVal = "Cell Num: \n" + cellCount + "\nPos: " + j + " " + i;
-                prevObject.GetComponentInChildren<TextMesh>().text = textMeshVal;
-                terrainArray[j, i] = prevObject;
-
-            }//end for
-
-        }//end for
-
-
-        //update sprites for the cells based on their terrain type
-        GameObject currentCell;
-
-        for (int i = 0; i < terrYLength; i++)
-        {
-            for (int j = 0; j < terrXLength; j++)
-            {
-                currentCell = terrainArray[j, i];
-                //determine terrain type
-                if (currentCell.GetComponent<CellBehaviourScript>().getCellTerrainType().ToLower() == "ground")
-                {
-                    currentCell.GetComponent<SpriteRenderer>().color = Color.grey;
-
-                }//end if
-
-            }
-
-        }//end for int i
-
-
-    }//end setSquareColour
-
-    */
-
+        
     }
 
-    string distributedRandom()
+    string distributedRandom(int x, int y)
     {
         //variables to hold specficiations of where the terrain type should consider the upper, middle and lower values of each axis
         int upperY;
@@ -282,7 +172,7 @@ public class ProceduralGenScript : MonoBehaviour
         int rand = Random.Range(1, 11);
 
         //if(StaticScript.terrainGenType.ToLower() == "standard")
-        if(1==1)
+        if (terrainType == 1) //temp variable, use later when basis for algorithm types are set
         {
             //set upper y to be at 20% height
             upperY = (int)(terrYLength * 0.2);
@@ -292,75 +182,55 @@ public class ProceduralGenScript : MonoBehaviour
             //Debug.Log("Mid y: " + midY);
             //Debug.Log("Lower y: " + lowerY);
 
-            if (rand < upperY)
+            if (y <= upperY)
             {
-                airCellCount++;
                 return "air";
 
             }//end if
-            else if(rand>= upperY && rand<= lowerY)
+            else if(y> upperY && y<= lowerY)
             {
                 int subRand = Random.Range(1, 11);
                 if (subRand <= 8)
                 {
-                    landCellCount++;
                     return "land";
+
                 }//end if
                 else if(subRand> 8)
                 {
-                    airCellCount++;
                     return "air";
+
                 }
 
             }//end else if
 
-            else if (rand > lowerY)
+            else if (y > lowerY)
             {
-                landCellCount++;
                 return "land";
 
             }//end else if
 
-        }//end if
+        }//end if terrain gen is set to standard
 
+
+        // default return type
         return "air";
 
     }//end distributedRandom
 
-
     void generateVoronoiPoints()
     {
-        if (staticTerrainDispersal)
+
+        for(int i = 0; i < maxVoronoiPoints; i++)
         {
-            /*int loopVal = 0;
-            //do while loop to generate positions of voronoi points
-            while (currVPoints < maxVoronoiPoints)
-            {
-                if(loopVal%maxVoronoiPoints == 0)
-                {
+            int x = Random.Range(0, terrXLength + 1);
+            int y = Random.Range(0, terrYLength + 1);
+            vPoints[i] = new VoronoiPoint(x,y,distributedRandom(x,y));
 
-                    currVPoints++;
-                }
-                
-
-            }//end while*/
-
-        }//end if
-        else
-        {
-            for(int i = 0; i < maxVoronoiPoints; i++)
-            {
-                int x = Random.Range(0, terrXLength + 1);
-                int y = Random.Range(0, terrYLength + 1);
-                vPoints[i] = new VoronoiPoint(x,y,distributedRandom());
-
-            }//end for
-
-        }//end else
+        }//end for
 
     }//end generateVoronoiPoints
 
-}
+}//end main class
 
 
 //class to hold voronoi point object
