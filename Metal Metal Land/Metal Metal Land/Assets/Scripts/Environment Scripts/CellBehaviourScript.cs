@@ -16,7 +16,7 @@ public class CellBehaviourScript : MonoBehaviour {
         
         //Debug.Log("Color Changed");
         //Debug.Log("Cell created at " + this.transform.position);
-        cellTerrainType = "ground";
+        //cellTerrainType = "ground";
 
     }
 

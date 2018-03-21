@@ -3,18 +3,15 @@ Script which uses a combination of Voronoi's algorithm and the Manhatten Distanc
 
 */
 using UnityEngine;
-using System.Collections;
 
 public class ProceduralGenScript : MonoBehaviour
 {
     //declare a 2d array of gameobjects to represent each cell 
     GameObject[,] terrainArray;
-    GameObject landCell;
 
     //variables for determining the x and y dimensions of the world 
     public int terrXLength = 25;
     public int terrYLength = 10;
-
 
     //debug variable, delete later
     public int terrainType;
@@ -23,17 +20,32 @@ public class ProceduralGenScript : MonoBehaviour
     VoronoiPoint[] vPoints;
 
     //variables for counting the amount of cells and for holding the max num of cells
-
     int maxVoronoiPoints;
-    int currVPoints = 0;
+
+    //load up default land cell and get the dimensions of it (normally 64*64)
+    GameObject terrainCell;
+    float dimX;
+    float dimY;
+
+    //get translation vectors for generating terrain
+    Vector3 objDown;
+    Vector3 objRight;
+    Vector3 objUp;
+
+    bool player1SpawnSet;
+    bool player2SpawnSet;
 
     // Use this for initialization
     void Start()
     {
+        terrainCell = Resources.Load("LandCell", typeof(GameObject)) as GameObject;
+        dimX = terrainCell.GetComponent<SpriteRenderer>().bounds.size.x;
+        dimY = terrainCell.GetComponent<SpriteRenderer>().bounds.size.y;
+        objDown = new Vector3(0, dimY);
+        objRight = new Vector3(dimX, 0); 
+
         maxVoronoiPoints = (int)((terrYLength * terrXLength) * 0.1);
         genTerrain();
-
-
 
     }//end start
 
@@ -42,39 +54,40 @@ public class ProceduralGenScript : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            Debug.Log("space pressed");
             GameObject[] cells;
             cells = GameObject.FindGameObjectsWithTag("Environment");
 
+            //destroy all current cells
             foreach(GameObject cell in cells)
             {
                 Destroy(cell);
 
             }//end foreach
+
+            //reset variables
             terrainArray = null;
             vPoints = null;
+
             genTerrain();
 
         }//end if
     }
 
-
-
+    //core function to generate the terrain
     void genTerrain()
     {
-        GameObject terrainCell = Resources.Load("LandCell", typeof(GameObject)) as GameObject;
-        float dimX = terrainCell.GetComponent<SpriteRenderer>().bounds.size.x;
-        float dimY = terrainCell.GetComponent<SpriteRenderer>().bounds.size.y;
-
-        Vector3 objDown = new Vector3(0, dimY);
-        Vector3 objRight = new Vector3(dimX, 0);
 
         //procedural Generation algorithm goes here
+        //declare an array of Voronoi Point objects 
         vPoints = new VoronoiPoint[maxVoronoiPoints];
+
+        //execute function to generate values for the voronoi array
         generateVoronoiPoints();
+
+        //create a terrain gameObject array which will hold each terrain cell
         terrainArray = new GameObject[terrXLength, terrYLength];
 
-
+        //loops to go through each terrain cell and calculate its manhatten distance to its closest voronoi point
         for (int i = 0; i < terrXLength; i++)
         {
             for(int j =0; j < terrYLength; j++)
@@ -89,7 +102,7 @@ public class ProceduralGenScript : MonoBehaviour
 
                     if (vPoints[z].getManhattanDistance(i, j) == 0)
                     {
-                        //item is a voronoi point, can't get closer than this
+                        //item is a voronoi point, can't get closer than this so break out of loop and move to next cell
                         terrainType = vPoints[z].getCellType();
                         break;
 
@@ -97,6 +110,8 @@ public class ProceduralGenScript : MonoBehaviour
 
                     else if (vPoints[z].getManhattanDistance(i, j) < minManHatDist)
                     {
+                        //item is not a voronoi point, continue examining closest points 
+                        // NOTE::: Potentially include function to skip over voronoi points which are too far away to consider
                         minManHatDist = vPoints[z].getManhattanDistance(i, j);
                         vPoint = vPoints[z];
 
@@ -104,13 +119,14 @@ public class ProceduralGenScript : MonoBehaviour
 
                 }//end for
 
-                if(terrainType == "")
+                //current cell was not a voronoi point. Therefore, collect its celltype
+                if (terrainType == "")
                 {
                     terrainType = vPoint.getCellType();
 
                 }//end if
 
-                // generate cell based on terrainType
+                // generate land cells based on terrainType
                 if(terrainType == "land")
                 {
                     Vector3 cellPos = this.transform.position - objDown * j;
@@ -121,17 +137,13 @@ public class ProceduralGenScript : MonoBehaviour
 
                 }//end if terrain of current cell is land
 
-                else
-                {
-
-                }//end else
-
-
             }//end for
 
         }//end outer for loop
 
         updateTerrainArt();
+
+        insertSpecialTerrain();
         
     }
 
@@ -212,30 +224,32 @@ public class ProceduralGenScript : MonoBehaviour
         {
             for(int j = 0; j < terrYLength; j++)
             {
-                if(terrainArray[i,j] != null)
+                if(terrainArray[i,j] != null )
                 {
                     try
                     {
                         if (terrainArray[i, j - 1] == null)
                         {
                             terrainArray[i, j].GetComponent<SpriteRenderer>().sprite = terrainTop;
+                            terrainArray[i, j].GetComponent<CellBehaviourScript>().setCellTerrainType("surface");
 
                         }
 
                         else
                         {
                             terrainArray[i, j].GetComponent<SpriteRenderer>().sprite = terrainBelow;
+                            terrainArray[i, j].GetComponent<CellBehaviourScript>().setCellTerrainType("underground");
+
                         }
 
 
-                    }
+                    }//end try
                     //used in the event that a cell is in the top row and is land
                     catch(System.IndexOutOfRangeException ioe)
                     {
                         terrainArray[i, j].GetComponent<SpriteRenderer>().sprite = terrainTop;
-                    }
 
-
+                    }//end catch
 
                 }//end if
 
@@ -243,8 +257,75 @@ public class ProceduralGenScript : MonoBehaviour
 
         }//end for
 
-
     }//end updateTerrainArt
+
+    //function which is used to insert special terrain
+    /*
+        Special terrain is prioritized as: (Most to least important)
+            1. Player Spawns
+            2. Weapon Spawns
+            3. Spike Pits
+            4. Elevators
+    */
+    void insertSpecialTerrain()
+    {
+        player1SpawnSet = false;
+        player2SpawnSet = false;
+
+        for(int i = 0; i < terrYLength; i++)
+        {
+            //loop for player 1
+            for(int j = 0; j<terrXLength; j++)
+            {
+                if (terrainArray[j,i]!= null && player1SpawnSet == false)
+                {
+                    if (terrainArray[j, i].GetComponent<CellBehaviourScript>().getCellTerrainType() == "surface")
+                    {
+                        Debug.Log("Player 1 Spawn is at : " + j + " , " + (i - 1));
+                        terrainArray[j, i].GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 1f); //sets color to red
+                        player1SpawnSet = true;
+
+                    }//end if
+
+                }//end if
+
+                if (player1SpawnSet)
+                {
+                    break;
+
+                }//end if
+
+            }//end for j
+
+
+
+            //loop for player 2 spawn
+            for(int j=terrXLength-1; j > 0; j--)
+            {
+                if (terrainArray[j, i] != null && player2SpawnSet == false)
+                {
+                    if (terrainArray[j, i].GetComponent<CellBehaviourScript>().getCellTerrainType() == "surface")
+                    {
+                        Debug.Log("Player 2 Spawn is at : " + j + " , " + (i - 1));
+                        terrainArray[j, i].GetComponent<SpriteRenderer>().color = new Color(0f, 255f, 0f, 1f); //sets color to red
+                        player2SpawnSet = true;        
+
+                    }//end if
+
+                }//end if
+
+                if (player2SpawnSet)
+                {
+                    break;
+
+                }//end if player2SpawnSet
+                
+            }
+
+        }//end for i
+        
+
+    }//end insertSpecialTerrain
 
 }//end main class
 
