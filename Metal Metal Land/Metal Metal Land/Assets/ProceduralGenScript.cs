@@ -30,7 +30,8 @@ public class ProceduralGenScript : MonoBehaviour
 
     //declare a 2d array of gameobjects to represent each cell 
     GameObject[,] terrainArray;
-    GameObject terrainCell;
+    GameObject landCell;
+    //GameObject airCell;
 
 
     // Use this for initialization
@@ -40,17 +41,8 @@ public class ProceduralGenScript : MonoBehaviour
         airCellCount = 0;
         maxVoronoiPoints = (int)((terrYLength * terrXLength) * 0.1);
 
-        for (int i = 0; i < 300; i++)
-        {
-            distributedRandom();
-
-        }
         cellCount = landCellCount + airCellCount;
 
-        Debug.Log("CellCount: " + cellCount);
-        Debug.Log("LandCellCount: " + landCellCount);
-        Debug.Log("AirCellCount: " + airCellCount);
-        Debug.Log("LandCell % : " + ((landCellCount / cellCount) * 100));
         genTerrain();
 
 
@@ -60,27 +52,45 @@ public class ProceduralGenScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown("space"))
+        {
+            Debug.Log("space pressed");
+            GameObject[] cells;
+            cells = GameObject.FindGameObjectsWithTag("Environment");
 
+            foreach(GameObject cell in cells)
+            {
+                Destroy(cell);
+
+            }//end foreach
+            terrainArray = null;
+            vPoints = null;
+            genTerrain();
+
+        }//end if
     }
 
 
 
     void genTerrain()
     {
+        GameObject terrainCell = Resources.Load("LandCell", typeof(GameObject)) as GameObject;
+        float dimX = terrainCell.GetComponent<SpriteRenderer>().bounds.size.x;
+        float dimY = terrainCell.GetComponent<SpriteRenderer>().bounds.size.y;
+
+        Vector3 objDown = new Vector3(0, dimY);
+        Vector3 objRight = new Vector3(dimX, 0);
+
         //procedural Generation algorithm goes here
         vPoints = new VoronoiPoint[maxVoronoiPoints];
         generateVoronoiPoints();
         
         //Pseudo Code steps defined by PC:: at start of comment, [./] defines that the task is complete, [X] defines it is not currently complete
-        for(int i = 0; i < vPoints.Length; i++)
-        {
-            Debug.Log(vPoints[i].toString());
-
-        }//end for
 
 
         //PC:: create reference to terrain cell object [./]
-        terrainCell = Resources.Load("TerrainCell", typeof(GameObject)) as GameObject;
+        //landCell = Resources.Load("LandCell", typeof(GameObject)) as GameObject;
+        //airCell = Resources.Load("AirCell", typeof(GameObject)) as GameObject;
 
         //PC:: create empty 2d GameObject array to hold each terrainCell [./]
         //PC:: get public array dimensions and create the new array based on these dimensions[./]
@@ -88,20 +98,96 @@ public class ProceduralGenScript : MonoBehaviour
 
         generateVoronoiPoints();
 
-
-        //PC:: get max point val to determine how many voronoi points should be used for this (More wild/defined terrain = more points, simpler terrain = less points)
-        //PC:: for loop & nested for loop to go through terrainArray array
-
-
-        //PC:: through the gameobject array, assigning the voronoi value (1 for terrain, 0 for air)
-
-        //PC:: end for loop
-
-        //PC:: for loop
+        GameObject prevObject = null;
 
         //PC:: move through gameobject array and instantiate objects based on what their closest voronoi point is.         
         //PC:: use manhatten distance algorithm to determine the nearest point
         //PC:: (Depending on terrain gen type specified by user, choose whether to prioritize air or land)
+        for (int i = 0; i < terrXLength; i++)
+        {
+            for(int j =0; j < terrYLength; j++)
+            {
+                VoronoiPoint vPoint = null;
+                int minManHatDist = 50;
+                string terrainType = "";
+
+                //loop to check for nearest voronoi point for current cell
+                for(int z = 0; z < vPoints.Length; z++)
+                {
+
+                    if (vPoints[z].getManhattanDistance(i, j) == 0)
+                    {
+                        //item is a voronoi point, can't get closer than this
+                        terrainType = vPoints[z].getCellType();
+                        break;
+
+                    }//end if
+
+                    else if (vPoints[z].getManhattanDistance(i, j) < minManHatDist)
+                    {
+                        minManHatDist = vPoints[z].getManhattanDistance(i, j);
+                        vPoint = vPoints[z];
+
+                    }//end else if
+
+                }//end for
+
+                if(terrainType == "")
+                {
+                    terrainType = vPoint.getCellType();
+
+                }//end if
+
+                // generate cell based on terrainType
+                if(terrainType == "land")
+                {
+                    Vector3 cellPos = this.transform.position - objDown * j;
+                    cellPos = cellPos + objRight * i;
+
+                    GameObject newCell = Instantiate(terrainCell, cellPos, this.transform.rotation) as GameObject;
+                    cellCount++;
+                    terrainArray[i, j] = newCell;
+
+
+                    /*if(j == 0)
+                    {
+                        prevObject = Instantiate(terrainCell, this.transform.position - (objDown * i), this.transform.rotation) as GameObject;
+                        cellCount++;
+                        string textMeshVal = "Cell Num: \n" + cellCount + "\nPos: " + 0 + " " + i;
+                        prevObject.GetComponentInChildren<TextMesh>().text = textMeshVal;
+                        terrainArray[0, i] = prevObject;
+                        
+
+                    }
+                    else
+                    {
+                        prevObject = Instantiate(terrainCell, prevObject.transform.position + objRight, this.transform.rotation) as GameObject;
+                        cellCount++;
+                        string textMeshVal = "Cell Num: \n" + cellCount + "\nPos: " + j + " " + i;
+                        prevObject.GetComponentInChildren<TextMesh>().text = textMeshVal;
+                        terrainArray[j, i] = prevObject;
+
+                    }*/
+                    
+
+                }//end if terrain of current cell is land
+
+                else if(terrainType == "air")
+                {
+
+
+                }//end else if
+
+                else
+                {
+
+                }//end else
+
+
+            }//end for
+
+        }//end outer for loop
+
 
         //PC:: end for loop
 
@@ -241,14 +327,6 @@ public class ProceduralGenScript : MonoBehaviour
 
     }//end distributedRandom
 
-    int getManhattanDistance(int xVal1, int xVal2, int yVal1, int yVal2)
-    {
-        int absXValue = System.Math.Abs(xVal1 - xVal2);
-        int absYValue = System.Math.Abs(yVal1 - yVal2);
-
-        return absXValue + absYValue;
-
-    }//end getManhattanDistance
 
     void generateVoronoiPoints()
     {
@@ -291,11 +369,13 @@ class VoronoiPoint
     private int x;
     private int y;
     private string cellType;
+
     public VoronoiPoint(int x, int y, string cellType)
     {
         this.x = x;
         this.y = y;
         this.cellType = cellType;
+
 
     }//end constructor
 
@@ -340,5 +420,15 @@ class VoronoiPoint
         return "X CoOrd: " + x + "  yCoOrd: " + y + "  Terrain: " + cellType;
 
     }
+
+
+    public int getManhattanDistance(int xVal, int yVal)
+    {
+        int absXValue = System.Math.Abs(xVal - x);
+        int absYValue = System.Math.Abs(yVal - y);
+
+        return absXValue + absYValue;
+
+    }//end getManhattanDistance
 
 }//end voronoiPoint class
