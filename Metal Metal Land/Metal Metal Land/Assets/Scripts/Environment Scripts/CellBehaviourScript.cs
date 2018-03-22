@@ -12,7 +12,7 @@ public class CellBehaviourScript : MonoBehaviour {
 	void Awake () {
         mySpriteRenderer = this.GetComponent<SpriteRenderer>();
         //mySpriteRenderer.color = new Color(255f, 0f, 0f, 1f); //sets color to red
-        Debug.Log("Sprite dims: " + mySpriteRenderer.bounds.size);
+        //Debug.Log("Sprite dims: " + mySpriteRenderer.bounds.size);
         
         //Debug.Log("Color Changed");
         //Debug.Log("Cell created at " + this.transform.position);

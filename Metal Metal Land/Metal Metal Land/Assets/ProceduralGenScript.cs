@@ -2,6 +2,7 @@
 Script which uses a combination of Voronoi's algorithm and the Manhatten Distance algorithm to procedurally generate a world
 
 */
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ProceduralGenScript : MonoBehaviour
@@ -33,7 +34,10 @@ public class ProceduralGenScript : MonoBehaviour
     Vector3 objUp;
 
     bool player1SpawnSet;
+    Vector2 player1Spawn;
+
     bool player2SpawnSet;
+    Vector2 player2Spawn;
 
     // Use this for initialization
     void Start()
@@ -218,7 +222,7 @@ public class ProceduralGenScript : MonoBehaviour
     void updateTerrainArt()
     {
         Sprite terrainTop =  Resources.Load("Images/EnvironmentArt/BlockSprites/TerrainATop", typeof(Sprite)) as Sprite;
-        Sprite terrainBelow = Resources.Load("Images/EnvironmentArt/BlockSprites/TerrainAInterior", typeof(Sprite)) as Sprite;
+        Sprite terrainBelowMoss = Resources.Load("Images/EnvironmentArt/BlockSprites/TerrainAInterior", typeof(Sprite)) as Sprite;
 
         for(int i = 0; i < terrXLength; i++)
         {
@@ -228,7 +232,12 @@ public class ProceduralGenScript : MonoBehaviour
                 {
                     try
                     {
-                        if (terrainArray[i, j - 1] == null)
+                        if (j - 1 < 0)
+                        {
+                            terrainArray[i, j].GetComponent<SpriteRenderer>().sprite = terrainTop;
+                            terrainArray[i, j].GetComponent<CellBehaviourScript>().setCellTerrainType("surface");
+                        }
+                        else if (terrainArray[i, j - 1] == null)
                         {
                             terrainArray[i, j].GetComponent<SpriteRenderer>().sprite = terrainTop;
                             terrainArray[i, j].GetComponent<CellBehaviourScript>().setCellTerrainType("surface");
@@ -237,7 +246,7 @@ public class ProceduralGenScript : MonoBehaviour
 
                         else
                         {
-                            terrainArray[i, j].GetComponent<SpriteRenderer>().sprite = terrainBelow;
+                            terrainArray[i, j].GetComponent<SpriteRenderer>().sprite = terrainBelowMoss;
                             terrainArray[i, j].GetComponent<CellBehaviourScript>().setCellTerrainType("underground");
 
                         }
@@ -247,7 +256,7 @@ public class ProceduralGenScript : MonoBehaviour
                     //used in the event that a cell is in the top row and is land
                     catch(System.IndexOutOfRangeException ioe)
                     {
-                        terrainArray[i, j].GetComponent<SpriteRenderer>().sprite = terrainTop;
+                        Debug.Log("bing");
 
                     }//end catch
 
@@ -272,60 +281,193 @@ public class ProceduralGenScript : MonoBehaviour
         player1SpawnSet = false;
         player2SpawnSet = false;
 
-        for(int i = 0; i < terrYLength; i++)
+        //loop through to find surface cells and their positions
+        List<Vector2> surfaceCells = new List<Vector2>();
+
+        for(int i = 0; i < terrXLength; i++)
         {
-            //loop for player 1
-            for(int j = 0; j<terrXLength; j++)
+            for(int j = 0; j< terrYLength; j++)
             {
-                if (terrainArray[j,i]!= null && player1SpawnSet == false)
+                if(terrainArray[i, j] != null &&
+                        terrainArray[i, j].GetComponent<CellBehaviourScript>().getCellTerrainType() == "surface")
                 {
-                    if (terrainArray[j, i].GetComponent<CellBehaviourScript>().getCellTerrainType() == "surface")
-                    {
-                        Debug.Log("Player 1 Spawn is at : " + j + " , " + (i - 1));
-                        terrainArray[j, i].GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 1f); //sets color to red
-                        player1SpawnSet = true;
-
-                    }//end if
-
-                }//end if
-
-                if (player1SpawnSet)
-                {
-                    break;
+                    surfaceCells.Add(new Vector2(i, j));
 
                 }//end if
 
             }//end for j
 
+        }//end for i
 
+        //pass a reference to the surface cells list to a function which will set up player spawns
+        Debug.Log(surfaceCells.Count);
+        while (!player1SpawnSet)
+        {
+            player1SpawnSet = generatePlayerSpawn(ref surfaceCells, 1);
 
-            //loop for player 2 spawn
-            for(int j=terrXLength-1; j > 0; j--)
+        }//end while player 1 spawn is not set
+        while (!player2SpawnSet)
+        {
+            player2SpawnSet = generatePlayerSpawn(ref surfaceCells, 2);
+
+        }//end while player 2 spawn is not set
+
+        //determine amount of weapon altars to insert 
+        int weaponAltarAmount = surfaceCells.Count / 5;
+        int weaponAltarCount = 0;
+
+        while (weaponAltarCount < weaponAltarAmount)
+        {
+            int randomCellXVal = Random.Range(0, surfaceCells.Count);
+            Vector2 weaponAltarSpawnLocation = new Vector2(-1, -1);
+
+            foreach (Vector2 vec in surfaceCells)
             {
-                if (terrainArray[j, i] != null && player2SpawnSet == false)
+                if (vec.x == randomCellXVal)
                 {
-                    if (terrainArray[j, i].GetComponent<CellBehaviourScript>().getCellTerrainType() == "surface")
-                    {
-                        Debug.Log("Player 2 Spawn is at : " + j + " , " + (i - 1));
-                        terrainArray[j, i].GetComponent<SpriteRenderer>().color = new Color(0f, 255f, 0f, 1f); //sets color to red
-                        player2SpawnSet = true;        
-
-                    }//end if
+                    weaponAltarSpawnLocation = vec;
+                    break;
 
                 }//end if
 
-                if (player2SpawnSet)
+            }//end for each
+
+            if (!(weaponAltarSpawnLocation.x == -1 && weaponAltarSpawnLocation.y == -1))
+            {
+                terrainArray[(int)weaponAltarSpawnLocation.x, (int)weaponAltarSpawnLocation.y].GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 255f, 1f); //sets color to blue
+                surfaceCells.Remove(weaponAltarSpawnLocation);
+                weaponAltarCount++;
+
+            }//end if
+
+        }//end while for generating weapons
+
+        //generate spike pits or explosive barrels or nothing (If 3 is rolled, no dangerous items are generated
+        int spikeOrBombBarrelChance = Random.Range(1, 4);
+
+        //generate spikes
+        if (spikeOrBombBarrelChance == 1)
+        {
+            bool spikesGenerated = false;
+            while (!spikesGenerated)
+            {
+                int randomCellXVal = Random.Range(0, surfaceCells.Count);
+                Vector2 spikePitLocation = new Vector2(-1, -1);
+
+                foreach (Vector2 vec in surfaceCells)
                 {
+                    if (vec.x == randomCellXVal)
+                    {
+                        //ensure that potential spike pit cells have 3 height
+                        if (terrainArray[(int)vec.x, (int)vec.y + 1] != null && terrainArray[(int)vec.x, (int)vec.y + 2] != null)
+                            spikePitLocation = vec;
+                            break;
+
+                    }//end if
+
+                }//end for each
+                if (!(spikePitLocation.x == -1 && spikePitLocation.y == -1))
+                {
+                    terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y].GetComponent<SpriteRenderer>().color = new Color(122f, 122f, 0f, 1f); //sets color to orange
+                    terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + 1].GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 0f, 1f); //sets color to yellow
+                    spikesGenerated = true;
+
+                }//end if
+
+
+            }
+            
+
+            /*Vector2 weaponAltarSpawnLocation = new Vector2(-1, -1);
+
+            foreach (Vector2 vec in surfaceCells)
+            {
+                if (vec.x == randomCellXVal)
+                {
+                    weaponAltarSpawnLocation = vec;
                     break;
 
-                }//end if player2SpawnSet
-                
-            }
+                }//end if
 
-        }//end for i
+            }//end for each
+
+            if (!(weaponAltarSpawnLocation.x == -1 && weaponAltarSpawnLocation.y == -1))
+            {
+                terrainArray[(int)weaponAltarSpawnLocation.x, (int)weaponAltarSpawnLocation.y].GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 255f, 1f); //sets color to blue
+                surfaceCells.Remove(weaponAltarSpawnLocation);
+                weaponAltarCount++;
+
+            }//end if*/
+
+        }//end if spikes are to be used
+
+        else if(spikeOrBombBarrelChance == 2)
+        {
+
+
+        }//generate explosive barrels
+        
         
 
+
     }//end insertSpecialTerrain
+
+    bool generatePlayerSpawn(ref List<Vector2> cellVectors, int player)
+    {
+        bool playerSpawnSet = false;
+        while (!playerSpawnSet)
+        {
+            int playerSpawnX = Random.Range(0, terrXLength);
+
+            Vector2 playerSpawn = new Vector2(-1, -1);
+            foreach (Vector2 vec in cellVectors)
+            {
+                if (vec.x == playerSpawnX)
+                {
+                    playerSpawn = vec;
+                    break;
+
+                }//end if
+
+
+            }//end for each
+
+            //handle the rare event (roughly 1 in 100 chance) where there may not be a valid square at the point, roll again and grab the next square
+            if (playerSpawn.x == -1 && playerSpawn.y == -1)
+            {
+                Debug.Log("Failed on setting the spawn for player: " + player);
+                return false;
+
+            }
+
+            //ensure user does not spawn very low down or in a cave etc.
+            if (playerSpawn.y < terrYLength / 2)
+            {
+
+                playerSpawnSet = true;
+                cellVectors.Remove(playerSpawn);
+                if (player == 1)
+                {
+                    terrainArray[(int)playerSpawn.x, (int)playerSpawn.y].GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 1f); //sets color to red
+                    player1Spawn = playerSpawn;
+                    return true;
+
+                }
+
+                else if (player == 2)
+                {
+                    terrainArray[(int)playerSpawn.x, (int)playerSpawn.y].GetComponent<SpriteRenderer>().color = new Color(0f, 255f, 0f, 1f); //sets color to green
+                    player2Spawn = playerSpawn;
+                    return true;
+
+                }//end else if
+
+            }//end if
+
+        }//end while playerSpawn is not set
+
+        return false;
+    }
 
 }//end main class
 
