@@ -359,46 +359,37 @@ public class ProceduralGenScript : MonoBehaviour
                     if (vec.x == randomCellXVal)
                     {
                         //ensure that potential spike pit cells have 3 height
-                        if (terrainArray[(int)vec.x, (int)vec.y + 1] != null && terrainArray[(int)vec.x, (int)vec.y + 2] != null)
+                        if (terrainArray[(int)vec.x, (int)vec.y + 1] != null &&
+                            terrainArray[(int)vec.x, (int)vec.y + 2] != null &&
+                            terrainArray[(int)vec.x, (int)vec.y + 3] != null)
+                        {
                             spikePitLocation = vec;
                             break;
+                        }
+
 
                     }//end if
 
                 }//end for each
                 if (!(spikePitLocation.x == -1 && spikePitLocation.y == -1))
                 {
-                    terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y].GetComponent<SpriteRenderer>().color = new Color(122f, 122f, 0f, 1f); //sets color to orange
-                    terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + 1].GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 0f, 1f); //sets color to yellow
-                    spikesGenerated = true;
+                    int terrainDepth = 0;
+                    while (terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth + 2] != null)
+                    {
+                        terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth].GetComponent<SpriteRenderer>().color = new Color(122f, 122f, 0f, 1f); //sets color to orange
+                        terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth + 1].GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 0f, 1f); //sets color to yellow
+                        spikesGenerated = true;
+                        terrainDepth++;
+
+                    }//end while
+                    
 
                 }//end if
 
 
             }
             
-
-            /*Vector2 weaponAltarSpawnLocation = new Vector2(-1, -1);
-
-            foreach (Vector2 vec in surfaceCells)
-            {
-                if (vec.x == randomCellXVal)
-                {
-                    weaponAltarSpawnLocation = vec;
-                    break;
-
-                }//end if
-
-            }//end for each
-
-            if (!(weaponAltarSpawnLocation.x == -1 && weaponAltarSpawnLocation.y == -1))
-            {
-                terrainArray[(int)weaponAltarSpawnLocation.x, (int)weaponAltarSpawnLocation.y].GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 255f, 1f); //sets color to blue
-                surfaceCells.Remove(weaponAltarSpawnLocation);
-                weaponAltarCount++;
-
-            }//end if*/
-
+            
         }//end if spikes are to be used
 
         else if(spikeOrBombBarrelChance == 2)
