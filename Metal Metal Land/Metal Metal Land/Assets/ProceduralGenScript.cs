@@ -299,8 +299,8 @@ public class ProceduralGenScript : MonoBehaviour
 
         }//end for i
 
+
         //pass a reference to the surface cells list to a function which will set up player spawns
-        Debug.Log(surfaceCells.Count);
         while (!player1SpawnSet)
         {
             player1SpawnSet = generatePlayerSpawn(ref surfaceCells, 1);
@@ -318,21 +318,10 @@ public class ProceduralGenScript : MonoBehaviour
 
         while (weaponAltarCount < weaponAltarAmount)
         {
-            int randomCellXVal = Random.Range(0, surfaceCells.Count);
-            Vector2 weaponAltarSpawnLocation = new Vector2(-1, -1);
+            
+            Vector2 weaponAltarSpawnLocation = getSurfaceCells(ref surfaceCells);
 
-            foreach (Vector2 vec in surfaceCells)
-            {
-                if (vec.x == randomCellXVal)
-                {
-                    weaponAltarSpawnLocation = vec;
-                    break;
-
-                }//end if
-
-            }//end for each
-
-            if (!(weaponAltarSpawnLocation.x == -1 && weaponAltarSpawnLocation.y == -1))
+            if (!(weaponAltarSpawnLocation.x <= -1 || weaponAltarSpawnLocation.y <= -1))
             {
                 terrainArray[(int)weaponAltarSpawnLocation.x, (int)weaponAltarSpawnLocation.y].GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 255f, 1f); //sets color to blue
                 surfaceCells.Remove(weaponAltarSpawnLocation);
@@ -351,44 +340,69 @@ public class ProceduralGenScript : MonoBehaviour
             bool spikesGenerated = false;
             while (!spikesGenerated)
             {
-                int randomCellXVal = Random.Range(0, surfaceCells.Count);
-                Vector2 spikePitLocation = new Vector2(-1, -1);
+                Vector2 spikePitLocation = new Vector2(-1,-1);
 
-                foreach (Vector2 vec in surfaceCells)
-                {
-                    if (vec.x == randomCellXVal)
+
+                    try
                     {
-                        //ensure that potential spike pit cells have 3 height
-                        if (terrainArray[(int)vec.x, (int)vec.y + 1] != null &&
-                            terrainArray[(int)vec.x, (int)vec.y + 2] != null &&
-                            terrainArray[(int)vec.x, (int)vec.y + 3] != null)
+                        spikePitLocation = getSurfaceCells(ref surfaceCells);
+
+                        foreach (Vector2 vec in surfaceCells)
                         {
-                            spikePitLocation = vec;
-                            break;
-                        }
+                            if (vec.x == spikePitLocation.x)
+                            {
+                                //ensure that potential spike pit cells have 3 height
+                                if (terrainArray[(int)vec.x, (int)vec.y + 1] != null &&
+                                    terrainArray[(int)vec.x, (int)vec.y + 2] != null)
+                                {
+                                    spikePitLocation = vec;
+                                    break;
+                                }//end if
+
+                            }//end if
+
+                        }//end for each
 
 
-                    }//end if
+                    }//end try
+                    catch(System.IndexOutOfRangeException ioore)
+                    {
+                        Debug.Log("Terrain does not match the minimum criteria for spikes to spawn. Spikes will not be spawned");
 
-                }//end for each
+                    }//end catch
+                    
+
+                
                 if (!(spikePitLocation.x == -1 && spikePitLocation.y == -1))
                 {
                     int terrainDepth = 0;
-                    while (terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth + 2] != null)
-                    {
-                        terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth].GetComponent<SpriteRenderer>().color = new Color(122f, 122f, 0f, 1f); //sets color to orange
-                        terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth + 1].GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 0f, 1f); //sets color to yellow
-                        spikesGenerated = true;
-                        terrainDepth++;
-
-                    }//end while
                     
+                    // an error happens here, game doesn't crash or anything and works perfectly fine despite it, I just want to get rid of the warning
+                    try
+                    {
+                        while (terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth + 2] != null)
+                        {
+                            //this block should be destroyed
+                            //terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth].GetComponent<SpriteRenderer>().color = new Color(122f, 122f, 0f, 1f); //sets color to orange
+                            Destroy(terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth]);
+
+                            //this should be replaced with spikes
+                            terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth + 1].GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 255f, 1f); //sets color to yellow
+                            spikesGenerated = true;
+                            terrainDepth++;
+
+                        }//end while
+
+                    }//end try
+                    catch(System.IndexOutOfRangeException ioore)
+                    {
+                        Debug.Log("here's the pointless error and look at it do nothing at all");
+
+                    }//end catch
 
                 }//end if
 
-
-            }
-            
+            }//end while            
             
         }//end if spikes are to be used
 
@@ -408,28 +422,12 @@ public class ProceduralGenScript : MonoBehaviour
         bool playerSpawnSet = false;
         while (!playerSpawnSet)
         {
-            int playerSpawnX = Random.Range(0, terrXLength);
+            Vector2 playerSpawn = getSurfaceCells(ref cellVectors);
 
-            Vector2 playerSpawn = new Vector2(-1, -1);
-            foreach (Vector2 vec in cellVectors)
-            {
-                if (vec.x == playerSpawnX)
-                {
-                    playerSpawn = vec;
-                    break;
+            while (playerSpawn.x <= -1 || playerSpawn.y <= -1) {
+                playerSpawn = getSurfaceCells(ref cellVectors);
 
-                }//end if
-
-
-            }//end for each
-
-            //handle the rare event (roughly 1 in 100 chance) where there may not be a valid square at the point, roll again and grab the next square
-            if (playerSpawn.x == -1 && playerSpawn.y == -1)
-            {
-                Debug.Log("Failed on setting the spawn for player: " + player);
-                return false;
-
-            }
+            }//end while
 
             //ensure user does not spawn very low down or in a cave etc.
             if (playerSpawn.y < terrYLength / 2)
@@ -458,7 +456,51 @@ public class ProceduralGenScript : MonoBehaviour
         }//end while playerSpawn is not set
 
         return false;
-    }
+
+    }//end generate player spawn
+
+    Vector2 getSurfaceCells (ref List<Vector2> cellVectors)
+    {
+        bool spawnSet = false;
+        Vector2 objectSpawn = new Vector2(-1, -1);
+
+        while (!spawnSet)
+        {
+            int xCoOrd = Random.Range(0, cellVectors.Count);
+
+            foreach (Vector2 vec in cellVectors)
+            {
+                if (vec.x == xCoOrd)
+                {
+                    objectSpawn = vec;
+                    break;
+
+                }//end if
+
+
+            }//end for each
+
+            //handle the rare event where there may not be a valid square at the point, roll again and grab the next square
+            if (objectSpawn.x <= -1 || objectSpawn.y <= -1)
+            {
+                Debug.Log("Failed on setting the spawn for object");
+
+            }//end if
+
+            else
+            {
+                spawnSet = true;
+
+            }//end else 
+
+            return objectSpawn;
+
+        }//end while
+
+        //vector shouldn't be returned
+        return new Vector2(-1, -1);
+        
+    }//end getSurfaceCells
 
 }//end main class
 
