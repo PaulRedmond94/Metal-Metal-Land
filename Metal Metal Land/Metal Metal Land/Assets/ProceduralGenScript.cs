@@ -56,7 +56,7 @@ public class ProceduralGenScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space"))
+        /*if (Input.GetKeyDown("space"))
         {
             GameObject[] cells;
             cells = GameObject.FindGameObjectsWithTag("Environment");
@@ -75,6 +75,7 @@ public class ProceduralGenScript : MonoBehaviour
             genTerrain();
 
         }//end if
+        */
     }
 
     //core function to generate the terrain
@@ -316,6 +317,8 @@ public class ProceduralGenScript : MonoBehaviour
         int weaponAltarAmount = surfaceCells.Count / 5;
         int weaponAltarCount = 0;
 
+        GameObject weaponAltarInert = Resources.Load("waltar_inert") as GameObject;
+
         while (weaponAltarCount < weaponAltarAmount)
         {
             
@@ -324,6 +327,7 @@ public class ProceduralGenScript : MonoBehaviour
             if (!(weaponAltarSpawnLocation.x <= -1 || weaponAltarSpawnLocation.y <= -1))
             {
                 terrainArray[(int)weaponAltarSpawnLocation.x, (int)weaponAltarSpawnLocation.y].GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 255f, 1f); //sets color to blue
+                Instantiate(weaponAltarInert, terrainArray[(int)weaponAltarSpawnLocation.x, (int)weaponAltarSpawnLocation.y].transform.position + new Vector3(0,0.64f), this.transform.rotation);
                 surfaceCells.Remove(weaponAltarSpawnLocation);
                 weaponAltarCount++;
 
@@ -335,8 +339,11 @@ public class ProceduralGenScript : MonoBehaviour
         int spikeOrBombBarrelChance = Random.Range(1, 4);
 
         //generate spikes
-        if (spikeOrBombBarrelChance == 1)
+        //if (spikeOrBombBarrelChance == 1)
+        if(1==1)
         {
+            GameObject spikes = Resources.Load("Spikes") as GameObject;
+
             bool spikesGenerated = false;
             while (!spikesGenerated)
             {
@@ -345,7 +352,11 @@ public class ProceduralGenScript : MonoBehaviour
 
                     try
                     {
-                        spikePitLocation = getSurfaceCells(ref surfaceCells);
+                        do
+                        {
+                            spikePitLocation = getSurfaceCells(ref surfaceCells);
+                        } while (terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + 1] == null ||
+                                terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + 2] == null);
 
                         foreach (Vector2 vec in surfaceCells)
                         {
@@ -387,7 +398,11 @@ public class ProceduralGenScript : MonoBehaviour
                             Destroy(terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth]);
 
                             //this should be replaced with spikes
-                            terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth + 1].GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 255f, 1f); //sets color to yellow
+                            //terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth + 1].GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 255f, 1f); //sets color to yellow
+                            Vector3 spikesPos = terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth + 1].transform.position;
+                            Destroy(terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth + 1]);
+                            GameObject spikesSpawned = Instantiate(spikes, spikesPos, this.transform.rotation) as GameObject;
+                            terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth + 1] = spikesSpawned;
                             spikesGenerated = true;
                             terrainDepth++;
 
@@ -408,13 +423,27 @@ public class ProceduralGenScript : MonoBehaviour
 
         else if(spikeOrBombBarrelChance == 2)
         {
+            int explosiveBarrelsCount = 0;
+            int maxExplosiveBarrelsCount = terrXLength / 10;
+            while (explosiveBarrelsCount< maxExplosiveBarrelsCount)
+            {
 
+                Vector2 explosiveBarrelLocation= getSurfaceCells(ref surfaceCells);
+
+                if (!(explosiveBarrelLocation.x <= -1 || explosiveBarrelLocation.y <= -1))
+                {
+                    terrainArray[(int)explosiveBarrelLocation.x, (int)explosiveBarrelLocation.y].GetComponent<SpriteRenderer>().color = Color.black; //sets color to black
+                    surfaceCells.Remove(explosiveBarrelLocation);
+                    Debug.Log("Barrel Spawned");
+                    explosiveBarrelsCount++;
+
+                }//end if
+
+            }//end while for generating weapons
 
         }//generate explosive barrels
         
         
-
-
     }//end insertSpecialTerrain
 
     bool generatePlayerSpawn(ref List<Vector2> cellVectors, int player)
@@ -503,74 +532,3 @@ public class ProceduralGenScript : MonoBehaviour
     }//end getSurfaceCells
 
 }//end main class
-
-
-//class to hold voronoi point object
-class VoronoiPoint
-{
-    private int x;
-    private int y;
-    private string cellType;
-
-    public VoronoiPoint(int x, int y, string cellType)
-    {
-        this.x = x;
-        this.y = y;
-        this.cellType = cellType;
-
-
-    }//end constructor
-
-    //setters and getters
-    public void setX(int x) {
-        this.x = x;
-
-    }//end set X
-
-    public int getX()
-    {
-        return x;
-
-    }//end getX
-
-    public void setY(int y)
-    {
-        this.y = y;
-
-    }//end setY
-
-    public int getY()
-    {
-        return y;
-
-    }//end getY
-
-    public void setCellType(string cellType)
-    {
-        this.cellType = cellType;
-
-    }//end set CellType
-
-    public string getCellType()
-    {
-        return cellType;
-
-    }//end getCellType
-
-    public string toString()
-    {
-        return "X CoOrd: " + x + "  yCoOrd: " + y + "  Terrain: " + cellType;
-
-    }
-
-
-    public int getManhattanDistance(int xVal, int yVal)
-    {
-        int absXValue = System.Math.Abs(xVal - x);
-        int absYValue = System.Math.Abs(yVal - y);
-
-        return absXValue + absYValue;
-
-    }//end getManhattanDistance
-
-}//end voronoiPoint class
