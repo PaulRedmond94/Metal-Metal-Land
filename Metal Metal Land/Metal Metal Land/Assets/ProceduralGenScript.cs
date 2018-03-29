@@ -42,7 +42,7 @@ public class ProceduralGenScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        terrainCell = Resources.Load("LandCell", typeof(GameObject)) as GameObject;
+        terrainCell = Resources.Load("Objects/LandCell", typeof(GameObject)) as GameObject;
         dimX = terrainCell.GetComponent<SpriteRenderer>().bounds.size.x;
         dimY = terrainCell.GetComponent<SpriteRenderer>().bounds.size.y;
         objDown = new Vector3(0, dimY);
@@ -50,6 +50,17 @@ public class ProceduralGenScript : MonoBehaviour
 
         maxVoronoiPoints = (int)((terrYLength * terrXLength) * 0.1);
         genTerrain();
+
+        foreach (GameObject gObject in terrainArray)
+        {
+            if(gObject != null)
+            {
+                gObject.layer = 8;
+
+            }//end if
+            
+
+        }//end foreach
 
     }//end start
 
@@ -317,7 +328,7 @@ public class ProceduralGenScript : MonoBehaviour
         int weaponAltarAmount = surfaceCells.Count / 5;
         int weaponAltarCount = 0;
 
-        GameObject weaponAltarInert = Resources.Load("waltar_inert") as GameObject;
+        GameObject weaponAltarInert = Resources.Load("Objects/waltar_inert") as GameObject;
 
         while (weaponAltarCount < weaponAltarAmount)
         {
@@ -342,7 +353,7 @@ public class ProceduralGenScript : MonoBehaviour
         //if (spikeOrBombBarrelChance == 1)
         if(1==1)
         {
-            GameObject spikes = Resources.Load("Spikes") as GameObject;
+            GameObject spikes = Resources.Load("Objects/Spikes") as GameObject;
 
             bool spikesGenerated = false;
             while (!spikesGenerated)

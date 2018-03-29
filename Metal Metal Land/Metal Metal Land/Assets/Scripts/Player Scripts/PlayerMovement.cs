@@ -3,120 +3,164 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
 
-    float acceleration = 3.0f;
+    //variables to manipulate movement
+    //only public variables should be modified
+    float maxSpeedXVal;
+    float jumpForceYVal;
+    float acceleration;
+    Vector2 maxSpeed, stopChar;
+
+    //varaibles to manipulate knockback and speed modifications while moving
     float knockbackModifier, speedModifier;
+
     Rigidbody2D playerRigBod2d;
-    GameObject playerCharacter;
+
     bool faceLeft, grounded;
-    Vector2 maxSpeed;
+    
+    //variables to manipulate animation
     Animator characterAnimator;
     int currentAnimationState;
 
+    Vector3 offSet;
+
+
     // Use this for initialization
     void Start () {
-        playerCharacter = this.gameObject;
-        playerRigBod2d = playerCharacter.GetComponent<Rigidbody2D>();
+        maxSpeedXVal = 4.0f;
+        jumpForceYVal = 2.0f;
+        acceleration = 4.0f;
+        playerRigBod2d = this.GetComponent<Rigidbody2D>();
         faceLeft = false;
         grounded = true;
         knockbackModifier = 1.0f;
         speedModifier = 1.0f;
-        maxSpeed = new Vector2(5.0f, 0.0f);
+        maxSpeed = new Vector2(maxSpeedXVal, 0.0f);
         characterAnimator = this.GetComponent<Animator>();
         currentAnimationState = 0;
         changeAnimationState(0);
+        offSet = new Vector3(this.GetComponent<BoxCollider2D>().size.x,0);
 
     }//end start
-	
-    //TODO modify jumping controls so that they 
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update() {
 
+        //code to control jumping
         //make character jump
         if (grounded && (Input.GetKeyDown("w") || Input.GetKeyDown("space")))
         {
-            Debug.Log("kbm jump");
-            playerRigBod2d.AddForce(new Vector2(0, 1.75f), ForceMode2D.Impulse);
+            playerRigBod2d.AddForce(new Vector2(0, jumpForceYVal), ForceMode2D.Impulse);
             grounded = false;
             knockbackModifier = 1.5f;
-            Debug.Log("Can't jump");
             changeAnimationState(2);
 
         }//end else if
 
         //check to see if on the ground, if so, re-enable ability to jump
-        if (!grounded)
+        if (!grounded && playerRigBod2d.velocity.y == 0)
         {
-            if (playerRigBod2d.velocity.y == 0)
-            {
-                Debug.Log("Can jump again");
-                changeAnimationState(0);
-                grounded = true;
-                knockbackModifier = 1.0f;
-
-            }//end if
+            changeAnimationState(0);
+            grounded = true;
+            knockbackModifier = 1.0f;
 
         }// end if not grounded
 
+        //end code to control jumping
 
-        float dir = Input.GetAxis("Horizontal");
-        if (maxSpeed.x > Mathf.Abs(playerRigBod2d.velocity.x))
+        //code to control running
+        float dir = Input.GetAxisRaw("Horizontal");
+        //Debug.DrawRay(transform.position, new Vector2(30,0), Color.white, 5f, false);
+        //Debug.DrawRay(transform.position, ((this.GetComponent<BoxCollider2D>().size.x) * dir),0) Color.red, 5f, false);
+        //Debug.DrawRay(transform.position, new Vector3(((this.GetComponent<BoxCollider2D>().size.x/2)+0.1f)*dir,0), Color.green, 1f, false);
+        Debug.DrawRay(transform.position+(offSet * dir), ((Vector2.left) * 0.25f) * dir, Color.green, 3.0f, false);
+
+        //function to apply force to character sprite to make them move
+        //Vector2 offset = new Vector2(transform.position.x + this.GetComponent<)
+
+        RaycastHit2D wallDetect = new RaycastHit2D();
+        wallDetect = Physics2D.Raycast(transform.position + (offSet * dir), (Vector2.left * 0.25f) * dir);
+
+        //(transform.position,(Vector2.left*(-dir)),5.0f)
+        try
         {
-            playerRigBod2d.AddForce((Vector2.right * acceleration * dir)*speedModifier);
+            if (wallDetect.collider.gameObject.tag == "Environment")
+            {
+                //Debug.Log(wallDetect.collider);
+                Vector2 stopChar = playerRigBod2d.velocity;
+                stopChar.x = 0;
+                playerRigBod2d.velocity = stopChar;
 
-        }//end if
+            }//end if
 
-        //Debug messages for speed
-        //Debug.Log("Abs Vel: " + Mathf.Abs(rigBod.velocity.x));
-        //Debug.Log("Base Vel: " + rigBod.velocity);
-        //Debug.Log("Max Speed: " + maxSpeed.x);
+            else if (maxSpeed.x > Mathf.Abs(playerRigBod2d.velocity.x))
+            {
+                playerRigBod2d.AddForce((Vector2.right * acceleration * dir) * speedModifier);
 
+            }//end else if
+
+        }//end try
+        catch (System.NullReferenceException nre)
+        {
+            Debug.Log("Error details: " + nre.Data);
+
+        }//end catch 
+        
+        //character is no longer running, make the character stand still
         if (Input.GetKeyUp("a") || Input.GetKeyUp("d"))
         {
             //rigBod.velocity.x= rigBod.velocity.x*0.2f;
-            Vector2 modVelocity = playerRigBod2d.velocity;
-            modVelocity.x = 0;
-            playerRigBod2d.velocity = modVelocity;
-            changeAnimationState(0);
+            stopChar = playerRigBod2d.velocity;
+            stopChar.x = 0;
+
+            if (grounded)
+            {
+                changeAnimationState(0);
+
+            }//end if character is grounded
 
         }//end if
 
+        //make character face the left
         if (Input.GetKeyDown("a"))
         {
-            Debug.Log("Left");
             if(!faceLeft)
             {
-                Debug.Log("Switch Left");
                 this.transform.rotation = (Quaternion.Euler(0, 180, 0));
 
             }//end if
             faceLeft = true;
-        }
+
+        }// end if to make character face left
+        
+        //make character face to the right
         else if (Input.GetKeyDown("d"))
         {
-            Debug.Log("Right");
             if (faceLeft)
             {
-                Debug.Log("Switch right");
                 this.transform.rotation = (Quaternion.Euler(0, 0, 0));
                 
             }
             faceLeft = false;
 
-        }//end else if
+        }//end else if to make character to face right
 
+
+        //make character sprite run
         if((Input.GetKey("a") || Input.GetKey("d"))&& grounded)
         {
             changeAnimationState(1);            
 
-        }
+        }//end if
 
+        //character is now crouching, reduce speed and knockback
         if (Input.GetKeyDown("s"))
         {
             Debug.Log("Crouching");
             knockbackModifier = 0.75f;
             speedModifier = 0.5f;
         }//end if
+
+        //character is now standing, return knockback modifier to normal state
         if (Input.GetKeyUp("s"))
         {
             knockbackModifier = 1.0f;
@@ -126,6 +170,41 @@ public class PlayerMovement : MonoBehaviour {
 
     }//end update
 
+    //function which changes sprites current animation style
+    void changeAnimationState(int state)
+    {
+        
+        if (currentAnimationState == state)
+            return;
+
+        switch (state)
+        {
+            //character is standing still
+            case 0:
+                characterAnimator.SetInteger("animationState", 0);
+                currentAnimationState = 0;
+                break;
+            
+            //character is running
+            case 1:
+                characterAnimator.SetInteger("animationState", 1);
+                currentAnimationState = 1;
+                break;
+            
+            // character is jumping
+            case 2:
+                characterAnimator.SetInteger("animationState", 2);
+                currentAnimationState = 2;
+                break;
+
+        }//end switch
+
+        currentAnimationState = state;
+
+    }//end changeAnimationState
+
+
+    //getters and setters
     public bool getFaceLeft()
     {
         return this.faceLeft;
@@ -137,33 +216,5 @@ public class PlayerMovement : MonoBehaviour {
         return knockbackModifier;
 
     }//end getKnockbackModifier
-
-    void changeAnimationState(int state)
-    {
-        if (currentAnimationState == state)
-            return;
-
-        switch (state)
-        {
-            case 0:
-                characterAnimator.SetInteger("animationState", 0);
-                Debug.Log("now standing still");
-                break;
-
-            case 1:
-                characterAnimator.SetInteger("animationState", 1);
-                Debug.Log("now running");
-                break;
-
-            case 2:
-                characterAnimator.SetInteger("animationState", 2);
-                Debug.Log("now jumping");
-                break;
-
-        }//end switch
-
-        currentAnimationState = state;
-
-    }//end changeAnimationState
 
 }
