@@ -8,15 +8,17 @@ public class LiveWeaponAltarScript : MonoBehaviour {
     List<GameObject> weapons = new List<GameObject>();
     GameObject revolver;
     GameObject altarWeapon;
+    GameObject inertAltar;
 	// Use this for initialization
 	void Start () {
 
-        revolver = Resources.Load("Objects/Weapons/OcelotsRevolvers") as GameObject;
-        //Instantiate(revolver, transform.position, transform.rotation);
+        revolver = Resources.Load("Objects/Weapons/Equipment/OcelotRevolvers") as GameObject;
         weapons.Add(revolver);
         //Debug.Log(eapons.Count);
 
         altarWeapon = revolver;
+
+        inertAltar = Resources.Load("Objects/waltar_inert") as GameObject;
 
         SpriteRenderer weaponSprite = GetComponentInChildren<SpriteRenderer>();
 
@@ -38,9 +40,17 @@ public class LiveWeaponAltarScript : MonoBehaviour {
 	
 	}
 
+    public void resetAltar()
+    {
+        Instantiate(inertAltar, transform.position, transform.rotation);
+        Destroy(gameObject);
+
+    }//end resetAltar
+
     public GameObject getAltarWeapon()
     {
         return altarWeapon;
 
     }//end getAltarWeapon
+
 }

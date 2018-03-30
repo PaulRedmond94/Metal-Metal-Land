@@ -19,7 +19,7 @@ public class InertWeaponAltarScript : MonoBehaviour {
     void activateAltar()
     {
         Instantiate(liveWeaponAltar, this.transform.position, this.transform.rotation);
-        Destroy(this);
+        Destroy(this.gameObject);
         Debug.Log("Altar activated");
         
 

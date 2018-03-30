@@ -4,7 +4,6 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour {
 
     //variables to manipulate movement
-    //only public variables should be modified
     float maxSpeedXVal;
     float jumpForceYVal;
     float acceleration;
@@ -23,22 +22,26 @@ public class PlayerMovement : MonoBehaviour {
 
     Vector3 offSet;
 
-
     // Use this for initialization
     void Start () {
         maxSpeedXVal = 4.0f;
         jumpForceYVal = 2.0f;
         acceleration = 4.0f;
-        playerRigBod2d = this.GetComponent<Rigidbody2D>();
-        faceLeft = false;
-        grounded = true;
         knockbackModifier = 1.0f;
         speedModifier = 1.0f;
+
+        faceLeft = false;
+        grounded = true;
+
         maxSpeed = new Vector2(maxSpeedXVal, 0.0f);
+
+        playerRigBod2d = this.GetComponent<Rigidbody2D>();
+        offSet = new Vector3(this.GetComponent<BoxCollider2D>().size.x, 0);
         characterAnimator = this.GetComponent<Animator>();
+        
         currentAnimationState = 0;
         changeAnimationState(0);
-        offSet = new Vector3(this.GetComponent<BoxCollider2D>().size.x,0);
+        
 
     }//end start
 
@@ -69,18 +72,14 @@ public class PlayerMovement : MonoBehaviour {
 
         //code to control running
         float dir = Input.GetAxisRaw("Horizontal");
-        //Debug.DrawRay(transform.position, new Vector2(30,0), Color.white, 5f, false);
-        //Debug.DrawRay(transform.position, ((this.GetComponent<BoxCollider2D>().size.x) * dir),0) Color.red, 5f, false);
-        //Debug.DrawRay(transform.position, new Vector3(((this.GetComponent<BoxCollider2D>().size.x/2)+0.1f)*dir,0), Color.green, 1f, false);
-        Debug.DrawRay(transform.position+(offSet * dir), ((Vector2.left) * 0.25f) * dir, Color.green, 3.0f, false);
+
+        // line for testing potential wall collisions
+        //Debug.DrawRay(transform.position+(offSet * dir), ((Vector2.left) * 1f) * dir, Color.green, 3.0f, false);
 
         //function to apply force to character sprite to make them move
-        //Vector2 offset = new Vector2(transform.position.x + this.GetComponent<)
-
+        //raycast used to determine if character is going to run into a wall. If so, don't let them put force into it
         RaycastHit2D wallDetect = new RaycastHit2D();
         wallDetect = Physics2D.Raycast(transform.position + (offSet * dir), (Vector2.left * 0.25f) * dir);
-
-        //(transform.position,(Vector2.left*(-dir)),5.0f)
         try
         {
             if (wallDetect.collider.gameObject.tag == "Environment")
@@ -101,7 +100,7 @@ public class PlayerMovement : MonoBehaviour {
         }//end try
         catch (System.NullReferenceException nre)
         {
-            Debug.Log("Error details: " + nre.Data);
+            //this is a catch used in the event that the character is touching air
 
         }//end catch 
         
@@ -205,9 +204,20 @@ public class PlayerMovement : MonoBehaviour {
 
 
     //getters and setters
-    public bool getFaceLeft()
+    public int getFaceLeft()
     {
-        return this.faceLeft;
+        //facing left
+        if (faceLeft)
+        {
+            return -1;
+
+        }//end if
+
+        //facing right
+        else
+        {
+            return 1;
+        }
 
     }//end getFaceLeft
 

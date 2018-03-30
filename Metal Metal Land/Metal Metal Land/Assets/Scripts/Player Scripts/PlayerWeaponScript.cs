@@ -265,7 +265,8 @@ void Update () {
 
     int getCurrentDir()
     {
-        bool isLeft = this.gameObject.GetComponent<PlayerMovement>().getFaceLeft();
+        //bool isLeft = this.gameObject.GetComponent<PlayerMovement>().getFaceLeft();
+        bool isLeft = true;
         if (isLeft)
         {
             return -1;
