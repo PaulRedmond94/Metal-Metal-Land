@@ -5,18 +5,18 @@ public class CellBehaviourScript : MonoBehaviour {
 
     SpriteRenderer mySpriteRenderer;
     string cellTerrainType;
-    int test = 0;
-    
+    int cellHealth;
+    Sprite undamaged;
+    Sprite cracked;
+    Sprite damaged;
+    Sprite crumbling;
+    Sprite destroyed;
     
 	// Use this for initialization
 	void Awake () {
+        cellHealth = 5;
         mySpriteRenderer = this.GetComponent<SpriteRenderer>();
-        //mySpriteRenderer.color = new Color(255f, 0f, 0f, 1f); //sets color to red
-        //Debug.Log("Sprite dims: " + mySpriteRenderer.bounds.size);
-        
-        //Debug.Log("Color Changed");
-        //Debug.Log("Cell created at " + this.transform.position);
-        //cellTerrainType = "ground";
+        cellTerrainType = "ground";
 
     }
 
@@ -27,13 +27,18 @@ public class CellBehaviourScript : MonoBehaviour {
 
     void Update()
     {
+        if (cellHealth == 0)
+        {
+            explode();
+
+        }//end if
 
     }//end update
     
     void OnMouseDown()
     {
         Debug.Log("Clicked on");
-        explode();
+        decreaseCellHealth();
         
 
     }// end OnMouseDown
@@ -54,4 +59,25 @@ public class CellBehaviourScript : MonoBehaviour {
         Destroy(this.gameObject);
         
     }//end detonate
+
+    public void setCellHealth(int cellHealth)
+    {
+        this.cellHealth = cellHealth;
+
+    }//end setCellHealth
+
+    public void decreaseCellHealth()
+    {
+        cellHealth--;
+        if(cellHealth>0)
+            updateSprite();
+
+    }//end decreaseCellHealth
+
+    public int getCellHealth()
+    {
+        return cellHealth;
+
+    }
+
 }

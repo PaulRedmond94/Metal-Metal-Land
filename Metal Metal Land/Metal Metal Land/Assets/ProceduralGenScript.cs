@@ -338,6 +338,7 @@ public class ProceduralGenScript : MonoBehaviour
             if (!(weaponAltarSpawnLocation.x <= -1 || weaponAltarSpawnLocation.y <= -1))
             {
                 terrainArray[(int)weaponAltarSpawnLocation.x, (int)weaponAltarSpawnLocation.y].GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 255f, 1f); //sets color to blue
+                terrainArray[(int)weaponAltarSpawnLocation.x, (int)weaponAltarSpawnLocation.y].GetComponent<CellBehaviourScript>().setCellHealth(int.MaxValue);
                 Instantiate(weaponAltarInert, terrainArray[(int)weaponAltarSpawnLocation.x, (int)weaponAltarSpawnLocation.y].transform.position + new Vector3(0,0.64f), this.transform.rotation);
                 surfaceCells.Remove(weaponAltarSpawnLocation);
                 weaponAltarCount++;
@@ -360,41 +361,38 @@ public class ProceduralGenScript : MonoBehaviour
             {
                 Vector2 spikePitLocation = new Vector2(-1,-1);
 
-
-                    try
+                try
+                {
+                    do
                     {
-                        do
-                        {
-                            spikePitLocation = getSurfaceCells(ref surfaceCells);
-                        } while (terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + 1] == null ||
-                                terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + 2] == null);
+                        spikePitLocation = getSurfaceCells(ref surfaceCells);
+                    } while (terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + 1] == null ||
+                            terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + 2] == null);
 
-                        foreach (Vector2 vec in surfaceCells)
+                    foreach (Vector2 vec in surfaceCells)
+                    {
+                        if (vec.x == spikePitLocation.x)
                         {
-                            if (vec.x == spikePitLocation.x)
+                            //ensure that potential spike pit cells have 3 height
+                            if (terrainArray[(int)vec.x, (int)vec.y + 1] != null &&
+                                terrainArray[(int)vec.x, (int)vec.y + 2] != null)
                             {
-                                //ensure that potential spike pit cells have 3 height
-                                if (terrainArray[(int)vec.x, (int)vec.y + 1] != null &&
-                                    terrainArray[(int)vec.x, (int)vec.y + 2] != null)
-                                {
-                                    spikePitLocation = vec;
-                                    break;
-                                }//end if
-
+                                spikePitLocation = vec;
+                                break;
                             }//end if
 
-                        }//end for each
+                        }//end if
+
+                    }//end for each
 
 
-                    }//end try
-                    catch(System.IndexOutOfRangeException ioore)
-                    {
-                        Debug.Log("Terrain does not match the minimum criteria for spikes to spawn. Spikes will not be spawned");
+                }//end try
+                catch(System.IndexOutOfRangeException ioore)
+                {
+                    Debug.Log("Terrain does not match the minimum criteria for spikes to spawn. Spikes will not be spawned");
 
-                    }//end catch
-                    
-
-                
+                }//end catch
+                                    
                 if (!(spikePitLocation.x == -1 && spikePitLocation.y == -1))
                 {
                     int terrainDepth = 0;
@@ -413,6 +411,7 @@ public class ProceduralGenScript : MonoBehaviour
                             Vector3 spikesPos = terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth + 1].transform.position;
                             Destroy(terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth + 1]);
                             GameObject spikesSpawned = Instantiate(spikes, spikesPos, this.transform.rotation) as GameObject;
+                            spikesSpawned.GetComponent<CellBehaviourScript>().setCellHealth(int.MaxValue);
                             terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth + 1] = spikesSpawned;
                             spikesGenerated = true;
                             terrainDepth++;
