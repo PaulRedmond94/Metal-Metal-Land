@@ -69,8 +69,8 @@ public class CellBehaviourScript : MonoBehaviour {
     public void decreaseCellHealth()
     {
         cellHealth--;
-        if(cellHealth>0)
-            updateSprite();
+        //if(cellHealth>0)
+            //updateSprite();
 
     }//end decreaseCellHealth
 

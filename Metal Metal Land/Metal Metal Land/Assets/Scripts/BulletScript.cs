@@ -72,6 +72,13 @@ public class BulletScript : MonoBehaviour {
 
         }//end if object is ammunition
 
+        else if(collision.gameObject.tag == "BombBox")
+        {
+
+
+        }
+
+
         else
         {
             Debug.Log("Bullet Hit");

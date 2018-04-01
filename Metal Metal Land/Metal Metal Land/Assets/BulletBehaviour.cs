@@ -22,6 +22,13 @@ public class BulletBehaviour : MonoBehaviour {
 
         }
 
+        if (coll.gameObject.tag.ToLower() == "bombbox")
+        {
+            coll.gameObject.GetComponent<BombBoxScript>().detonateBomb();
+            Destroy(gameObject);
+
+        }
+
     }//end On2DCollisionEnter
 
 }
