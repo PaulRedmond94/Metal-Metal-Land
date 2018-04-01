@@ -451,7 +451,7 @@ public class ProceduralGenScript : MonoBehaviour
 
             }//end while for generating weapons
 
-        }//generate explosive barrels
+        }//generate explosive boxes
         
         
     }//end insertSpecialTerrain
