@@ -69,4 +69,10 @@ public class LiveWeaponAltarScript : MonoBehaviour {
 
     }//end getAltarWeapon
 
+    public void destroyAltar()
+    {
+
+
+    }
+
 }

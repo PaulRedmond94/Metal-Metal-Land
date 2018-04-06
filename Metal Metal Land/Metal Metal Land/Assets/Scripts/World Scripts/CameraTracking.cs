@@ -25,8 +25,8 @@ public class CameraTracking : MonoBehaviour {
         downBounds = (sePoint.transform.position.y + initialPos.y)/2;
         rightBounds = (sePoint.transform.position.x + initialPos.x) /2;
 
-        Debug.Log("Max X,Y : " + leftBounds + "," + upBounds);
-        Debug.Log("Min X,Y : " + rightBounds + "," + downBounds);
+        //Debug.Log("Max X,Y : " + leftBounds + "," + upBounds);
+        //Debug.Log("Min X,Y : " + rightBounds + "," + downBounds);
 
 
     }//end start
