@@ -14,6 +14,9 @@ public class ProceduralGenScript : MonoBehaviour
     public int terrXLength = 25;
     public int terrYLength = 10;
 
+    public Sprite[] terrainTop;
+    public Sprite[] terrainBelow;
+
     //debug variable, delete later
     public int terrainType;
 
@@ -233,9 +236,8 @@ public class ProceduralGenScript : MonoBehaviour
 
     void updateTerrainArt()
     {
-        Sprite terrainTop =  Resources.Load("Images/EnvironmentArt/BlockSprites/TerrainATop", typeof(Sprite)) as Sprite;
-        Sprite terrainBelowMoss = Resources.Load("Images/EnvironmentArt/BlockSprites/TerrainAInterior", typeof(Sprite)) as Sprite;
-
+        //Sprite terrainTop =  Resources.Load("Images/EnvironmentArt/BlockSprites/TerrainATop", typeof(Sprite)) as Sprite;
+        //Sprite terrainBelowMoss = Resources.Load("Images/EnvironmentArt/BlockSprites/TerrainAInterior", typeof(Sprite)) as Sprite;
         for(int i = 0; i < terrXLength; i++)
         {
             for(int j = 0; j < terrYLength; j++)
@@ -244,21 +246,58 @@ public class ProceduralGenScript : MonoBehaviour
                 {
                     try
                     {
+                        int randomNum = Random.Range(1, 10);
+
+                        Sprite cellSprite;
+
                         if (j - 1 < 0)
                         {
-                            terrainArray[i, j].GetComponent<SpriteRenderer>().sprite = terrainTop;
+                            if (randomNum < 8)
+                            {
+                                cellSprite = terrainTop[0];
+
+                            }//end if
+
+                            else {
+                                cellSprite = terrainTop[1];
+
+                            }//end else
+
+                            terrainArray[i, j].GetComponent<SpriteRenderer>().sprite = cellSprite;
                             terrainArray[i, j].GetComponent<CellBehaviourScript>().setCellTerrainType("surface");
                         }
                         else if (terrainArray[i, j - 1] == null)
                         {
-                            terrainArray[i, j].GetComponent<SpriteRenderer>().sprite = terrainTop;
+                            if (randomNum < 8)
+                            {
+                                cellSprite = terrainTop[0];
+
+                            }//end if
+
+                            else {
+                                cellSprite = terrainTop[1];
+
+                            }//end else
+
+                            terrainArray[i, j].GetComponent<SpriteRenderer>().sprite = cellSprite;
                             terrainArray[i, j].GetComponent<CellBehaviourScript>().setCellTerrainType("surface");
 
                         }
-
                         else
                         {
-                            terrainArray[i, j].GetComponent<SpriteRenderer>().sprite = terrainBelowMoss;
+                            if (randomNum < 7)
+                            {
+                                cellSprite = terrainBelow[0];
+
+                            }//end if
+
+                            else
+                            {
+                                cellSprite = terrainBelow[1];
+
+                            }//end else if
+
+                            terrainArray[i, j].GetComponent<SpriteRenderer>().sprite = cellSprite;
                             terrainArray[i, j].GetComponent<CellBehaviourScript>().setCellTerrainType("underground");
 
                         }

@@ -17,7 +17,11 @@ public class SpikeCollision : MonoBehaviour {
     {
         if(coll.gameObject.tag.ToLower() == "player")
         {
-            Debug.Log("You is dead");
+            if (coll.gameObject.GetComponent<PlayerGameController>().getAlive())
+            {
+                coll.gameObject.GetComponent<PlayerGameController>().killPlayer();
+
+            }//end if
 
         }
 
