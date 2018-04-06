@@ -29,6 +29,9 @@ public class CharacterSelect : MonoBehaviour {
     GameObject p1Image, p1Icon, p1DescText;
     GameObject p2Image, p2Icon, p2DescText;
 
+    // variable to hold what index to skip when moving through characters (Skip over character already selected by other player)
+    int skipIndex;
+
     //boolean variables to determine if either player has picked their character 
     bool p1Confirm;
     bool p2Confirm;
@@ -84,6 +87,7 @@ public class CharacterSelect : MonoBehaviour {
             "\nNationality: " + characters[p2CurrentCharacter].getNationality() +
             "\nGenre: " + characters[p2CurrentCharacter].getGenre();
 
+        skipIndex = -1;
 
     }//end start
 
@@ -100,6 +104,8 @@ public class CharacterSelect : MonoBehaviour {
                 p1CurrentCharacter++;
                 if (p1CurrentCharacter > 7)
                     p1CurrentCharacter = 0;
+                if (p1CurrentCharacter == skipIndex)
+                    p1CurrentCharacter++;
 
                 p1Change = true;
 
@@ -111,6 +117,9 @@ public class CharacterSelect : MonoBehaviour {
                 if (p1CurrentCharacter < 0)
                     p1CurrentCharacter = 7;
 
+                if (p1CurrentCharacter == skipIndex)
+                    p1CurrentCharacter--; 
+
                 p1Change = true;
 
             }//end p1 input
@@ -118,6 +127,11 @@ public class CharacterSelect : MonoBehaviour {
             {
                 p1Confirm = true;
                 p1Icon.GetComponent<RectTransform>().position += new Vector3(0, -10.0f, 0);
+                skipIndex = p1CurrentCharacter;
+                if (!p2Confirm && p1CurrentCharacter == p2CurrentCharacter)
+                {
+                    lockIcon(1, ref p2CurrentCharacter);
+                }
 
             }//end else if
 
@@ -132,6 +146,8 @@ public class CharacterSelect : MonoBehaviour {
                 p2CurrentCharacter++;
                 if (p2CurrentCharacter > 7)
                     p2CurrentCharacter = 0;
+                if (p2CurrentCharacter == skipIndex)
+                    p2CurrentCharacter++;
 
                 p2Change = true;
 
@@ -142,6 +158,8 @@ public class CharacterSelect : MonoBehaviour {
                 p2CurrentCharacter--;
                 if (p2CurrentCharacter < 0)
                     p2CurrentCharacter = 7;
+                if (p2CurrentCharacter == skipIndex)
+                    p2CurrentCharacter--;
 
                 p2Change = true;
 
@@ -151,7 +169,8 @@ public class CharacterSelect : MonoBehaviour {
             {
                 p2Confirm = true;
                 p2Icon.GetComponent<RectTransform>().position += new Vector3(0, -10.0f, 0);
-
+                if(!p1Confirm && p1CurrentCharacter == p2CurrentCharacter)
+                    lockIcon(2, ref p1CurrentCharacter);
 
             }//end else if
 
@@ -227,5 +246,31 @@ public class CharacterSelect : MonoBehaviour {
 
 
     }//end updateProfileImages
+
+    // function used to push other playericon off of a recently select profile
+    // playerSubmitted is player who locked in
+    // playerpos is the player who is to be moved
+    void lockIcon(int playerSubmitted, ref int playerPos)
+    {
+        playerPos++;
+
+        if (playerPos > 7)
+        {
+            playerPos = 0;
+
+        }//end if
+
+        if(playerSubmitted == 2)
+        {
+            updateProfiles(p1Image, p1Icon, p1DescText, p1CurrentCharacter);
+        }
+        else
+        {
+            updateProfiles(p2Image, p2Icon, p2DescText, p2CurrentCharacter);
+        }
+
+    }
+
+
 
 }

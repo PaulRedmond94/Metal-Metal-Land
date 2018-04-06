@@ -17,7 +17,6 @@ public class RpgExplode : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        Debug.Log("Your head a splode");
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, cirCol.radius);
         ExplosiveScript.detonateArray(colliders);
 
