@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlayerGameController : MonoBehaviour {
 
+    int playerNumber;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -18,4 +20,17 @@ public class PlayerGameController : MonoBehaviour {
         Debug.Log("You have been killed");
 
     }//end kill
+
+    public int getPlayerNumber()
+    {
+        return playerNumber;
+
+    }//end int
+
+    public void setPlayerNumber(int playerNumber)
+    {
+        this.playerNumber = playerNumber;
+
+    }
+
 }

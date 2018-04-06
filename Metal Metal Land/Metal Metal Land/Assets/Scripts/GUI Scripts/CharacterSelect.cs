@@ -126,6 +126,7 @@ public class CharacterSelect : MonoBehaviour {
             else if (Input.GetKeyDown("space") && p1Confirm != true)
             {
                 p1Confirm = true;
+                StaticScript.player1Character = characters[p1CurrentCharacter].getName();
                 p1Icon.GetComponent<RectTransform>().position += new Vector3(0, -10.0f, 0);
                 skipIndex = p1CurrentCharacter;
                 if (!p2Confirm && p1CurrentCharacter == p2CurrentCharacter)
@@ -168,6 +169,7 @@ public class CharacterSelect : MonoBehaviour {
             else if (Input.GetKeyDown("return") && p2Confirm != true)
             {
                 p2Confirm = true;
+                StaticScript.player2Character = characters[p2CurrentCharacter].getName();
                 p2Icon.GetComponent<RectTransform>().position += new Vector3(0, -10.0f, 0);
                 if(!p1Confirm && p1CurrentCharacter == p2CurrentCharacter)
                     lockIcon(2, ref p1CurrentCharacter);
