@@ -307,7 +307,7 @@ public class ProceduralGenScript : MonoBehaviour
                     //used in the event that a cell is in the top row and is land
                     catch(System.IndexOutOfRangeException ioe)
                     {
-                        Debug.Log("bing");
+                        
 
                     }//end catch
 
@@ -376,7 +376,7 @@ public class ProceduralGenScript : MonoBehaviour
 
             if (!(weaponAltarSpawnLocation.x <= -1 || weaponAltarSpawnLocation.y <= -1))
             {
-                terrainArray[(int)weaponAltarSpawnLocation.x, (int)weaponAltarSpawnLocation.y].GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 255f, 1f); //sets color to blue
+                //terrainArray[(int)weaponAltarSpawnLocation.x, (int)weaponAltarSpawnLocation.y].GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 255f, 1f); //sets color to blue
                 terrainArray[(int)weaponAltarSpawnLocation.x, (int)weaponAltarSpawnLocation.y].GetComponent<CellBehaviourScript>().setCellHealth(int.MaxValue);
                 Instantiate(weaponAltarInert, terrainArray[(int)weaponAltarSpawnLocation.x, (int)weaponAltarSpawnLocation.y].transform.position + new Vector3(0,0.64f), this.transform.rotation);
                 surfaceCells.Remove(weaponAltarSpawnLocation);
@@ -516,15 +516,24 @@ public class ProceduralGenScript : MonoBehaviour
                 if (player == 1)
                 {
                     terrainArray[(int)playerSpawn.x, (int)playerSpawn.y].GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 1f); //sets color to red
+                    GameObject player1Prefab = Resources.Load("Characters/" + StaticScript.player1Character) as GameObject;
+                    GameObject player1Char = Instantiate(player1Prefab, terrainArray[(int)playerSpawn.x, (int)playerSpawn.y].transform.position + new Vector3(0, 0.64f), transform.rotation) as GameObject;
+                    //player1Char.name = StaticScript.player1Character;
+                    player1Char.GetComponent<PlayerGameController>().setPlayerNumber(1);
                     player1Spawn = playerSpawn;
                     return true;
-
+                    //terrainArray[(int)weaponAltarSpawnLocation.x, (int)weaponAltarSpawnLocation.y].transform.position + new Vector3(0,0.64f)
                 }
 
                 else if (player == 2)
                 {
                     terrainArray[(int)playerSpawn.x, (int)playerSpawn.y].GetComponent<SpriteRenderer>().color = new Color(0f, 255f, 0f, 1f); //sets color to green
+                    GameObject player2Prefab = Resources.Load("Characters/" + StaticScript.player2Character) as GameObject;
+                    GameObject player2Char = Instantiate(player2Prefab, terrainArray[(int)playerSpawn.x, (int)playerSpawn.y].transform.position + new Vector3(0, 0.64f), transform.rotation) as GameObject;
+                    //player2Char.name = StaticScript.player2Character;
+                    player2Char.GetComponent<PlayerGameController>().setPlayerNumber(2);
                     player2Spawn = playerSpawn;
+
                     return true;
 
                 }//end else if

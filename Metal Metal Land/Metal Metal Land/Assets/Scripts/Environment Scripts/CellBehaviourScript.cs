@@ -55,7 +55,7 @@ public class CellBehaviourScript : MonoBehaviour {
     }
     public void explode()
     {
-        Debug.Log("Kaboom!");
+
         Destroy(this.gameObject);
         
     }//end detonate

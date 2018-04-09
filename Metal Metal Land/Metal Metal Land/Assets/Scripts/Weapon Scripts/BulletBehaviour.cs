@@ -24,7 +24,7 @@ public class BulletBehaviour : MonoBehaviour {
     {
         while (durability > 0)
         {
-            Debug.Log(coll.gameObject.name);
+
             if (coll.gameObject.tag.ToLower() == "environment")
             {
                 coll.gameObject.GetComponent<CellBehaviourScript>().decreaseCellHealth();
@@ -41,7 +41,7 @@ public class BulletBehaviour : MonoBehaviour {
 
             }
            
-            else if(coll.gameObject.tag.ToLower() == "Player")
+            else if(coll.gameObject.tag.ToLower() == "player")
             {
                 coll.gameObject.GetComponent<PlayerGameController>().killPlayer();
                 durability--;

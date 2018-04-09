@@ -6,22 +6,26 @@ public class SniperFire : MonoBehaviour {
     GameObject bullet;
     bool canFire;
     Vector2 shootingPosition;
+    string fireAxis;
 
 	// Use this for initialization
 	void Start () {
         bullet = Resources.Load("Objects/Ammo/SniperRoundPrefab") as GameObject;
         canFire = true;
+        fireAxis = transform.parent.transform.parent.GetComponent<PlayerWeaponPickup>().getFireAxis();
         
     }//end start
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown("n") && this.transform.parent.transform.parent.tag == "Player" && canFire == true)
+        if (Input.GetAxis(fireAxis) > 0 && this.transform.parent.transform.parent.tag == "Player" && canFire == true)
         {
+            canFire = false;
             shootingPosition = GetComponentInChildren<Transform>().transform.position;
             fireBullet(0, 5.0f, 1, 10);
 
             //Debug.DrawRay(shootingPosition, Vector2.right, Color.green, 1.0f, false);
+            Invoke("allowFiring", 1.25f);
 
         }//end if
 

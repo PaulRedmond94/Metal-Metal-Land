@@ -14,63 +14,59 @@ Platform assembly: C:\Users\Paul\Documents\College\Year 4\Final Year Project\Met
 Loading C:\Users\Paul\Documents\College\Year 4\Final Year Project\Metal Metal Land\Metal Metal Land\Builds\DemoBuild\MetalMetalLand_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Paul\Documents\College\Year 4\Final Year Project\Metal Metal Land\Metal Metal Land\Builds\DemoBuild\MetalMetalLand_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Paul\Documents\College\Year 4\Final Year Project\Metal Metal Land\Metal Metal Land\Builds\DemoBuild\MetalMetalLand_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.286 seconds
+- Completed reload, in  0.311 seconds
 Platform assembly: C:\Users\Paul\Documents\College\Year 4\Final Year Project\Metal Metal Land\Metal Metal Land\Builds\DemoBuild\MetalMetalLand_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Paul\Documents\College\Year 4\Final Year Project\Metal Metal Land\Metal Metal Land\Builds\DemoBuild\MetalMetalLand_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.895899 ms
+UnloadTime: 1.752177 ms
 Play Button Clicked
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 8.126018 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 8.841526 ms
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 204.
-Total: 0.271752 ms (FindLiveObjects: 0.020509 ms CreateObjectMapping: 0.027967 ms MarkObjects: 0.186917 ms  DeleteObjects: 0.011653 ms)
+Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 211.
+Total: 0.217682 ms (FindLiveObjects: 0.020975 ms CreateObjectMapping: 0.012119 ms MarkObjects: 0.155686 ms  DeleteObjects: 0.016780 ms)
 
 Loading.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.971411 ms
+UnloadTime: 0.928994 ms
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 321.
-Total: 0.272685 ms (FindLiveObjects: 0.016780 ms CreateObjectMapping: 0.013517 ms MarkObjects: 0.235861 ms  DeleteObjects: 0.005593 ms)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 328.
+Total: 0.259167 ms (FindLiveObjects: 0.018645 ms CreateObjectMapping: 0.014449 ms MarkObjects: 0.214419 ms  DeleteObjects: 0.011187 ms)
 
 Both players ready to go, load scene here
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.487570 ms
+UnloadTime: 0.477315 ms
 
-Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 204.
-Total: 0.205562 ms (FindLiveObjects: 0.029832 ms CreateObjectMapping: 0.011187 ms MarkObjects: 0.142635 ms  DeleteObjects: 0.020975 ms)
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 211.
+Total: 0.217682 ms (FindLiveObjects: 0.023772 ms CreateObjectMapping: 0.008856 ms MarkObjects: 0.154754 ms  DeleteObjects: 0.029366 ms)
 
 Loading.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.465662 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.362648 ms
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 304.
-Total: 0.202765 ms (FindLiveObjects: 0.013051 ms CreateObjectMapping: 0.009322 ms MarkObjects: 0.174332 ms  DeleteObjects: 0.005593 ms)
-
-Play Button Clicked
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 316.
+Total: 0.230267 ms (FindLiveObjects: 0.013983 ms CreateObjectMapping: 0.010720 ms MarkObjects: 0.200901 ms  DeleteObjects: 0.004195 ms)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.633934 ms
+UnloadTime: 0.575668 ms
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 204.
-Total: 0.562617 ms (FindLiveObjects: 0.048477 ms CreateObjectMapping: 0.029366 ms MarkObjects: 0.454941 ms  DeleteObjects: 0.027035 ms)
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 211.
+Total: 0.259167 ms (FindLiveObjects: 0.024238 ms CreateObjectMapping: 0.020043 ms MarkObjects: 0.199036 ms  DeleteObjects: 0.014916 ms)
 
 Loading.
  
@@ -80,17 +76,25 @@ The referenced script on this Behaviour (Game Object 'Main Camera') is missing!
  
 (Filename:  Line: 1655)
 
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.319764 ms
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 258.
-Total: 0.160814 ms (FindLiveObjects: 0.009788 ms CreateObjectMapping: 0.006991 ms MarkObjects: 0.139372 ms  DeleteObjects: 0.004195 ms)
-
-Max X,Y : -5.37,3.33
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.611094 ms
+new level loaded!!!!!!!!!!!!!!!!!!!!!!!!!!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-Min X,Y : 6.955,-4
+IN START!!!!!!!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+new level loaded!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+IN START!!!!!!!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Leonard Lovefist Ailbhe(Clone)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -98,1009 +102,187 @@ Recursive Serialization is not supported. You can't dereference a PPtr while loa
  
 (Filename:  Line: 1112)
 
+Failed on setting the spawn for object
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Failed on setting the spawn for object
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Failed on setting the spawn for object
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
 here's the pointless error and look at it do nothing at all
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+Ailbhe(Clone) Ailbhe(Clone)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+Stuart Butler(Clone) Ailbhe(Clone)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-LandCell(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-LandCell(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-LandCell(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-LandCell(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-GoreTusk
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-GoreTusk
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-LandCell(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-LandCell(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-LandCell(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-LandCell(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-LandCell(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-LandCell(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-LandCell(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-LandCell(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-LandCell(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-LandCell(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 1396.
+Total: 0.665631 ms (FindLiveObjects: 0.162678 ms CreateObjectMapping: 0.030298 ms MarkObjects: 0.446551 ms  DeleteObjects: 0.024704 ms)
 
-BuckshotPrefab(Clone)
+The referenced script on this Behaviour (Game Object 'Main Camera') is missing!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+(Filename:  Line: 1655)
 
-BuckshotPrefab(Clone)
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+NullReferenceException: Object reference not set to an instance of an object
+  at GameController.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+(Filename:  Line: -1)
 
-BuckshotPrefab(Clone)
+NullReferenceException: Object reference not set to an instance of an object
+  at GameController.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+(Filename:  Line: -1)
 
-BuckshotPrefab(Clone)
+You have been killed
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+In round victory
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+In round victory
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+UnloadTime: 1.257148 ms
+new level loaded!!!!!!!!!!!!!!!!!!!!!!!!!!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+IN START!!!!!!!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+new level loaded!!!!!!!!!!!!!!!!!!!!!!!!!!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+IN START!!!!!!!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+Leonard Lovefist Ailbhe(Clone)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+here's the pointless error and look at it do nothing at all
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+Ailbhe(Clone) Ailbhe(Clone)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+Stuart Butler(Clone) Ailbhe(Clone)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+Unloading 119 unused Assets to reduce memory usage. Loaded Objects now: 1071.
+Total: 0.570075 ms (FindLiveObjects: 0.097886 ms CreateObjectMapping: 0.034959 ms MarkObjects: 0.381759 ms  DeleteObjects: 0.055003 ms)
 
-BuckshotPrefab(Clone)
+The referenced script on this Behaviour (Game Object 'Main Camera') is missing!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+(Filename:  Line: 1655)
 
-BuckshotPrefab(Clone)
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.888907 ms
+new level loaded!!!!!!!!!!!!!!!!!!!!!!!!!!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+IN START!!!!!!!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+new level loaded!!!!!!!!!!!!!!!!!!!!!!!!!!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+IN START!!!!!!!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+Leonard Lovefist Ailbhe(Clone)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+Failed on setting the spawn for object
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+Failed on setting the spawn for object
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+Failed on setting the spawn for object
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+here's the pointless error and look at it do nothing at all
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+Ailbhe(Clone) Ailbhe(Clone)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
+Stuart Butler(Clone) Ailbhe(Clone)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-BuckshotPrefab(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-LandCell(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 1021.
+Total: 0.369639 ms (FindLiveObjects: 0.063859 ms CreateObjectMapping: 0.025170 ms MarkObjects: 0.262430 ms  DeleteObjects: 0.017246 ms)
 
-LandCell(Clone)
+The referenced script on this Behaviour (Game Object 'Main Camera') is missing!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+(Filename:  Line: 1655)
 
-LandCell(Clone)
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+NullReferenceException: Object reference not set to an instance of an object
+  at GameController.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+(Filename:  Line: -1)
 
-BuckshotPrefab(Clone)
+NullReferenceException: Object reference not set to an instance of an object
+  at GameController.Update () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+(Filename:  Line: -1)
 
-BuckshotPrefab(Clone)
+UnloadTime: 1.107055 ms
+new level loaded!!!!!!!!!!!!!!!!!!!!!!!!!!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-LandCell(Clone)
+IN START!!!!!!!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-LandCell(Clone)
+new level loaded!!!!!!!!!!!!!!!!!!!!!!!!!!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-LandCell(Clone)
+IN START!!!!!!!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-LandCell(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-LandCell(Clone)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+Unloading 192 unused Assets to reduce memory usage. Loaded Objects now: 293.
+Total: 0.390615 ms (FindLiveObjects: 0.037290 ms CreateObjectMapping: 0.027501 ms MarkObjects: 0.201833 ms  DeleteObjects: 0.122591 ms)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2270 -> priority: 1 
+  Thread -> id: 3ba8 -> priority: 1 

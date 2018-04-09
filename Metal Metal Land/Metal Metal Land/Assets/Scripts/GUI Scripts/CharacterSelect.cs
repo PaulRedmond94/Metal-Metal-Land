@@ -194,6 +194,9 @@ public class CharacterSelect : MonoBehaviour {
         if (p1Confirm && p2Confirm)
         {
             Debug.Log("Both players ready to go, load scene here");
+            StaticScript.player1Character = p1Image.GetComponent<Image>().sprite.name;
+            StaticScript.player2Character = p2Image.GetComponent<Image>().sprite.name;
+            
             StaticScript.nextSceneToLoad = "Scenes/MatchOptions";
             SceneManager.LoadScene("Scenes/LoadingManager", LoadSceneMode.Single);
 

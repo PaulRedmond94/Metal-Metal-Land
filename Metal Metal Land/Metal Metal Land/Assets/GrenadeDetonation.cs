@@ -20,7 +20,7 @@ public class GrenadeDetonation : MonoBehaviour {
 
     void detonateGrenade()
     {
-        Debug.Log("Grenade go boom");
+
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, cirCol2D.radius);
         ExplosiveScript.detonateArray(colliders);

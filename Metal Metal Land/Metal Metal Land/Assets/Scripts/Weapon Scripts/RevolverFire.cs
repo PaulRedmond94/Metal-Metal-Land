@@ -7,23 +7,25 @@ public class RevolverFire : MonoBehaviour
     GameObject bullet;
     bool canFire;
     Vector2 shootingPosition;
+    string fireAxis;
 
     // Use this for initialization
     void Start()
     {
         bullet = Resources.Load("Objects/Ammo/BulletPrefab") as GameObject;
         canFire = true;
+        fireAxis = transform.parent.transform.parent.GetComponent<PlayerWeaponPickup>().getFireAxis();
 
     }//end start
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("n") && this.transform.parent.transform.parent.tag == "Player")
+        if (Input.GetAxis(fireAxis) > 0 && this.transform.parent.transform.parent.tag == "Player")
         {
             if (canFire)
             {
-                fireBullet(0, 1.0f, 0.25f, 0);
+                fireBullet(0, 1.0f, 0.75f, 0);
 
             }
             //Debug.DrawRay(, Vector2.right, Color.green, 1.0f, false);
@@ -63,9 +65,6 @@ public class RevolverFire : MonoBehaviour
         //apply force to bullet
         Rigidbody2D bulletRigBod2d = firedBullet.GetComponent<Rigidbody2D>();
         bulletRigBod2d.AddForce(transform.right * (20), ForceMode2D.Impulse);
-
-        Debug.Log(dir);
-
 
         Destroy(firedBullet, 2.0f);
 

@@ -39,7 +39,7 @@ public class ShotgunPelletBehaviour : MonoBehaviour {
 
             }//end else if
 
-            else if (coll.gameObject.tag.ToLower() == "Player")
+            else if (coll.gameObject.tag.ToLower() == "player")
             {
                 coll.gameObject.GetComponent<PlayerGameController>().killPlayer();
                 Destroy(gameObject);

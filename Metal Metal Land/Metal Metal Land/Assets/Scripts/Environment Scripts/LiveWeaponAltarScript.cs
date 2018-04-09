@@ -24,15 +24,22 @@ public class LiveWeaponAltarScript : MonoBehaviour {
         grenade = Resources.Load("Objects/Weapons/Spawns/grenadeItem") as GameObject;
 
         weapons.Add(revolver);
+        weapons.Add(rpg);
+        weapons.Add(sniper);
+        weapons.Add(shotgun);
+        weapons.Add(grenade);
         //Debug.Log(eapons.Count);
 
-
         //decide what weapon the altar will use
+        //hard coded values for testing
         //altarWeapon = revolver;
         //altarWeapon = rpg;
         //altarWeapon = sniper;
         //altarWeapon = shotgun;
-        altarWeapon = grenade;
+        //altarWeapon = grenade;
+
+        //choose random weapon
+        altarWeapon = weapons[Random.Range(0, weapons.Count)];
 
         inertAltar = Resources.Load("Objects/waltar_inert") as GameObject;
 

@@ -6,21 +6,23 @@ public class rpgFire : MonoBehaviour {
     GameObject rpg;
     Vector2 shootingPosition;
     bool canFire;
+    string fireAxis;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         rpg = Resources.Load("Objects/Ammo/RpgPrefab") as GameObject;
         canFire = true;
+        fireAxis = transform.parent.transform.parent.GetComponent<PlayerWeaponPickup>().getFireAxis();
 
-	}//end start
+    }//end start
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetKey("n") && this.transform.parent.transform.parent.tag == "Player" && canFire == true)
+        if (Input.GetAxis(fireAxis) > 0 && this.transform.parent.transform.parent.tag == "Player" && canFire == true)
         {
             shootingPosition = GetComponentInChildren<Transform>().transform.position;
-            Debug.Log("Choc's Away Curly");
+            
             fireRocket();
             //Debug.DrawRay(shootingPosition, Vector2.right, Color.green, 1.0f, false);
 

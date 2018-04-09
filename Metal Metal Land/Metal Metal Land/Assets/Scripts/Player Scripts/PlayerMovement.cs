@@ -22,6 +22,11 @@ public class PlayerMovement : MonoBehaviour {
 
     Vector3 offSet;
 
+    //controller items
+    string playerMove, playerJump;
+
+    
+
     // Use this for initialization
     void Start () {
         maxSpeedXVal = 4.0f;
@@ -41,7 +46,9 @@ public class PlayerMovement : MonoBehaviour {
         
         currentAnimationState = 0;
         changeAnimationState(0);
-        
+        assignAxis();
+
+
 
     }//end start
 
@@ -50,7 +57,7 @@ public class PlayerMovement : MonoBehaviour {
 
         //code to control jumping
         //make character jump
-        if (grounded && (Input.GetKeyDown("w") || Input.GetKeyDown("space")))
+        if (grounded && (Input.GetAxis(playerJump)!= 0))
         {
             playerRigBod2d.AddForce(new Vector2(0, jumpForceYVal), ForceMode2D.Impulse);
             grounded = false;
@@ -71,7 +78,7 @@ public class PlayerMovement : MonoBehaviour {
         //end code to control jumping
 
         //code to control running
-        float dir = Input.GetAxisRaw("Horizontal");
+        float dir = Input.GetAxisRaw(playerMove);
 
         // line for testing potential wall collisions
         //Debug.DrawRay(transform.position+(offSet * dir), ((Vector2.left) * 1f) * dir, Color.green, 3.0f, false);
@@ -105,7 +112,7 @@ public class PlayerMovement : MonoBehaviour {
         }//end catch 
         
         //character is no longer running, make the character stand still
-        if (Input.GetKeyUp("a") || Input.GetKeyUp("d"))
+        if (Input.GetAxis(playerMove)> -0.5f && Input.GetAxis(playerMove) < 0.5f)
         {
             //rigBod.velocity.x= rigBod.velocity.x*0.2f;
             stopChar = playerRigBod2d.velocity;
@@ -120,7 +127,7 @@ public class PlayerMovement : MonoBehaviour {
         }//end if
 
         //make character face the left
-        if (Input.GetKeyDown("a"))
+        if (Input.GetAxis(playerMove)== -1)
         {
             if(!faceLeft)
             {
@@ -132,7 +139,7 @@ public class PlayerMovement : MonoBehaviour {
         }// end if to make character face left
         
         //make character face to the right
-        else if (Input.GetKeyDown("d"))
+        else if (Input.GetAxis(playerMove)== 1)
         {
             if (faceLeft)
             {
@@ -145,7 +152,7 @@ public class PlayerMovement : MonoBehaviour {
 
 
         //make character sprite run
-        if((Input.GetKey("a") || Input.GetKey("d"))&& grounded)
+        if((Input.GetAxis(playerMove) == 1 || Input.GetAxis(playerMove) == -1) && grounded)
         {
             changeAnimationState(1);            
 
@@ -227,6 +234,40 @@ public class PlayerMovement : MonoBehaviour {
 
     }//end getKnockbackModifier
 
+    public void assignAxis()
+    {
+        //Debug.Log(gameObject.name + " " + StaticScript.player1Character+ "(Clone)");
+        if (gameObject.name == StaticScript.player1Character + "(Clone)")
+        {
+            playerMove = "p1_move";
+            playerJump = "p1_jump";
 
+        }
+        else
+        {
+            playerMove = "p2_move";
+            playerJump = "p2_jump";
+
+        }
+
+    }
+
+    /*public void assignAxis(int playerNum)
+    {
+        if (playerNum == 1)
+        {
+            playerMove = "p1_move";
+            playerJump = "p1_jump"; 
+
+        }
+        else
+        {
+            playerMove = "p1_move";
+            playerJump = "p1_jump";
+
+        }
+
+    }
+    */
 
 }

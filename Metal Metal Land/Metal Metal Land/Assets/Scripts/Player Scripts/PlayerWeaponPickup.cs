@@ -1,42 +1,56 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerWeaponPickup : MonoBehaviour {
+public class PlayerWeaponPickup : MonoBehaviour
+{
 
-    bool weaponPickedUp, weaponDroppable;
+    bool weaponPickedUp, weaponDroppable, actionCanHappen;
 
     GameObject weaponSlot;
     Vector2 pickupPosition;
     Vector2 equipPosition;
+    string playerPickupAxis, playerFire;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         //pickupPosition = gameObject.GetComponentInChildren<Transform>().transform.position;
         weaponPickedUp = false;
         weaponDroppable = false;
+        actionCanHappen = true;
+        assignAxis();
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //code to drop weapon
+        if (Input.GetAxis(playerPickupAxis)  == 1 && weaponPickedUp == true && weaponDroppable == true && actionCanHappen == true)
+        {
+            actionCanHappen = false;
+            Debug.Log("Drop gun");
+
+            //throw gun away
+            Destroy(weaponSlot.gameObject);
+            Invoke("allowWeaponPickUp", 2f);
+            
+
+        }//else if 
+
+    }
 
     void OnTriggerStay2D(Collider2D collider)
     {
-        if(collider.tag == "LiveAltar")
+        if (collider.tag == "LiveAltar")
         {
-            if (Input.GetKey("m") && !(weaponPickedUp))
+            if (Input.GetAxis(playerPickupAxis) == 1 && weaponPickedUp == false && actionCanHappen == true)
             {
-                /*weaponPickedUp = true;
-                weaponSlot = transform.GetChild(0).gameObject;
-                weaponSlot = Instantiate(collider.GetComponent<LiveWeaponAltarScript>().getAltarWeapon(), transform.GetChild(0).transform.position, transform.rotation) as GameObject;
-                weaponSlot.transform.parent = this.transform;
-                */
-                pickupPosition = gameObject.GetComponentInChildren<Transform>().transform.position;
+                actionCanHappen = false;
+                Debug.Log("Pickup gun");
                 weaponPickedUp = true;
+                pickupPosition = gameObject.GetComponentInChildren<Transform>().transform.position;
                 weaponSlot = transform.GetChild(0).gameObject;
-
                 GameObject equipItem = collider.GetComponentInChildren<ItemObjectReference>().equipReference;
                 weaponSlot = Instantiate(equipItem, transform.GetChild(0).transform.position, transform.rotation) as GameObject;
                 //weaponSlot.transform.position = pickupPosition;
@@ -44,36 +58,65 @@ public class PlayerWeaponPickup : MonoBehaviour {
                 
                 //reset altar to inert
                 collider.GetComponent<LiveWeaponAltarScript>().resetAltar();
+                Invoke("allowWeaponDrop", 2f);
 
-                Invoke("allowWeaponDrop", 0.5f);
-                
 
             }//end if
-
-            else if (Input.GetKey("m") && weaponPickedUp && weaponDroppable)
-            {
-                //throw gun away
-                weaponDroppable = false;
-                Destroy(weaponSlot.gameObject);
-
-                Invoke("allowWeaponPickUp", 0.5f);
-
-            }//else if 
 
         }
 
 
     }//end onTriggerEnter
-    
+
     void allowWeaponDrop()
     {
         weaponDroppable = true;
+        Debug.Log("Weapon can now be dropped");
+        actionCanHappen = true;
 
     }
 
     void allowWeaponPickUp()
     {
         weaponPickedUp = false;
+        Debug.Log("Weapon can now be picked up");
+        actionCanHappen = true;
+
+    }
+
+    public void assignAxis()
+    {
+        if (gameObject.name == StaticScript.player1Character + "(Clone)")
+        {
+            playerPickupAxis = "p1_pickup";
+            playerFire = "p1_fire";
+        }
+        else
+        {
+            playerPickupAxis = "p2_pickup";
+            playerFire = "p2_fire";
+
+        }
+
+    }
+
+    /*public void assignAxis(int playerNum)
+    {
+        if (playerNum == 1)
+        {
+            playerPickupAxis = "p1_pickup";
+            playerFire = "p1_fire";
+        }
+        else
+        {
+            playerPickupAxis = "p1_move";
+            playerFire = "p1_jump";
+
+        }
+    }*/
+    public string getFireAxis()
+    {
+        return playerFire;
 
     }
 }
