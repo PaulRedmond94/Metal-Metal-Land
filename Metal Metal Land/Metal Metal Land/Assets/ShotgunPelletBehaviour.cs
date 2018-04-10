@@ -11,7 +11,7 @@ public class ShotgunPelletBehaviour : MonoBehaviour {
         dir = 1;
 
         bulletRigBod2d = gameObject.GetComponent<Rigidbody2D>();
-        bulletRigBod2d.AddForce(transform.right * (10) *dir, ForceMode2D.Impulse);
+        bulletRigBod2d.AddForce(transform.right * (15) *dir, ForceMode2D.Impulse);
 
     }
 	

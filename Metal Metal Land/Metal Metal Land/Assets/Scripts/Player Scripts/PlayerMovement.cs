@@ -24,13 +24,15 @@ public class PlayerMovement : MonoBehaviour {
 
     //controller items
     string playerMove, playerJump;
+    Renderer charRenderer;
+    CircleCollider2D characterFootBox;
 
     
 
     // Use this for initialization
     void Start () {
         maxSpeedXVal = 4.0f;
-        jumpForceYVal = 2.0f;
+        jumpForceYVal = 2.2f;
         acceleration = 4.0f;
         knockbackModifier = 1.0f;
         speedModifier = 1.0f;
@@ -43,7 +45,7 @@ public class PlayerMovement : MonoBehaviour {
         playerRigBod2d = this.GetComponent<Rigidbody2D>();
         offSet = new Vector3(this.GetComponent<BoxCollider2D>().size.x, 0);
         characterAnimator = this.GetComponent<Animator>();
-        
+        characterFootBox = gameObject.GetComponent<CircleCollider2D>();
         currentAnimationState = 0;
         changeAnimationState(0);
         assignAxis();
@@ -57,20 +59,23 @@ public class PlayerMovement : MonoBehaviour {
 
         //code to control jumping
         //make character jump
-        if (grounded && (Input.GetAxis(playerJump)!= 0))
+        if (grounded && (Input.GetAxis(playerJump)== 1))
         {
-            playerRigBod2d.AddForce(new Vector2(0, jumpForceYVal), ForceMode2D.Impulse);
             grounded = false;
+            playerRigBod2d.AddForce(new Vector2(0,jumpForceYVal), ForceMode2D.Impulse);
+            //Bryan's Suggestion
+            //playerRigBod2d.AddForce(new Vector2(0, Time.deltaTime * jumpForceYVal), ForceMode2D.Impulse);
+            
             knockbackModifier = 1.5f;
             changeAnimationState(2);
 
         }//end else if
 
         //check to see if on the ground, if so, re-enable ability to jump
-        if (!grounded && playerRigBod2d.velocity.y == 0)
+        if (grounded)
         {
             changeAnimationState(0);
-            grounded = true;
+            //grounded = true;
             knockbackModifier = 1.0f;
 
         }// end if not grounded
@@ -78,7 +83,7 @@ public class PlayerMovement : MonoBehaviour {
         //end code to control jumping
 
         //code to control running
-        float dir = Input.GetAxisRaw(playerMove);
+        int dir = (int)Input.GetAxisRaw(playerMove);
 
         // line for testing potential wall collisions
         //Debug.DrawRay(transform.position+(offSet * dir), ((Vector2.left) * 1f) * dir, Color.green, 3.0f, false);
@@ -86,7 +91,8 @@ public class PlayerMovement : MonoBehaviour {
         //function to apply force to character sprite to make them move
         //raycast used to determine if character is going to run into a wall. If so, don't let them put force into it
         RaycastHit2D wallDetect = new RaycastHit2D();
-        wallDetect = Physics2D.Raycast(transform.position + (offSet * dir), (Vector2.left * 0.25f) * dir);
+        Debug.DrawRay(new Vector2((transform.position.x),transform.position.y+5.0f), (Vector2.left * 1f) * -dir, Color.green, 3.0f, false);
+        wallDetect = Physics2D.Raycast(transform.position + (offSet/2 * dir), (Vector2.left * 0.15f) * dir);
         try
         {
             if (wallDetect.collider.gameObject.tag == "Environment")
@@ -98,8 +104,9 @@ public class PlayerMovement : MonoBehaviour {
 
             }//end if
 
-            else if (maxSpeed.x > Mathf.Abs(playerRigBod2d.velocity.x))
+            if (maxSpeed.x > Mathf.Abs(playerRigBod2d.velocity.x))
             {
+                //move character
                 playerRigBod2d.AddForce((Vector2.right * acceleration * dir) * speedModifier);
 
             }//end else if
@@ -269,5 +276,17 @@ public class PlayerMovement : MonoBehaviour {
 
     }
     */
+
+    public void setGrounded(bool grounded)
+    {
+        this.grounded = grounded;
+
+    }//end setGrounded
+
+    public bool getGrounded()
+    {
+        return grounded;
+
+    }
 
 }

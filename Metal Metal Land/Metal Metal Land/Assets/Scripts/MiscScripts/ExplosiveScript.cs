@@ -8,7 +8,7 @@ public class ExplosiveScript : MonoBehaviour {
         foreach (Collider2D collider in colliders)
         {
             if (collider.tag.ToLower() == "environment")
-            { 
+            {
 
                 collider.GetComponent<CellBehaviourScript>().explode();
 
@@ -16,7 +16,7 @@ public class ExplosiveScript : MonoBehaviour {
 
             else if (collider.tag.ToLower() == "player")
             {
-                
+
                 collider.GetComponent<PlayerGameController>().killPlayer();
 
             } //end else if player
@@ -36,7 +36,8 @@ public class ExplosiveScript : MonoBehaviour {
             else if (collider.gameObject.tag.ToLower() == "bombbox")
             {
                 //verify bomb is not currently exploding in order to avoid stack overflow errors
-                collider.gameObject.GetComponent<BombBoxScript>().detonateBomb();
+                if (!collider.gameObject.GetComponent<BombBoxScript>().detonating)
+                    collider.gameObject.GetComponent<BombBoxScript>().detonateBomb();
 
             }// end else if bombbox
 

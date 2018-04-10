@@ -391,7 +391,7 @@ public class ProceduralGenScript : MonoBehaviour
 
         //generate spikes
         //if (spikeOrBombBarrelChance == 1)
-        if(1==1)
+        if(Random.Range(1,3) == 1)
         {
             GameObject spikes = Resources.Load("Objects/Spikes") as GameObject;
 
@@ -407,7 +407,7 @@ public class ProceduralGenScript : MonoBehaviour
                         spikePitLocation = getSurfaceCells(ref surfaceCells);
                     } while (terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + 1] == null ||
                             terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + 2] == null);
-
+                    
                     foreach (Vector2 vec in surfaceCells)
                     {
                         if (vec.x == spikePitLocation.x)
@@ -470,19 +470,22 @@ public class ProceduralGenScript : MonoBehaviour
             
         }//end if spikes are to be used
 
-        else if(spikeOrBombBarrelChance == 2)
+        else
         {
+            GameObject bombBox = Resources.Load("Objects/BombBox") as GameObject;
+
             int explosiveBarrelsCount = 0;
             int maxExplosiveBarrelsCount = terrXLength / 10;
             while (explosiveBarrelsCount< maxExplosiveBarrelsCount)
             {
 
-                Vector2 explosiveBarrelLocation= getSurfaceCells(ref surfaceCells);
+                Vector2 bombBoxPos = getSurfaceCells(ref surfaceCells);
 
-                if (!(explosiveBarrelLocation.x <= -1 || explosiveBarrelLocation.y <= -1))
+                if (!(bombBoxPos.x <= -1 || bombBoxPos.y <= -1))
                 {
-                    terrainArray[(int)explosiveBarrelLocation.x, (int)explosiveBarrelLocation.y].GetComponent<SpriteRenderer>().color = Color.black; //sets color to black
-                    surfaceCells.Remove(explosiveBarrelLocation);
+                    //terrainArray[(int)explosiveBarrelLocation.x, (int)explosiveBarrelLocation.y].GetComponent<SpriteRenderer>().color = Color.black; //sets color to black
+                    GameObject bombBoxSpawned = Instantiate(bombBox, terrainArray[(int)bombBoxPos.x, (int)bombBoxPos.y].transform.position + new Vector3(0, 0.64f), this.transform.rotation) as GameObject;
+                    surfaceCells.Remove(bombBoxPos);
                     Debug.Log("Barrel Spawned");
                     explosiveBarrelsCount++;
 

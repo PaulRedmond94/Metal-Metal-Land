@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameController : MonoBehaviour {
 
@@ -36,23 +37,33 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(Time.frameCount%60 == 0)
+        try
         {
-            foreach(GameObject playChar in players)
+            if (Time.frameCount % 60 == 0)
             {
-                if (playChar.GetComponent<PlayerGameController>().getAlive() == false)
+                foreach (GameObject playChar in players)
                 {
-                    if(deathDetected == false)
+                    if (playChar.GetComponent<PlayerGameController>().getAlive() == false)
                     {
-                        deathDetected = true;
-                        Invoke("roundVictory", 3);
+                        if (deathDetected == false)
+                        {
+                            deathDetected = true;
+                            Invoke("roundVictory", 3);
 
+                        }
                     }
+
                 }
 
             }
 
         }
+        catch(NullReferenceException nre)
+        {
+
+
+        }
+        
 
 	}
 
@@ -118,7 +129,6 @@ public class GameController : MonoBehaviour {
 
     IEnumerator loadNextLevel()
     {
-        Debug.Log("new level loaded!!!!!!!!!!!!!!!!!!!!!!!!!!");
         loadingLevelCoRoutine = SceneManager.LoadSceneAsync(StaticScript.nextSceneToLoad);
         loadingLevelCoRoutine.allowSceneActivation = false;
         yield return null;

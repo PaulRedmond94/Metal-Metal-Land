@@ -65,7 +65,7 @@ public class SniperFire : MonoBehaviour {
 
         Destroy(firedBullet, 5.0f);
 
-        Invoke("allowFiring", reLoadTime);
+        
 
     }//end fireBullet
 

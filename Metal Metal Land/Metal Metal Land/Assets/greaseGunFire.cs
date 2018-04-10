@@ -6,19 +6,21 @@ public class greaseGunFire : MonoBehaviour {
     GameObject bullet;
     bool canFire;
     Vector2 shootingPosition;
+    string fireAxis;
 
     // Use this for initialization
     void Start()
     {
         bullet = Resources.Load("Objects/Ammo/BulletPrefab") as GameObject;
         canFire = true;
+        fireAxis = transform.parent.GetComponent<PlayerWeaponPickup>().getFireAxis();
 
     }//end start
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("n") && this.transform.parent.transform.parent.tag == "Player")
+        if (Input.GetAxis(fireAxis) == 1 && this.transform.parent.transform.parent.tag == "Player")
         {
             if (canFire)
             {
