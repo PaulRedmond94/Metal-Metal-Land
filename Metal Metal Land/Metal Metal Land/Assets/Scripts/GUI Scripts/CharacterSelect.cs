@@ -33,8 +33,15 @@ public class CharacterSelect : MonoBehaviour {
     int skipIndex;
 
     //boolean variables to determine if either player has picked their character 
-    bool p1Confirm;
-    bool p2Confirm;
+    bool p1Confirm, p2Confirm;
+
+    //boolean variables to determine if a player can move their character select icon
+    //included to stop skipping over multiple characters easily
+    bool p1CanChange, p2CanChange;
+
+
+    //axis variables for controllers
+    string p1move, p2move, p1ConfirmButton, p2ConfirmButton;
 
 	// Use this for initialization
 	void Start () {
@@ -72,8 +79,6 @@ public class CharacterSelect : MonoBehaviour {
         //call function to read in character details from text file 
         readInCharacterData();
 
-
-
         //load in initial values
         p1DescText.GetComponent<Text>().text =
             "Name: " + characters[p1CurrentCharacter].getName() +
@@ -89,6 +94,15 @@ public class CharacterSelect : MonoBehaviour {
 
         skipIndex = -1;
 
+        p1CanChange = true;
+        p2CanChange = true;
+
+        p1move = "p1_move";
+        p1ConfirmButton = "p1_jump";
+
+        p2move = "p2_move";
+        p2ConfirmButton = "p2_jump";
+
     }//end start
 
     // Update is called once per frame
@@ -99,8 +113,9 @@ public class CharacterSelect : MonoBehaviour {
         // handle player 1's input
         if (!p1Confirm)
         {
-            if (Input.GetKeyDown("right"))
+            if (Input.GetAxis(p1move)==1 && p1CanChange)
             {
+                p1CanChange = false;
                 p1CurrentCharacter++;
                 if (p1CurrentCharacter > 7)
                     p1CurrentCharacter = 0;
@@ -108,11 +123,13 @@ public class CharacterSelect : MonoBehaviour {
                     p1CurrentCharacter++;
 
                 p1Change = true;
+                StartCoroutine("allowPlayerToMove", 1);
 
             }//end if input is right
 
-            else if (Input.GetKeyDown("left"))
+            else if (Input.GetAxis(p1move)==-1 && p1CanChange)
             {
+                p1CanChange = false;
                 p1CurrentCharacter--;
                 if (p1CurrentCharacter < 0)
                     p1CurrentCharacter = 7;
@@ -121,9 +138,10 @@ public class CharacterSelect : MonoBehaviour {
                     p1CurrentCharacter--; 
 
                 p1Change = true;
+                StartCoroutine("allowPlayerToMove", 1);
 
             }//end p1 input
-            else if (Input.GetKeyDown("space") && p1Confirm != true)
+            else if (Input.GetAxis(p1ConfirmButton) == 1 && !p1Confirm)
             {
                 p1Confirm = true;
                 StaticScript.player1Character = characters[p1CurrentCharacter].getName();
@@ -140,10 +158,11 @@ public class CharacterSelect : MonoBehaviour {
 
 
         // handle player 2's input
-        if (!p2Confirm)
+        if (!p2Confirm && p2CanChange)
         {
-            if (Input.GetKeyDown("up"))
+            if (Input.GetAxis(p2move)==1)
             {
+                p2CanChange = false;
                 p2CurrentCharacter++;
                 if (p2CurrentCharacter > 7)
                     p2CurrentCharacter = 0;
@@ -151,11 +170,13 @@ public class CharacterSelect : MonoBehaviour {
                     p2CurrentCharacter++;
 
                 p2Change = true;
+                StartCoroutine("allowPlayerToMove", 2);
 
             }//end if input is right
 
-            else if (Input.GetKeyDown("down"))
+            else if (Input.GetAxis(p2move)== -1)
             {
+                p2CanChange = false;
                 p2CurrentCharacter--;
                 if (p2CurrentCharacter < 0)
                     p2CurrentCharacter = 7;
@@ -163,10 +184,11 @@ public class CharacterSelect : MonoBehaviour {
                     p2CurrentCharacter--;
 
                 p2Change = true;
+                StartCoroutine("allowPlayerToMove", 2);
 
             }//end p2 input
 
-            else if (Input.GetKeyDown("return") && p2Confirm != true)
+            else if (Input.GetAxis(p2ConfirmButton) == 1 && !p2Confirm)
             {
                 p2Confirm = true;
                 StaticScript.player2Character = characters[p2CurrentCharacter].getName();
@@ -247,9 +269,7 @@ public class CharacterSelect : MonoBehaviour {
                 "\nNationality: " + characters[currChar].getNationality() +
                 "\nGenre: " + characters[currChar].getGenre();
         }//end else
-        Debug.Log(pIcon.GetComponent<RectTransform>().position);
-
-
+        
     }//end updateProfileImages
 
     // function used to push other playericon off of a recently select profile
@@ -275,6 +295,27 @@ public class CharacterSelect : MonoBehaviour {
         }
 
     }
+
+    IEnumerator allowPlayerToMove(int player)
+    {
+        //wait for 1/10th of a second
+        yield return new WaitForSeconds(0.1f);
+
+        if(player == 1)
+        {
+            p1CanChange = true;
+
+        }//end if player 1
+
+        else
+        {
+            p2CanChange = true;
+
+        }
+
+        //return 
+    }
+
 
 
 

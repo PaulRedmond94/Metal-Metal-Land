@@ -18,7 +18,6 @@ public class GroundDetector : MonoBehaviour {
     {
         if (coll.gameObject.tag.ToLower() == "environment" || coll.gameObject.tag.ToLower() == "bombbox") 
         {
-            Debug.Log("touched the ground");
             if (!gameObject.GetComponentInParent<PlayerMovement>().getGrounded())
                 gameObject.GetComponentInParent<PlayerMovement>().setGrounded(true);
         }

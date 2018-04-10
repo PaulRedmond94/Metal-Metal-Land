@@ -1,6 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+Script which is used to control:
+    player movement (running, jumping etc.)
+    player animations for previously mentioned movement states
+
+
+*/
+
 public class PlayerMovement : MonoBehaviour {
 
     //variables to manipulate movement
@@ -15,6 +23,8 @@ public class PlayerMovement : MonoBehaviour {
     Rigidbody2D playerRigBod2d;
 
     bool faceLeft, grounded;
+
+    bool canMosh, currentlyMoshing;
     
     //variables to manipulate animation
     Animator characterAnimator;
@@ -50,7 +60,7 @@ public class PlayerMovement : MonoBehaviour {
         changeAnimationState(0);
         assignAxis();
 
-
+        canMosh = true;
 
     }//end start
 
@@ -165,6 +175,8 @@ public class PlayerMovement : MonoBehaviour {
 
         }//end if
 
+
+        /*
         //character is now crouching, reduce speed and knockback
         if (Input.GetKeyDown("s"))
         {
@@ -180,11 +192,41 @@ public class PlayerMovement : MonoBehaviour {
             Debug.Log("Not crouching");
             speedModifier = 1.0f;
         }//end if
+        */
+
+        if (canPlayerMosh())
+        {
+            canMosh = false;
+            currentlyMoshing = true;
+            Invoke("allowMosh", 2.0f);
+
+            playerRigBod2d.AddForce(new Vector2(0, jumpForceYVal), ForceMode2D.Impulse);
+
+
+        }//end if
 
     }//end update
 
+    //function to detect moshing
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (currentlyMoshing)
+        {
+            if(coll.gameObject.tag.ToLower() == "environment")
+            {
+                coll.gameObject.GetComponent<CellBehaviourScript>().decreaseCellHealth(2);
+                Debug.Log("Please stop moshing, the ground can only take so much");
+
+
+            }//end if coll is environment
+            currentlyMoshing = false;
+
+        }//end currentlyMoshing
+
+    }
+
     //function which changes sprites current animation style
-    void changeAnimationState(int state)
+    public void changeAnimationState(int state)
     {
         
         if (currentAnimationState == state)
@@ -259,23 +301,6 @@ public class PlayerMovement : MonoBehaviour {
 
     }
 
-    /*public void assignAxis(int playerNum)
-    {
-        if (playerNum == 1)
-        {
-            playerMove = "p1_move";
-            playerJump = "p1_jump"; 
-
-        }
-        else
-        {
-            playerMove = "p1_move";
-            playerJump = "p1_jump";
-
-        }
-
-    }
-    */
 
     public void setGrounded(bool grounded)
     {
@@ -288,5 +313,31 @@ public class PlayerMovement : MonoBehaviour {
         return grounded;
 
     }
+
+    //function to determine if mosh ability should be usable,
+    //primarily used to dramatically shorten the if statement conditions because it was pretty verbose
+    bool canPlayerMosh()
+    {
+        //if statement to see if player presses fire button, has no weapon and cooldown is over for mosh ability
+        if (Input.GetAxis(gameObject.GetComponent<PlayerWeaponPickup>().getFireAxis()) == 1
+            && gameObject.GetComponent<PlayerWeaponPickup>().weaponPickedUp == false
+            && canMosh)
+        {
+            return true;
+
+        }
+        else
+        {
+            return false;
+
+        }
+
+    }//end canPlayerMosh
+
+    void allowMosh()
+    {
+        canMosh = true;
+
+    }//end void
 
 }

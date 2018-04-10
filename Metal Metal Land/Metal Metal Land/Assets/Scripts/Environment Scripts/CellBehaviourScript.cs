@@ -74,6 +74,15 @@ public class CellBehaviourScript : MonoBehaviour {
 
     }//end decreaseCellHealth
 
+    //overload that allows you to increase stength
+    public void decreaseCellHealth(int damageVal)
+    {
+        cellHealth -= damageVal; 
+        if (cellHealth <= 0)
+            Destroy(gameObject);
+
+    }//end decreaseCellHealth
+
     public int getCellHealth()
     {
         return cellHealth;

@@ -428,7 +428,7 @@ public class ProceduralGenScript : MonoBehaviour
                 }//end try
                 catch(System.IndexOutOfRangeException ioore)
                 {
-                    Debug.Log("Terrain does not match the minimum criteria for spikes to spawn. Spikes will not be spawned");
+                    Debug.Log("Terrain does not match the minimum criteria for spikes to spawn. Spikes will be spawned elsewhere");
 
                 }//end catch
                                     

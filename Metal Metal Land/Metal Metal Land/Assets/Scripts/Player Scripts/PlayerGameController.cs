@@ -38,6 +38,7 @@ public class PlayerGameController : MonoBehaviour {
     public void killPlayer()
     {
         gameObject.GetComponent<PlayerMovement>().enabled = false;
+        gameObject.GetComponent<PlayerMovement>().changeAnimationState(0);
         Debug.Log("You have been killed");
         alive = false;
 

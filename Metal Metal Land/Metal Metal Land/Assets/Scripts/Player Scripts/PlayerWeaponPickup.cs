@@ -1,10 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+    Script which is concerned with controlling players ability to pickup and drop weapons from weapon altars
+
+
+
+*/
+
 public class PlayerWeaponPickup : MonoBehaviour
 {
 
-    bool weaponPickedUp, weaponDroppable, actionCanHappen;
+    public bool weaponPickedUp;
+    bool weaponDroppable, actionCanHappen;
 
     GameObject weaponSlot;
     Vector2 pickupPosition;
