@@ -23,13 +23,13 @@ public class ExplosiveScript : MonoBehaviour {
 
             else if (collider.tag.ToLower() == "livealtar")
             {
-                Destroy(collider);
+                collider.GetComponent<LiveWeaponAltarScript>().removeAltar();
 
             }//end else if livealtar
 
             else if (collider.tag.ToLower() == "inertaltar")
             {
-                Destroy(collider);
+                collider.GetComponent<InertWeaponAltarScript>().removeAltar();
 
             }//end else if inertaltar
 

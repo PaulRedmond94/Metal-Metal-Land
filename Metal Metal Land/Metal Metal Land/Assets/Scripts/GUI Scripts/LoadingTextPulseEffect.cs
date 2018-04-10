@@ -24,6 +24,11 @@ public class LoadingTextPulseEffect : MonoBehaviour {
 
         }//end if
 
+        if(Time.frameCount%60 == 0)
+        {
+            UpdateLoadText();
+
+        }
 
 	}
 
@@ -48,7 +53,6 @@ public class LoadingTextPulseEffect : MonoBehaviour {
         if (count == 3)
             count = 0;
         loadText.text = textToLoad;
-        Debug.Log(textToLoad);
 
     }//end void
 }

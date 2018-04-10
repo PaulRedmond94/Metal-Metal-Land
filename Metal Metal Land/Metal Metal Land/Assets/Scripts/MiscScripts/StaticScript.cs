@@ -10,5 +10,6 @@
     public static string terrainGenType;
     public static int roundCount = 10;
 
+    public static bool roundInProngress = false;
 
 }//end static script
