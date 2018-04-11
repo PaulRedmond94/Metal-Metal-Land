@@ -428,7 +428,7 @@ public class ProceduralGenScript : MonoBehaviour
                 }//end try
                 catch(System.IndexOutOfRangeException ioore)
                 {
-                    Debug.Log("Terrain does not match the minimum criteria for spikes to spawn. Spikes will be spawned elsewhere");
+
 
                 }//end catch
                                     
@@ -486,7 +486,6 @@ public class ProceduralGenScript : MonoBehaviour
                     //terrainArray[(int)explosiveBarrelLocation.x, (int)explosiveBarrelLocation.y].GetComponent<SpriteRenderer>().color = Color.black; //sets color to black
                     GameObject bombBoxSpawned = Instantiate(bombBox, terrainArray[(int)bombBoxPos.x, (int)bombBoxPos.y].transform.position + new Vector3(0, 0.64f), this.transform.rotation) as GameObject;
                     surfaceCells.Remove(bombBoxPos);
-                    Debug.Log("Barrel Spawned");
                     explosiveBarrelsCount++;
 
                 }//end if
@@ -571,17 +570,11 @@ public class ProceduralGenScript : MonoBehaviour
             }//end for each
 
             //handle the rare event where there may not be a valid square at the point, roll again and grab the next square
-            if (objectSpawn.x <= -1 || objectSpawn.y <= -1)
-            {
-                Debug.Log("Failed on setting the spawn for object");
-
-            }//end if
-
-            else
+            if (!(objectSpawn.x <= -1) || !(objectSpawn.y <= -1))
             {
                 spawnSet = true;
 
-            }//end else 
+            }//end if
 
             return objectSpawn;
 

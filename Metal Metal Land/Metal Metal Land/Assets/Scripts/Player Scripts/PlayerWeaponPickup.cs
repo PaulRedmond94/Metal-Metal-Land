@@ -19,6 +19,8 @@ public class PlayerWeaponPickup : MonoBehaviour
     Vector2 equipPosition;
     string playerPickupAxis, playerFire;
 
+    GameObject uiController;
+
     // Use this for initialization
     void Start()
     {
@@ -27,6 +29,8 @@ public class PlayerWeaponPickup : MonoBehaviour
         weaponDroppable = false;
         actionCanHappen = true;
         assignAxis();
+
+        uiController = GameObject.FindGameObjectWithTag("InGameLiveUI");
 
     }
 
@@ -37,7 +41,7 @@ public class PlayerWeaponPickup : MonoBehaviour
         if (Input.GetAxis(playerPickupAxis)  == 1 && weaponPickedUp == true && weaponDroppable == true && actionCanHappen == true)
         {
             actionCanHappen = false;
-            Debug.Log("Drop gun");
+            updateUI("Nothing");
 
             //throw gun away
             Destroy(weaponSlot.gameObject);
@@ -55,11 +59,12 @@ public class PlayerWeaponPickup : MonoBehaviour
             if (Input.GetAxis(playerPickupAxis) == 1 && weaponPickedUp == false && actionCanHappen == true)
             {
                 actionCanHappen = false;
-                Debug.Log("Pickup gun");
                 weaponPickedUp = true;
                 pickupPosition = gameObject.GetComponentInChildren<Transform>().transform.position;
                 weaponSlot = transform.GetChild(0).gameObject;
                 GameObject equipItem = collider.GetComponentInChildren<ItemObjectReference>().equipReference;
+                string equipName = equipItem.name.Replace("Clone", "");
+                updateUI(equipName);
                 weaponSlot = Instantiate(equipItem, transform.GetChild(0).transform.position, transform.rotation) as GameObject;
                 //weaponSlot.transform.position = pickupPosition;
                 weaponSlot.transform.parent = this.transform;
@@ -127,4 +132,12 @@ public class PlayerWeaponPickup : MonoBehaviour
         return playerFire;
 
     }
+
+    void updateUI(string weapon)
+    {
+        string playerObjectName = gameObject.name.Replace("(Clone)","");
+        uiController.GetComponent<InGameUIController>().updateWeapon(playerObjectName, weapon);
+
+    }
+
 }

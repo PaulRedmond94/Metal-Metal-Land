@@ -16,17 +16,19 @@ public class GroundDetector : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.tag.ToLower() == "environment" || coll.gameObject.tag.ToLower() == "bombbox") 
+        if (coll.gameObject.tag.ToLower() == "environment"
+            || coll.gameObject.tag.ToLower() == "bombbox"
+            || coll.gameObject.tag.ToLower() == "livegrenade") 
         {
             if (!gameObject.GetComponentInParent<PlayerMovement>().getGrounded())
                 gameObject.GetComponentInParent<PlayerMovement>().setGrounded(true);
         }
         
 
-        if(coll.gameObject.tag.ToLower() == "player")
+        else if(coll.gameObject.tag.ToLower() == "player")
         {
             coll.gameObject.GetComponent<PlayerGameController>().killPlayer();
-
+            gameObject.GetComponentInParent<PlayerMovement>().setGrounded(true);
         }
     }
 }

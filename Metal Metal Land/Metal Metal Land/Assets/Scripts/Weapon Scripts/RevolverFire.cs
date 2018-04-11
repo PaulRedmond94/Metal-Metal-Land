@@ -23,7 +23,7 @@ public class RevolverFire : MonoBehaviour
     {
         if (Input.GetAxis(fireAxis) > 0 && this.transform.parent.transform.parent.tag == "Player")
         {
-            if (canFire)
+            if (canFire && GetComponentInParent<PlayerGameController>().getAlive())
             {
                 fireBullet(0, 1.0f, 0.75f, 0);
 

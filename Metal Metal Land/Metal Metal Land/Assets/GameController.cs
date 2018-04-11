@@ -30,8 +30,6 @@ public class GameController : MonoBehaviour {
         deathDetected = false;
 
         StartCoroutine(loadNextLevel());
-        Debug.Log("IN START!!!!!!!");
-
 
     }
 	

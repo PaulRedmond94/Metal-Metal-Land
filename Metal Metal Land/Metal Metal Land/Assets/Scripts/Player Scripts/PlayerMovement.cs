@@ -198,7 +198,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             canMosh = false;
             currentlyMoshing = true;
-            Invoke("allowMosh", 0.5f);
+            Invoke("allowMosh", 1.0f);
 
             playerRigBod2d.AddForce(new Vector2(((jumpForceYVal)*getFaceLeft()), jumpForceYVal/2), ForceMode2D.Impulse);
 

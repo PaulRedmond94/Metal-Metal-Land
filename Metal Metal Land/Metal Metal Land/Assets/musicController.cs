@@ -15,7 +15,7 @@ public class musicController : MonoBehaviour {
 	void Awake () {
         if (hasBeenCreatedBefore == false)
         {
-            Debug.Log("first time");
+
             hasBeenCreatedBefore = true;
             DontDestroyOnLoad(transform.gameObject);
 
@@ -23,7 +23,6 @@ public class musicController : MonoBehaviour {
 
             //load in all songs
             Object[] songFiles = Resources.LoadAll("Music/BattleMusic");
-            Debug.Log(songFiles.Length);
             foreach(Object song in songFiles)
             {
                 songs.Add((AudioClip)song);
@@ -39,23 +38,14 @@ public class musicController : MonoBehaviour {
         if (!objMusicController.isPlaying)
         {
             AudioClip song = getRandomSong();
-            Debug.Log("NEW SONG: " + song.name);
             objMusicController.clip = song;
             objMusicController.Play();
             objMusicController.volume = 100;
-            Debug.Log("Now Playing!!!");
 
         }//end if
 
-        if (objMusicController.isPlaying)
-        {
-            Debug.Log("Music is playing");
-
-        }
-
         if (Input.GetKeyDown("m"))
         {
-            Debug.Log("Loading Song");
             objMusicController.Stop();
             AudioClip song = getRandomSong();
             objMusicController.clip = song;
