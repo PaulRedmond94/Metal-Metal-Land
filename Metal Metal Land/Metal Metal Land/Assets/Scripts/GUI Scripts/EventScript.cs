@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class EventScript : MonoBehaviour {
 
     public Button btnPlay;
-    public Button btnChars;
+    public Button btnObjective;
+    public Button btnControls;
     public Button btnOptions;
     public Button btnExit;
 
@@ -14,7 +15,8 @@ public class EventScript : MonoBehaviour {
 	void Start () {
         //add on click listeners to each button
         btnPlay.GetComponent<Button>().onClick.AddListener(playFunction);
-        btnChars.GetComponent<Button>().onClick.AddListener(charsFunction);
+        btnObjective.GetComponent<Button>().onClick.AddListener(objectiveFunction);
+        btnControls.GetComponent<Button>().onClick.AddListener(controlsFunction);
         btnOptions.GetComponent<Button>().onClick.AddListener(optionsFunction);
         btnExit.GetComponent<Button>().onClick.AddListener(exitFunction);
 
@@ -28,20 +30,28 @@ public class EventScript : MonoBehaviour {
 
     void playFunction()
     {
-        Debug.Log("Play Button Clicked");
         StaticScript.nextSceneToLoad = "Scenes/CharacterSelect";
         SceneManager.LoadScene("Scenes/LoadingManager", LoadSceneMode.Single);
 
     }//end playFuncton
 
-    void charsFunction()
+    void objectiveFunction()
     {
-        StaticScript.nextSceneToLoad = ("Spaghetti");
+        StaticScript.nextSceneToLoad = "Scenes/GameObjective";
+        SceneManager.LoadScene("Scenes/LoadingManager", LoadSceneMode.Single);
+
+    }//end ObjectiveFunction
+
+    void controlsFunction()
+    {
+        StaticScript.nextSceneToLoad = ("Scenes/Controls");
+        SceneManager.LoadScene("Scenes/LoadingManager", LoadSceneMode.Single);
 
     }//end charsFunction
 
     void optionsFunction() {
-        Debug.Log(StaticScript.nextSceneToLoad);
+        StaticScript.nextSceneToLoad = ("Scenes/GameOptions");
+        SceneManager.LoadScene("Scenes/LoadingManager", LoadSceneMode.Single);
 
     }//end optionsFunction
 

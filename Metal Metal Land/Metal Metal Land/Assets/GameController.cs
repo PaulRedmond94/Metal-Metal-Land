@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour {
 
     bool deathDetected;
     bool loadLevel;
+    bool suddenDeath;
     AsyncOperation loadingLevelCoRoutine;
     GameObject[] players;
 
@@ -28,6 +29,7 @@ public class GameController : MonoBehaviour {
         Invoke("findPlayers", 1);
         
         deathDetected = false;
+        suddenDeath = false;
 
         StartCoroutine(loadNextLevel());
 
@@ -58,41 +60,25 @@ public class GameController : MonoBehaviour {
         }
         catch(NullReferenceException nre)
         {
-
+            //this catch is here in the event that the game has loaded the characters too slowly
 
         }
+
+        //if sudden death is enabled, drop a bomb every 3 seconds from a random position
+        if(suddenDeath && Time.frameCount % 180 == 0)
+        {
+            Debug.Log("bomb dropped, rip");
+            
+        }//end if
         
 
 	}
 
-    /*   void killPlayer(int player)
-       {
-           if (player == 1)
-           {
-               player1Alive = false;
-
-           }
-           else if(player == 2)
-           {
-               player2Alive = false;
-
-           }
-           Debug.Log("Player death detected");
-           if (!deathDetected)
-           {
-               deathDetected = true;
-               Invoke("roundVictory", 3.0f);
-
-           }
-
-
-       }//end killPlayer
-       */
     public void roundVictory()
     {
         Debug.Log("In round victory");
-        loadingLevelCoRoutine.allowSceneActivation = true;
-        /*foreach(GameObject charObj in players)
+        
+        foreach(GameObject charObj in players)
         {
             if (charObj.GetComponent<PlayerGameController>().getAlive())
             {
@@ -111,17 +97,11 @@ public class GameController : MonoBehaviour {
             }
 
         }
-
-        if (player1Alive)
-            StaticScript.player1Score++;
-
-        else if (player2Alive)
-            StaticScript.player2Score++;
         
         Debug.Log("Round is over");
-        */
-
-
+        
+        //load new level
+        loadingLevelCoRoutine.allowSceneActivation = true;
 
     }
 
@@ -141,6 +121,12 @@ public class GameController : MonoBehaviour {
             player.GetComponent<PlayerGameController>().setAlive(true);
 
         }
+
+    }
+
+    public void beginSuddenDeath()
+    {
+        suddenDeath = true;
 
     }
     

@@ -13,11 +13,22 @@ public class InGameUIController : MonoBehaviour {
     //gameobjects for current player weapon
     public GameObject player1Weapon, player2Weapon;
 
-    //gameobject to control game countdown
+    //gameobject/variable to control initial game countdown
     public GameObject countDownText;
     int countdownVal = 3;
 
+    //gameobjects to show player scores
+    public GameObject player1Score, player2Score;
+
+
+    //array to hold reference to players object
     GameObject[] players;
+
+    //Objects/variables for sudden death alert
+    public GameObject suddenDeathText;
+
+    //gameobject variable to reference the gamelogic controller
+    public GameObject gameController;
 
 	// Use this for initialization
 	void Start () {
@@ -27,13 +38,21 @@ public class InGameUIController : MonoBehaviour {
         player1Name.GetComponent<Text>().text = "Player 1: " + StaticScript.player1Character;
         player2Name.GetComponent<Text>().text = "Player 2: " + StaticScript.player2Character;
 
+        player1Score.GetComponent<Text>().text = "Score: " + StaticScript.player1Score;
+        player2Score.GetComponent<Text>().text = "Score: " + StaticScript.player2Score;
 
-    }
+        //initally hide sudden death text
+        suddenDeathText.GetComponent<Text>().enabled = false;  
+
+        //in 15 seconds make sudden death text appear
+        Invoke("suddenDeath", 15.0f);
+
+    }//end start
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (Time.frameCount % 60 == 0)
+        if (Time.frameCount % 45 == 0)
         {
             countdownVal--;
 
@@ -100,5 +119,11 @@ public class InGameUIController : MonoBehaviour {
 
     }//end updateWeapon
 
+    void suddenDeath()
+    {
+        suddenDeathText.GetComponent<Text>().enabled = true;
+        gameController.GetComponent<GameController>().beginSuddenDeath();
+
+    }//end beginSuddenDeath
 
 }

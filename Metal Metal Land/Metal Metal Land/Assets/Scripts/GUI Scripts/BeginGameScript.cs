@@ -24,6 +24,7 @@ public class BeginGameScript : MonoBehaviour {
 
     void beginGame()
     {
+        //reset player scores and tell loading manager to load up 
         StaticScript.roundCount = System.Int32.Parse(roundCounter.GetComponent<Text>().text);
         StaticScript.player1Score = 0;
         StaticScript.player2Score = 0;
