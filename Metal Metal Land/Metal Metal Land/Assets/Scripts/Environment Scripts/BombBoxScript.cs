@@ -1,12 +1,16 @@
-﻿//script to control bomb box explosions, fuses, volatility etc.
+﻿//script to control bomb box explosions, fuses, volatility and so on
 
 using UnityEngine;
 using System.Collections;
 
 public class BombBoxScript : MonoBehaviour {
 
+    //variable to determine if the bomb box is detonating, used to prevent stack overflow glitches when an explosion hits a bomb box
     public bool detonating;
-    //TODO Bring in feature where if box falls, it will detonate when it hits ground
+    //used to determine if the box is falling. If boxes are falling, they will explode when they hit the ground
+    bool falling;
+
+    //physics parts of the game object
     Rigidbody2D bombBoxRigBox;
     CircleCollider2D cirCol;
     GameObject explosionEffect;
@@ -15,14 +19,20 @@ public class BombBoxScript : MonoBehaviour {
     void Start () {
         detonating = false;
         bombBoxRigBox = gameObject.GetComponent<Rigidbody2D>();
-        explosionEffect = Resources.Load("Objects/ExplosionEffect") as GameObject;
+        explosionEffect = Resources.Load("Objects/ExplosionEffects/BombBoxExplosionEffect") as GameObject;
         cirCol = gameObject.GetComponent<CircleCollider2D>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        //determine if box is falling
+        if (bombBoxRigBox.velocity.y > 0)
+        {
+            falling = true;
+
+        }//end if to determine falling
 	
-	}
+	}//end update
 
     public void detonateBomb()
     {
@@ -32,9 +42,19 @@ public class BombBoxScript : MonoBehaviour {
         GameObject explosion = Instantiate(explosionEffect, gameObject.GetComponent<BoxCollider2D>().bounds.center, transform.rotation) as GameObject;
         explosion.transform.localScale = new Vector3(1.5f, 1.5f);
 
-
         Destroy(this.gameObject);
 
     }//end detonateBomb
+
+    //collision function to blow up bomb box if block below it is destroyed
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (falling)
+        {
+            detonateBomb();
+
+        }//end if
+
+    }
 
 }

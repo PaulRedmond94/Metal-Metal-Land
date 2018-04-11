@@ -60,7 +60,7 @@ public class CharacterSelect : MonoBehaviour {
         foreach (GameObject charIconPos in charIcons)
         {
             p1IconXAxis.Add((charIconPos.GetComponent<RectTransform>().position.x) - 20);
-            p2IconXAxis.Add((charIconPos.GetComponent<RectTransform>().position.x) + 30);
+            p2IconXAxis.Add((charIconPos.GetComponent<RectTransform>().position.x) + 20);
 
         }//end foreach 
 

@@ -9,7 +9,7 @@ public class RpgExplode : MonoBehaviour {
     // Use this for initialization
     void Start () {
         cirCol = gameObject.GetComponent<CircleCollider2D>();
-        explosionEffect = Resources.Load("Objects/ExplosionEffect") as GameObject;
+        explosionEffect = Resources.Load("Objects/ExplosionEffects/RPGExplosionEffect") as GameObject;
     }
 	
 	// Update is called once per frame

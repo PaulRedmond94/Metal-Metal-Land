@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//class to hold voronoi point object
+//class to hold voronoi point object, uses in the procedural generation algorithm
 class VoronoiPoint
 {
     private int x;

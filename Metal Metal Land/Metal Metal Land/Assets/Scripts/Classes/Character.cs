@@ -1,4 +1,8 @@
 ﻿public class Character {
+    /* Class which holds information and structure for each character
+       Primarily used in the character select screen
+       
+     */
 
     private string name;
     private string nationality;

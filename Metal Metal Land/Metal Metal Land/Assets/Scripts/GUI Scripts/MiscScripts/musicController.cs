@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 public class musicController : MonoBehaviour {
 
-    List<AudioClip> songs = new List<AudioClip>();
+    static List<AudioClip> songs = new List<AudioClip>();
 
-    AudioSource objMusicController;
+    static AudioSource objMusicController;
 
     //variable to determine if this is the first time the object has been created
     static bool hasBeenCreatedBefore = false;
