@@ -10,15 +10,25 @@ public class PlayerGameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-        alive = true;
         deathPointVert = GameObject.FindGameObjectWithTag("BoundaryPoint");
-	}
+
+	}//end awake
+
+    void Start()
+    {
+        alive = true;
+        gameObject.GetComponent<PlayerMovement>().enabled = true;
+        gameObject.GetComponent<PlayerWeaponPickup>().enabled = true;
+
+    }//end start
 	
 	// Update is called once per frame
 	void Update () {
 	    if(alive == false)
         {
             transform.eulerAngles = (new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 90.0f));
+            gameObject.GetComponent<PlayerMovement>().enabled = false;
+            gameObject.GetComponent<PlayerMovement>().changeAnimationState(0);
         }
 
         if(Time.frameCount% 60 == 0)
@@ -37,8 +47,6 @@ public class PlayerGameController : MonoBehaviour {
 
     public void killPlayer()
     {
-        gameObject.GetComponent<PlayerMovement>().enabled = false;
-        gameObject.GetComponent<PlayerMovement>().changeAnimationState(0);
         Debug.Log("You have been killed");
         alive = false;
 
