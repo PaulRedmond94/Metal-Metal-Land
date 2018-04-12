@@ -6,7 +6,6 @@ public class CellBehaviourScript : MonoBehaviour {
     SpriteRenderer mySpriteRenderer;
     string cellTerrainType;
     int cellHealth;
-    Sprite undamaged;
     Sprite cracked;
     Sprite damaged;
     Sprite crumbling;
@@ -17,6 +16,12 @@ public class CellBehaviourScript : MonoBehaviour {
         cellHealth = 5;
         mySpriteRenderer = this.GetComponent<SpriteRenderer>();
         cellTerrainType = "ground";
+
+        //load in terrainDamage sprites 
+        cracked = Resources.Load<Sprite>("Images/EnvironmentArt/BlockSprites/TerrainDegradation/Level1");
+        damaged = Resources.Load<Sprite>("Images/EnvironmentArt/BlockSprites/TerrainDegradation/Level2");
+        crumbling = Resources.Load<Sprite>("Images/EnvironmentArt/BlockSprites/TerrainDegradation/Level3");
+        destroyed = Resources.Load<Sprite>("Images/EnvironmentArt/BlockSprites/TerrainDegradation/Level4");
 
     }
 
@@ -80,6 +85,39 @@ public class CellBehaviourScript : MonoBehaviour {
         cellHealth -= damageVal; 
         if (cellHealth <= 0)
             Destroy(gameObject);
+
+        //if the current block type is a standard terrain block, make it look suitably damaged
+        if(gameObject.tag.ToLower() == "environment" && gameObject.transform.GetChild(0).gameObject != null)
+        {
+            GameObject cellDamage = gameObject.transform.GetChild(0).gameObject;
+
+            if (cellHealth == 4)
+            {
+                cellDamage.GetComponent<SpriteRenderer>().sprite = cracked;
+
+            }
+
+            else if(cellHealth == 3)
+            {
+                cellDamage.GetComponent<SpriteRenderer>().sprite = damaged;
+
+            }//end else if
+
+            else if (cellHealth == 2)
+            {
+                cellDamage.GetComponent<SpriteRenderer>().sprite = crumbling;
+
+            }//end else if
+
+            else if(cellHealth ==1)
+            {
+                cellDamage.GetComponent<SpriteRenderer>().sprite = destroyed;
+
+            }//end else if
+
+        }//end if regular environment block
+
+        
 
     }//end decreaseCellHealth
 
