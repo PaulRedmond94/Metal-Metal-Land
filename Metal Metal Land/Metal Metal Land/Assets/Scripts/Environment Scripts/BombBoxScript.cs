@@ -57,4 +57,16 @@ public class BombBoxScript : MonoBehaviour {
 
     }
 
+    public void setFalling(bool falling)
+    {
+        this.falling = falling;
+
+    }//end setFalling
+
+    public bool getFalling()
+    {
+        return falling;
+
+    }//end getFalling
+
 }

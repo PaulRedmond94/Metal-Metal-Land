@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
-using System;
+
 
 public class GameController : MonoBehaviour {
 
@@ -16,7 +16,11 @@ public class GameController : MonoBehaviour {
 
     bool deathDetected;
     bool loadLevel;
+
+    //sudden death related bools
     bool suddenDeath;
+
+
     AsyncOperation loadingLevelCoRoutine;
     GameObject[] players;
 
@@ -58,16 +62,16 @@ public class GameController : MonoBehaviour {
             }
 
         }
-        catch(NullReferenceException nre)
+        catch(System.NullReferenceException nre)
         {
             //this catch is here in the event that the game has loaded the characters too slowly
 
         }
 
-        //if sudden death is enabled, drop a bomb every 3 seconds from a random position
-        if(suddenDeath && Time.frameCount % 180 == 0)
+        //if sudden death is enabled, drop a bomb every 5 seconds from a random position
+        if(suddenDeath && Time.frameCount%300 == 0)
         {
-            Debug.Log("bomb dropped, rip");
+            dropBomb();
             
         }//end if
         
@@ -82,7 +86,8 @@ public class GameController : MonoBehaviour {
         {
             if (charObj.GetComponent<PlayerGameController>().getAlive())
             {
-                if(charObj.name + "(Clone)" == StaticScript.player1Character)
+                Debug.Log(charObj.name);
+                if(charObj.name.Replace("(Clone)","") == StaticScript.player1Character)
                 {
                     StaticScript.player1Score++;
                     Debug.Log("Player 1 gets a point");
@@ -93,6 +98,14 @@ public class GameController : MonoBehaviour {
                     Debug.Log("Player 2 gets a point");
 
                 }
+
+                //check to see if the game should end, if it should load victory screen
+                if(StaticScript.player1Score == StaticScript.roundCount
+                    || StaticScript.player2Score == StaticScript.roundCount)
+                {
+
+
+                }//end if
 
             }
 
@@ -129,6 +142,51 @@ public class GameController : MonoBehaviour {
         suddenDeath = true;
 
     }
+
+    void dropBomb()
+    {
+        //bool that determines if a bomb was dropped
+        bool bombDropped = false;
+
+        //gets array of current cells
+        GameObject[,] cellArray = gameObject.GetComponent<ProceduralGenScript>().getLandCellArray();
+
+        //gets bombbox prefab
+        GameObject bombBox = Resources.Load("Objects/BombBox") as GameObject;
+        
+        while(bombDropped == false)
+        {
+            int subRand = Random.Range(0, gameObject.GetComponent<ProceduralGenScript>().getTerrXLength() + 1);
+
+            try
+            {
+                //loop through column rows to determine if there is a block to drop a bomb on
+                for (int i = 0; i < gameObject.GetComponent<ProceduralGenScript>().getTerrYLength(); i++)
+                {
+                    if (cellArray[subRand, i] != null)
+                    {
+                        Debug.Log(cellArray[subRand, i].transform.position);
+                        GameObject droppingBomb = Instantiate(bombBox, gameObject.transform.position + cellArray[subRand, i].gameObject.transform.position + new Vector3(8, 10), gameObject.transform.rotation) as GameObject;
+                        droppingBomb.GetComponent<BombBoxScript>().setFalling(true);
+
+                        bombDropped = true;
+                        Debug.Log("Drop the bombshell");
+                        break;
+
+                    }//end if
+
+                }//end for loop to go through column
+
+            }
+            catch(System.IndexOutOfRangeException ioore)
+            {
+                Debug.LogError("You've run out of cells, game should end soon...");
+
+            }//end catch
+            
+        }//end while
+
+    }//end dropBomb
     
 
 }

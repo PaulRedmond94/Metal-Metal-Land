@@ -11,8 +11,8 @@ public class ProceduralGenScript : MonoBehaviour
     GameObject[,] terrainArray;
 
     //variables for determining the x and y dimensions of the world 
-    public int terrXLength = 25;
-    public int terrYLength = 10;
+    int terrXLength = 30;
+    int terrYLength = 10;
 
     public Sprite[] terrainTop;
     public Sprite[] terrainBelow;
@@ -70,26 +70,7 @@ public class ProceduralGenScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKeyDown("space"))
-        {
-            GameObject[] cells;
-            cells = GameObject.FindGameObjectsWithTag("Environment");
 
-            //destroy all current cells
-            foreach(GameObject cell in cells)
-            {
-                Destroy(cell);
-
-            }//end foreach
-
-            //reset variables
-            terrainArray = null;
-            vPoints = null;
-
-            genTerrain();
-
-        }//end if
-        */
     }
 
     //core function to generate the terrain
@@ -99,7 +80,7 @@ public class ProceduralGenScript : MonoBehaviour
         //procedural Generation algorithm goes here
         //declare an array of Voronoi Point objects 
         vPoints = new VoronoiPoint[maxVoronoiPoints];
-
+        
         //execute function to generate values for the voronoi array
         generateVoronoiPoints();
 
@@ -584,5 +565,37 @@ public class ProceduralGenScript : MonoBehaviour
         return new Vector2(-1, -1);
         
     }//end getSurfaceCells
+
+    //setters and getters
+    public int getTerrXLength()
+    {
+        return terrXLength;
+
+    }
+
+    public void setTerrXLength(int terrXLength)
+    {
+        this.terrXLength = terrXLength;
+
+    }
+
+    public int getTerrYLength()
+    {
+        return terrYLength;
+
+    }//end getTerrYLength
+
+    public void setTerrYLength(int terrYLength)
+    {
+        this.terrYLength = terrYLength;
+
+    }
+
+    //function which returns the current status of all cells
+    public GameObject[,] getLandCellArray()
+    {
+        return terrainArray;
+
+    }
 
 }//end main class
