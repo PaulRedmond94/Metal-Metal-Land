@@ -197,7 +197,7 @@ public class ProceduralGenScript : MonoBehaviour
             }//end else if
 
         }//end if terrain gen is set to standard
-        else if (2 == 2)
+        else if (2 == 3)
         {
             upperY = (int)(terrYLength * 0.2);
             lowerY = (int)(terrYLength * 0.8);
@@ -243,6 +243,21 @@ public class ProceduralGenScript : MonoBehaviour
             }
 
         }//end else if 1==1
+
+        else if (1 == 1)
+        {
+            if(Random.Range(1, 3)==1){
+                return "land";
+
+            }//end if
+
+            else
+            {
+                return "air";
+
+            }
+
+        }
 
 
 
