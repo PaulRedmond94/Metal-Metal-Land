@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
-
+using System.Collections.Generic;
 
 public class GameController : MonoBehaviour {
 
@@ -19,10 +19,13 @@ public class GameController : MonoBehaviour {
 
     //sudden death related bools
     bool suddenDeath;
+    bool skipBombDrop;
 
 
     AsyncOperation loadingLevelCoRoutine;
     GameObject[] players;
+
+    List<GameObject> powerups = new List<GameObject>();
 
 	// Use this for initialization
 	void Awake () {
@@ -34,6 +37,14 @@ public class GameController : MonoBehaviour {
         
         deathDetected = false;
         suddenDeath = false;
+        skipBombDrop = false;
+
+        //powerups = Resources.LoadAll("Objects/Powerups") as List<GameObject>;
+        foreach (GameObject powerupPrefab in Resources.LoadAll("Objects/Powerups"))
+        {
+            powerups.Add(powerupPrefab);
+
+        }//end foreach
 
         StartCoroutine(loadNextLevel());
 
@@ -69,14 +80,32 @@ public class GameController : MonoBehaviour {
         }
 
         //if sudden death is enabled, drop a bomb every 5 seconds from a random position
-        if(suddenDeath && Time.frameCount%300 == 0)
+        if(suddenDeath && Time.frameCount%300 == 0 && !skipBombDrop)
         {
-            dropBomb();
+            dropItem(true);
             
         }//end if
-        
 
-	}
+        //used in the event that someone uses Dio's Essence Powerup to stop time
+        if (skipBombDrop)
+        {
+            skipBombDrop = false;
+
+        }
+
+        //every 10 seconds potentially drop a powerup
+        if(Time.frameCount%60 == 0)
+        {
+            if (1 == 1)
+            {
+                dropItem(false);
+
+            }//end if
+
+        }
+
+
+    }
 
     public void roundVictory()
     {
@@ -103,7 +132,8 @@ public class GameController : MonoBehaviour {
                 if(StaticScript.player1Score == StaticScript.roundCount
                     || StaticScript.player2Score == StaticScript.roundCount)
                 {
-
+                    StaticScript.nextSceneToLoad = "Scenes/VictoryScene";
+                    SceneManager.LoadScene("Scenes/LoadingManager", LoadSceneMode.Single);
 
                 }//end if
 
@@ -143,18 +173,18 @@ public class GameController : MonoBehaviour {
 
     }
 
-    void dropBomb()
+    void dropItem(bool droppingBomb)
     {
         //bool that determines if a bomb was dropped
-        bool bombDropped = false;
+        bool itemDropped = false;
 
         //gets array of current cells
         GameObject[,] cellArray = gameObject.GetComponent<ProceduralGenScript>().getLandCellArray();
 
         //gets bombbox prefab
-        GameObject bombBox = Resources.Load("Objects/BombBox") as GameObject;
         
-        while(bombDropped == false)
+        
+        while(itemDropped == false)
         {
             int subRand = Random.Range(0, gameObject.GetComponent<ProceduralGenScript>().getTerrXLength() + 1);
 
@@ -166,20 +196,31 @@ public class GameController : MonoBehaviour {
                     if (cellArray[subRand, i] != null)
                     {
                         Debug.Log(cellArray[subRand, i].transform.position);
-                        GameObject droppingBomb = Instantiate(bombBox, gameObject.transform.position + cellArray[subRand, i].gameObject.transform.position + new Vector3(8, 10), gameObject.transform.rotation) as GameObject;
-                        droppingBomb.GetComponent<BombBoxScript>().setFalling(true);
+                        if (droppingBomb)
+                        {
+                            GameObject bombBox = Resources.Load("Objects/BombBox") as GameObject;
+                            GameObject droppedBomb = Instantiate(bombBox, gameObject.transform.position + cellArray[subRand, i].gameObject.transform.position + new Vector3(8, 10), gameObject.transform.rotation) as GameObject;
+                            droppedBomb.GetComponent<BombBoxScript>().setFalling(true);
 
-                        bombDropped = true;
-                        Debug.Log("Drop the bombshell");
+                        }//end if
+                        else
+                        {
+                            GameObject droppedItem = Instantiate(getRandomPowerup(), gameObject.transform.position + cellArray[subRand, i].gameObject.transform.position + new Vector3(8, 10), gameObject.transform.rotation) as GameObject;
+
+                        }//end else
+
+                        itemDropped = true;
+
                         break;
 
                     }//end if
 
                 }//end for loop to go through column
 
-            }
+            }//end try
             catch(System.IndexOutOfRangeException ioore)
             {
+                //only occurs when bombs are dropping
                 Debug.LogError("You've run out of cells, game should end soon...");
 
             }//end catch
@@ -187,6 +228,18 @@ public class GameController : MonoBehaviour {
         }//end while
 
     }//end dropBomb
+
+    GameObject getRandomPowerup()
+    {
+        return powerups[Random.Range(0, powerups.Count + 1)];
+
+    }//end generatePowerup
+
+    public void setSkipBombDrop()
+    {
+        skipBombDrop = true;
+
+    }//end skipBomb
     
 
 }

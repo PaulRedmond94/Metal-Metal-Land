@@ -113,7 +113,7 @@ public class CharacterSelect : MonoBehaviour {
         // handle player 1's input
         if (!p1Confirm)
         {
-            if (Input.GetAxis(p1move)==1 && p1CanChange)
+            if (Input.GetAxis("p1_move")==1 && p1CanChange)
             {
                 p1CanChange = false;
                 p1CurrentCharacter++;
@@ -127,7 +127,7 @@ public class CharacterSelect : MonoBehaviour {
 
             }//end if input is right
 
-            else if (Input.GetAxis(p1move)==-1 && p1CanChange)
+            else if (Input.GetAxis("p1_move")==-1 && p1CanChange)
             {
                 p1CanChange = false;
                 p1CurrentCharacter--;
@@ -141,7 +141,7 @@ public class CharacterSelect : MonoBehaviour {
                 StartCoroutine("allowPlayerToMove", 1);
 
             }//end p1 input
-            else if (Input.GetAxis(p1ConfirmButton) == 1 && !p1Confirm)
+            else if (Input.GetAxis("p1_jump") == 1 && !p1Confirm)
             {
                 p1Confirm = true;
                 StaticScript.player1Character = characters[p1CurrentCharacter].getName();
@@ -160,7 +160,7 @@ public class CharacterSelect : MonoBehaviour {
         // handle player 2's input
         if (!p2Confirm && p2CanChange)
         {
-            if (Input.GetAxis(p2move)==1)
+            if (Input.GetAxis("p2_move")==1)
             {
                 p2CanChange = false;
                 p2CurrentCharacter++;
@@ -174,7 +174,7 @@ public class CharacterSelect : MonoBehaviour {
 
             }//end if input is right
 
-            else if (Input.GetAxis(p2move)== -1)
+            else if (Input.GetAxis("p2_move")== -1)
             {
                 p2CanChange = false;
                 p2CurrentCharacter--;
@@ -188,7 +188,7 @@ public class CharacterSelect : MonoBehaviour {
 
             }//end p2 input
 
-            else if (Input.GetAxis(p2ConfirmButton) == 1 && !p2Confirm)
+            else if (Input.GetAxis("p2_jump") == 1 && !p2Confirm)
             {
                 p2Confirm = true;
                 StaticScript.player2Character = characters[p2CurrentCharacter].getName();

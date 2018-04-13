@@ -10,6 +10,8 @@ public class CellBehaviourScript : MonoBehaviour {
     Sprite damaged;
     Sprite crumbling;
     Sprite destroyed;
+
+    public GameObject cellDamage;
     
 	// Use this for initialization
 	void Awake () {
@@ -42,10 +44,8 @@ public class CellBehaviourScript : MonoBehaviour {
     
     void OnMouseDown()
     {
-        Debug.Log("Clicked on");
         decreaseCellHealth();
         
-
     }// end OnMouseDown
 
     //setters and getters
@@ -76,20 +76,44 @@ public class CellBehaviourScript : MonoBehaviour {
         cellHealth--;
         if (cellHealth <= 0)
             Destroy(gameObject);
+        else
+        {
+            updateCellSprite();
+        }
 
     }//end decreaseCellHealth
 
     //overload that allows you to increase stength
     public void decreaseCellHealth(int damageVal)
     {
-        cellHealth -= damageVal; 
+        cellHealth -= damageVal;
         if (cellHealth <= 0)
-            Destroy(gameObject);
-
-        //if the current block type is a standard terrain block, make it look suitably damaged
-        if(gameObject.tag.ToLower() == "environment" && gameObject.transform.GetChild(0).gameObject != null)
         {
-            GameObject cellDamage = gameObject.transform.GetChild(0).gameObject;
+            Destroy(gameObject);
+        }
+        
+        else
+        {
+            updateCellSprite();
+        }
+
+    }//end decreaseCellHealth
+
+    public int getCellHealth()
+    {
+        return cellHealth;
+
+    }
+
+    void updateCellSprite()
+    {
+        //if the current block type is a standard terrain block, make it look suitably damaged
+        Debug.Log("in update function");
+        if (gameObject.tag.ToLower() == "environment" && cellDamage.gameObject != null)
+        {
+            Debug.Log("valid object");
+
+            Debug.Log(cellHealth);
 
             if (cellHealth == 4)
             {
@@ -97,7 +121,7 @@ public class CellBehaviourScript : MonoBehaviour {
 
             }
 
-            else if(cellHealth == 3)
+            else if (cellHealth == 3)
             {
                 cellDamage.GetComponent<SpriteRenderer>().sprite = damaged;
 
@@ -109,22 +133,13 @@ public class CellBehaviourScript : MonoBehaviour {
 
             }//end else if
 
-            else if(cellHealth ==1)
+            else if (cellHealth == 1)
             {
                 cellDamage.GetComponent<SpriteRenderer>().sprite = destroyed;
 
             }//end else if
 
         }//end if regular environment block
-
-        
-
-    }//end decreaseCellHealth
-
-    public int getCellHealth()
-    {
-        return cellHealth;
-
     }
 
 }

@@ -43,6 +43,19 @@ public class ProceduralGenScript : MonoBehaviour
     bool player2SpawnSet;
     Vector2 player2Spawn;
 
+    void Awake()
+    {
+        //debug mode variables
+        if(StaticScript.player1Character == "")
+        {
+            StaticScript.player1Character = "Ailbhe";
+            StaticScript.player2Character = "Stuart Butler";
+            StaticScript.roundCount = 10;
+
+        }
+
+    }//end Awake
+
     // Use this for initialization
     void Start()
     {
