@@ -2,6 +2,7 @@
 Script which uses a combination of Voronoi's algorithm and the Manhatten Distance algorithm to procedurally generate a world
 
 */
+
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -147,6 +148,7 @@ public class ProceduralGenScript : MonoBehaviour
         
     }
 
+    //function which returns whether the land should be air or land cells
     string distributedRandom(int x, int y)
     {
         //variables to hold specficiations of where the terrain type should consider the upper, middle and lower values of each axis
@@ -161,18 +163,18 @@ public class ProceduralGenScript : MonoBehaviour
         int rand = Random.Range(1, 11);
 
         //if(StaticScript.terrainGenType.ToLower() == "standard")
-        if (terrainType == 1) //temp variable, use later when basis for algorithm types are set
+        if (2 == 1) //temp variable, use later when basis for algorithm types are set
         {
             //set upper y to be at 20% height
             upperY = (int)(terrYLength * 0.2);
-            lowerY = (int)(terrYLength *0.8);
+            lowerY = (int)(terrYLength * 0.8);
 
             if (y <= upperY)
             {
                 return "air";
 
             }//end if
-            else if(y> upperY && y<= lowerY)
+            else if (y > upperY && y <= lowerY)
             {
                 int subRand = Random.Range(1, 11);
                 if (subRand <= 8)
@@ -180,7 +182,7 @@ public class ProceduralGenScript : MonoBehaviour
                     return "land";
 
                 }//end if
-                else if(subRand> 8)
+                else if (subRand > 8)
                 {
                     return "air";
 
@@ -195,6 +197,53 @@ public class ProceduralGenScript : MonoBehaviour
             }//end else if
 
         }//end if terrain gen is set to standard
+        else if (2 == 2)
+        {
+            upperY = (int)(terrYLength * 0.2);
+            lowerY = (int)(terrYLength * 0.8);
+
+            upperX = (int)(terrXLength * 0.2);
+            lowerX = (int)(terrXLength * 0.8);
+
+            if ((x <= upperX || x >= lowerX))
+            {
+                return "land";
+
+            }
+
+            else if (y <= upperY)
+            {
+                return "air";
+
+            }//end if
+
+            else if (y > lowerY)
+            {
+                return "land";
+
+            }//end else if
+
+            else if((x>upperX && x<lowerX)&&(y>upperY&& y < lowerY))
+            {
+                if(Random.Range(1,4) % 2 == 0)
+                {
+                    return "land";
+
+                }
+                else
+                {
+                    return "air";
+                }
+
+            }
+
+            else
+            {
+                return "land";
+            }
+
+        }//end else if 1==1
+
 
 
         // default return type
