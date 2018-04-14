@@ -17,8 +17,8 @@ public class PlayerMovement : MonoBehaviour {
     float acceleration;
     Vector2 maxSpeed, stopChar;
 
-    //varaibles to manipulate knockback and speed modifications while moving
-    float knockbackModifier, speedModifier;
+    //varaibles to manipulate knockback, jump and speed modifications while moving or with powerups
+    float knockbackModifier, speedModifier, jumpModifier;
 
     Rigidbody2D playerRigBod2d;
 
@@ -37,8 +37,6 @@ public class PlayerMovement : MonoBehaviour {
     Renderer charRenderer;
     CircleCollider2D characterFootBox;
 
-    
-
     // Use this for initialization
     void Start () {
         maxSpeedXVal = 4.0f;
@@ -46,6 +44,7 @@ public class PlayerMovement : MonoBehaviour {
         acceleration = 4.0f;
         knockbackModifier = 1.0f;
         speedModifier = 1.0f;
+        jumpModifier = 1.0f;
 
         faceLeft = false;
         grounded = true;
@@ -72,7 +71,7 @@ public class PlayerMovement : MonoBehaviour {
         if (grounded && (Input.GetAxis(playerJump)== 1))
         {
             grounded = false;
-            playerRigBod2d.AddForce(new Vector2(0,jumpForceYVal), ForceMode2D.Impulse);
+            playerRigBod2d.AddForce(new Vector2(0,jumpForceYVal * jumpModifier), ForceMode2D.Impulse);
             //Bryan's Suggestion
             //playerRigBod2d.AddForce(new Vector2(0, Time.deltaTime * jumpForceYVal), ForceMode2D.Impulse);
             
@@ -101,11 +100,11 @@ public class PlayerMovement : MonoBehaviour {
         //function to apply force to character sprite to make them move
         //raycast used to determine if character is going to run into a wall. If so, don't let them put force into it
         RaycastHit2D wallDetect = new RaycastHit2D();
-        Debug.DrawRay(new Vector2((transform.position.x),transform.position.y+5.0f), (Vector2.left * 1f) * -dir, Color.green, 3.0f, false);
-        wallDetect = Physics2D.Raycast(transform.position + (offSet/2 * dir), (Vector2.left * 0.15f) * dir);
+        //Debug.DrawRay(new Vector2((transform.position.x),transform.position.y+5.0f), (Vector2.left * 1f) * -dir, Color.green, 3.0f, false);
+        //wallDetect = Physics2D.Raycast(transform.position + (offSet/2 * dir), (Vector2.left * 0.15f) * dir);
         try
         {
-            if (wallDetect.collider.gameObject.tag == "Environment")
+            /*if (wallDetect.collider.gameObject.tag == "Environment")
             {
                 //Debug.Log(wallDetect.collider);
                 Vector2 stopChar = playerRigBod2d.velocity;
@@ -113,7 +112,7 @@ public class PlayerMovement : MonoBehaviour {
                 playerRigBod2d.velocity = stopChar;
 
             }//end if
-
+            */
             if (maxSpeed.x > Mathf.Abs(playerRigBod2d.velocity.x))
             {
                 //move character
@@ -301,13 +300,6 @@ public class PlayerMovement : MonoBehaviour {
 
     }
 
-
-    public void setGrounded(bool grounded)
-    {
-        this.grounded = grounded;
-
-    }//end setGrounded
-
     public bool getGrounded()
     {
         return grounded;
@@ -339,5 +331,24 @@ public class PlayerMovement : MonoBehaviour {
         canMosh = true;
 
     }//end void
+
+
+    public void setGrounded(bool grounded)
+    {
+        this.grounded = grounded;
+
+    }//end setGrounded
+
+    public void setSpeedModifier(float speedModifier)
+    {
+        this.speedModifier = speedModifier;
+
+    }//end set speed modifier
+
+    public void setJumpModifier(float jumpModifier)
+    {
+        this.jumpModifier = jumpModifier;
+
+    }//end set jump modifer
 
 }

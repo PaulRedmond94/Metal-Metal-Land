@@ -18,9 +18,12 @@ public class GameController : MonoBehaviour {
     bool loadLevel;
 
     //sudden death related bools
-    bool suddenDeath;
+    bool suddenDeathEnabled;
+    bool suddenDeathActivated;
     bool skipBombDrop;
-
+    
+    //holds reference to ingame ui controller, used for making sudden death text appear when it's necessary
+    public GameObject InGameUIController;
 
     AsyncOperation loadingLevelCoRoutine;
     GameObject[] players;
@@ -36,17 +39,25 @@ public class GameController : MonoBehaviour {
         Invoke("findPlayers", 1);
         
         deathDetected = false;
-        suddenDeath = false;
         skipBombDrop = false;
 
         //powerups = Resources.LoadAll("Objects/Powerups") as List<GameObject>;
         foreach (GameObject powerupPrefab in Resources.LoadAll("Objects/Powerups"))
         {
+            Debug.Log(powerupPrefab.name);
             powerups.Add(powerupPrefab);
 
         }//end foreach
 
         StartCoroutine(loadNextLevel());
+
+        suddenDeathEnabled= StaticScript.suddenDeathEnabled;
+        if (suddenDeathEnabled)
+        {
+            Invoke("beginSuddenDeath",15.0f);
+            
+
+        }
 
     }
 	
@@ -80,30 +91,23 @@ public class GameController : MonoBehaviour {
         }
 
         //if sudden death is enabled, drop a bomb every 5 seconds from a random position
-        if(suddenDeath && Time.frameCount%300 == 0 && !skipBombDrop)
+        if(suddenDeathActivated && Time.frameCount%300 == 0 )
         {
             dropItem(true);
             
         }//end if
 
-        //used in the event that someone uses Dio's Essence Powerup to stop time
-        if (skipBombDrop)
+        //every 15 seconds potentially drop a powerup
+        if(Time.frameCount%900 == 0)
         {
-            skipBombDrop = false;
-
-        }
-
-        //every 10 seconds potentially drop a powerup
-        if(Time.frameCount%60 == 0)
-        {
-            if (1 == 1)
+            if (Random.Range(1, 3) == 1)
             {
+                //drops a powerup, the false referring to whether it's true or false the drop item should be a bomb or not
                 dropItem(false);
 
             }//end if
 
-        }
-
+        }//end if for powerup drop
 
     }
 
@@ -169,7 +173,8 @@ public class GameController : MonoBehaviour {
 
     public void beginSuddenDeath()
     {
-        suddenDeath = true;
+        suddenDeathActivated = true;
+        InGameUIController.GetComponent<InGameUIController>().activateSuddenDeath();
 
     }
 
@@ -195,7 +200,6 @@ public class GameController : MonoBehaviour {
                 {
                     if (cellArray[subRand, i] != null)
                     {
-                        Debug.Log(cellArray[subRand, i].transform.position);
                         if (droppingBomb)
                         {
                             GameObject bombBox = Resources.Load("Objects/BombBox") as GameObject;

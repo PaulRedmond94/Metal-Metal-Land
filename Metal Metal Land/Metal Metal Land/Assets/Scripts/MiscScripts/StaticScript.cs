@@ -26,4 +26,7 @@
     public static int musicLevel = 100;
     public static int sfxLevel = 100;
 
+    public static bool suddenDeathEnabled = true;
+    public static bool itemsEnabled = true;
+
 }//end static script

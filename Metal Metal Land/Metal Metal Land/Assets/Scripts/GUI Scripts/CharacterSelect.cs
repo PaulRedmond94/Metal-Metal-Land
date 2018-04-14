@@ -233,13 +233,13 @@ public class CharacterSelect : MonoBehaviour {
 
         string text = streamReader.ReadToEnd();
         //split text into lines
-        string[] fileLines = text.Split('\r');
+        string[] fileLines = text.Split('\n');
         //for each loop strips the data out of the lines and creates character objects for it
         foreach(string line in fileLines)
         {
             //seperate each line based on hash marks
             string[] attributes = line.Split('#');
-            characters.Add(new Character(attributes[0], attributes[2], attributes[3]));            
+            characters.Add(new Character(attributes[0], attributes[1], attributes[2]));            
 
         }//end foreach
 
@@ -253,7 +253,6 @@ public class CharacterSelect : MonoBehaviour {
             pIcon.gameObject.transform.position = new Vector3(p1IconXAxis[currChar], p1Icon.gameObject.transform.position.y);
             pDesc.GetComponent<Text>().text =
                 "Name: " + characters[currChar].getName() +
-                //"\nBio: " + characters[currChar].getBio() +
                 "\nNationality: " + characters[currChar].getNationality() +
                 "\nGenre: " + characters[currChar].getGenre();
 
@@ -264,7 +263,6 @@ public class CharacterSelect : MonoBehaviour {
             pIcon.gameObject.transform.position = new Vector3(p2IconXAxis[currChar], p1Icon.gameObject.transform.position.y);
             pDesc.GetComponent<Text>().text =
                 "Name: " + characters[currChar].getName() +
-                //"\nBio: " + characters[currChar].getBio() +
                 "\nNationality: " + characters[currChar].getNationality() +
                 "\nGenre: " + characters[currChar].getGenre();
         }//end else

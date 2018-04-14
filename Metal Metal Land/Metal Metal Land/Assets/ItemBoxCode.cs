@@ -21,7 +21,7 @@ public class ItemBoxCode : MonoBehaviour {
 	void Update () {
         if (gameObject.GetComponent<Rigidbody2D>().velocity.magnitude > 0.25f)
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0,-0.25f);
-
+        /*
         if (Input.GetKeyDown("a"))
         {
             gameObject.GetComponent<Rigidbody2D>().isKinematic = !gameObject.GetComponent<Rigidbody2D>().isKinematic;
@@ -33,14 +33,14 @@ public class ItemBoxCode : MonoBehaviour {
             
 
         }
-	
+	    */
 	}
 
     void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.tag.ToLower() == "player")
         {
-            //coll.gameObject.GetComponent<PlayerPowerUpController>()
+            coll.gameObject.GetComponent<PlayerPowerupController>().activatePowerup(gameObject.name.Substring(0, 3));
 
         }//end if
 

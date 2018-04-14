@@ -27,9 +27,6 @@ public class InGameUIController : MonoBehaviour {
     //Objects/variables for sudden death alert
     public GameObject suddenDeathText;
 
-    //gameobject variable to reference the gamelogic controller
-    public GameObject gameController;
-
 	// Use this for initialization
 	void Start () {
         player1Image.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/CharacterArt/CharacterIcons/" + StaticScript.player1Character);
@@ -43,9 +40,6 @@ public class InGameUIController : MonoBehaviour {
 
         //initally hide sudden death text
         suddenDeathText.GetComponent<Text>().enabled = false;  
-
-        //in 15 seconds make sudden death text appear
-        Invoke("suddenDeath", 15.0f);
 
     }//end start
 	
@@ -119,10 +113,9 @@ public class InGameUIController : MonoBehaviour {
 
     }//end updateWeapon
 
-    void suddenDeath()
+    public void activateSuddenDeath()
     {
         suddenDeathText.GetComponent<Text>().enabled = true;
-        gameController.GetComponent<GameController>().beginSuddenDeath();
 
     }//end beginSuddenDeath
 
