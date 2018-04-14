@@ -54,7 +54,7 @@ public class GameController : MonoBehaviour {
         suddenDeathEnabled= StaticScript.suddenDeathEnabled;
         if (suddenDeathEnabled)
         {
-            Invoke("beginSuddenDeath",15.0f);
+            Invoke("beginSuddenDeath",30.0f);
             
 
         }
@@ -98,7 +98,7 @@ public class GameController : MonoBehaviour {
         }//end if
 
         //every 15 seconds potentially drop a powerup
-        if(Time.frameCount%900 == 0)
+        if(Time.frameCount%600 == 0)
         {
             if (Random.Range(1, 3) == 1)
             {
