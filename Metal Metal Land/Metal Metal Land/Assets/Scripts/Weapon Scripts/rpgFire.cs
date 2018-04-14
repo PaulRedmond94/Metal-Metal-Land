@@ -58,9 +58,6 @@ public class rpgFire : MonoBehaviour {
         Rigidbody2D rocketRigBod2d = firedRocket.GetComponent<Rigidbody2D>();
         rocketRigBod2d.AddForce(transform.right * (20), ForceMode2D.Impulse);
 
-        Debug.Log(dir);
-
-
         Destroy(firedRocket, 2.0f);
 
         Invoke("allowFiring",2.0f);

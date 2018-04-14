@@ -14,7 +14,7 @@
     public static int player2Score = 0;
 
     //holds a reference of what type of terrain to generate
-    public static string terrainGenType;
+    public static string terrainGenType = "";
 
     //holds reference to how many rounds are to be played up to
     public static int roundCount = 10;

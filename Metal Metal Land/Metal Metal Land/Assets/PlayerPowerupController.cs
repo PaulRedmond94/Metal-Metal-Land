@@ -28,43 +28,32 @@ public class PlayerPowerupController : MonoBehaviour {
     public void activatePowerup(string power)
     {
         //if the power is skyhunter wings (bigger jumps)
-        if(power.ToLower() == "sky")
+        if (power.ToLower() == "sky")
         {
             gameObject.GetComponent<PlayerMovement>().setJumpModifier(1.5f);
 
         }//end if power is skyhunter wings
-        
+
         //if the power is essence of dio (time stop)
-        else if(power.ToLower() == "dio")
+        else if (power.ToLower() == "dio")
         {
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
             GameObject frozenPlayer;
-            if (gameObject.name.Contains("Ailbhe"))
+            foreach (GameObject player in players)
             {
-                foreach (GameObject player in players)
+
+                Debug.Log(gameObject.name + ", " + player.name);
+
+                if (player.name != gameObject.name)
                 {
-
-                    Debug.Log(gameObject.name + ", " + player.name);
-
-                    if (player.name != gameObject.name)
-                    {
-                        player.GetComponent<Rigidbody2D>().isKinematic = true;
-                        player.GetComponent<SpriteRenderer>().material = negativeMaterial;
-
-                    }//end if
-
-
-
-
-                }//end foreach to cycle through
+                    player.GetComponent<Rigidbody2D>().isKinematic = true;
+                    player.GetComponent<SpriteRenderer>().material = negativeMaterial;
+                    frozenPlayer = player;
+                }
             }
-            
-
-
-
-        }//end if power is essence of dio
+        }
         //if the power is run to the hills (faster run speed)
-        else if(power.ToLower() == "run")
+        else if (power.ToLower() == "run")
         {
             gameObject.GetComponent<PlayerMovement>().setSpeedModifier(1.5f);
 

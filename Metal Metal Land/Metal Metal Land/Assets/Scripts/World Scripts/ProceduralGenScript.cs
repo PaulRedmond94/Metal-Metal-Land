@@ -18,8 +18,7 @@ public class ProceduralGenScript : MonoBehaviour
     public Sprite[] terrainTop;
     public Sprite[] terrainBelow;
 
-    //debug variable, delete later
-    public int terrainType;
+    string terrainType;
 
     //array of voronoi points
     VoronoiPoint[] vPoints;
@@ -43,22 +42,21 @@ public class ProceduralGenScript : MonoBehaviour
     bool player2SpawnSet;
     Vector2 player2Spawn;
 
-    void Awake()
-    {
-        //debug mode variables
-        if(StaticScript.player1Character == "")
-        {
-            StaticScript.player1Character = "Ailbhe";
-            StaticScript.player2Character = "Stuart Butler";
-            StaticScript.roundCount = 10;
-
-        }
-
-    }//end Awake
-
     // Use this for initialization
     void Start()
     {
+
+        if (StaticScript.terrainGenType.ToLower() != "")
+        {
+            terrainType = StaticScript.terrainGenType.ToLower();
+
+        }
+        else
+        {
+            terrainType = "standard";
+
+        }
+
         terrainCell = Resources.Load("Objects/LandCell", typeof(GameObject)) as GameObject;
         dimX = terrainCell.GetComponent<SpriteRenderer>().bounds.size.x;
         dimY = terrainCell.GetComponent<SpriteRenderer>().bounds.size.y;
@@ -175,7 +173,7 @@ public class ProceduralGenScript : MonoBehaviour
         int rand = Random.Range(1, 11);
 
         //if(StaticScript.terrainGenType.ToLower() == "standard")
-        if (2 == 1) //temp variable, use later when basis for algorithm types are set
+        if (terrainType.ToLower() == "standard") //temp variable, use later when basis for algorithm types are set
         {
             //set upper y to be at 20% height
             upperY = (int)(terrYLength * 0.2);
@@ -209,7 +207,7 @@ public class ProceduralGenScript : MonoBehaviour
             }//end else if
 
         }//end if terrain gen is set to standard
-        else if (2 == 3)
+        else if (terrainType.ToLower() == "canyon")
         {
             upperY = (int)(terrYLength * 0.2);
             lowerY = (int)(terrYLength * 0.8);
@@ -256,7 +254,7 @@ public class ProceduralGenScript : MonoBehaviour
 
         }//end else if 1==1
 
-        else if (1 == 1)
+        else if (terrainType.ToLower() == "megarandom")
         {
             if(Random.Range(1, 3)==1){
                 return "land";
@@ -270,8 +268,6 @@ public class ProceduralGenScript : MonoBehaviour
             }
 
         }
-
-
 
         // default return type
         return "air";

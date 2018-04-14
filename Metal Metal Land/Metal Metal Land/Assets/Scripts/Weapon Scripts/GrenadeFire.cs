@@ -20,7 +20,8 @@ public class GrenadeFire : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis(playerFireAxis)>0 && transform.parent.transform.parent.tag == "Player" && canFire == true && GetComponentInParent<PlayerGameController>().getAlive())
+        if (Input.GetAxis(playerFireAxis)>0 
+            && transform.parent.transform.parent.tag == "Player" && canFire == true && GetComponentInParent<PlayerGameController>().getAlive())
         {
             //shootingPosition = GetComponentInChildren<Transform>().transform.position;
             shootingPosition = transform.GetChild(0).transform.position;

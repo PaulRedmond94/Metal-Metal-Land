@@ -108,12 +108,8 @@ public class CellBehaviourScript : MonoBehaviour {
     void updateCellSprite()
     {
         //if the current block type is a standard terrain block, make it look suitably damaged
-        Debug.Log("in update function");
         if (gameObject.tag.ToLower() == "environment" && cellDamage.gameObject != null)
         {
-            Debug.Log("valid object");
-
-            Debug.Log(cellHealth);
 
             if (cellHealth == 4)
             {

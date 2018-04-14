@@ -23,14 +23,14 @@ public class LiveWeaponAltarScript : MonoBehaviour {
         sniper = Resources.Load("Objects/Weapons/Spawns/SniperItem") as GameObject;
         shotgun = Resources.Load("Objects/Weapons/Spawns/shotgunItem") as GameObject;
         grenade = Resources.Load("Objects/Weapons/Spawns/grenadeItem") as GameObject;
-        //greaseGun = Resources.Load("Objects/Weapons/Spawns/GreaseGunItem") as GameObject;
+        greaseGun = Resources.Load("Objects/Weapons/Spawns/GreaseGunItem") as GameObject;
 
         weapons.Add(revolver);
         weapons.Add(rpg);
         weapons.Add(sniper);
         weapons.Add(shotgun);
         weapons.Add(grenade);
-        //weapons.Add(greaseGun);
+        weapons.Add(greaseGun);
         //Debug.Log(eapons.Count);
 
         //decide what weapon the altar will use

@@ -6,20 +6,21 @@ using UnityEngine.SceneManagement;
 public class BeginGameScript : MonoBehaviour {
 
     Button beginButton;
-    GameObject roundCounter;
+    public Dropdown dropdownVal;
+    public Text roundValCounter;
+    public Toggle suddenDeath;
+    public Toggle items;
 
 	// Use this for initialization
 	void Start () {
         beginButton = this.gameObject.GetComponent<Button>();
         beginButton.onClick.AddListener(beginGame);
-        roundCounter = GameObject.Find("RoundValText");
 
     }//end start
 	
 	// Update is called once per frame
 	void Update () {
 	
-
 	}
 
     void beginGame()
@@ -31,7 +32,7 @@ public class BeginGameScript : MonoBehaviour {
         //this causes the catch to trigger and set the rounds to max
         try
         {
-            rounds = int.Parse(roundCounter.GetComponent<Text>().text);
+            rounds = int.Parse(roundValCounter.GetComponent<Text>().text);
         }
         catch (System.FormatException formatException)
         {
@@ -42,6 +43,28 @@ public class BeginGameScript : MonoBehaviour {
         StaticScript.roundCount = rounds;
         StaticScript.player1Score = 0;
         StaticScript.player2Score = 0;
+
+        switch(dropdownVal.GetComponent<Dropdown>().value){
+            case 0:
+                StaticScript.terrainGenType = "standard";
+                break;
+            case 1:
+                StaticScript.terrainGenType = "canyon";
+                break;
+
+            case 2:
+                StaticScript.terrainGenType = "megarandom";
+                break;
+
+            default:
+                StaticScript.terrainGenType = "standard";
+                break;
+
+        }
+            
+
+        StaticScript.itemsEnabled = items.GetComponent<Toggle>().isOn;
+        StaticScript.suddenDeathEnabled = suddenDeath.GetComponent<Toggle>().isOn;
         StaticScript.nextSceneToLoad = "Scenes/procGenScene";
         SceneManager.LoadScene("Scenes/LoadingManager", LoadSceneMode.Single);
 

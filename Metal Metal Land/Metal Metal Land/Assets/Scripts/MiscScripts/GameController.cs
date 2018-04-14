@@ -30,8 +30,26 @@ public class GameController : MonoBehaviour {
 
     List<GameObject> powerups = new List<GameObject>();
 
+    public bool debugEnableItems;
+    public bool debugEnabledSuddenDeath;
+
 	// Use this for initialization
 	void Awake () {
+
+        //debug mode variables
+        if (StaticScript.player1Character == "")
+        {
+            StaticScript.player1Character = "Ailbhe";
+            StaticScript.player2Character = "Stuart Butler";
+            StaticScript.roundCount = 10;
+            StaticScript.itemsEnabled = false;
+            StaticScript.suddenDeathEnabled = false;
+
+        }//end if player1Character isn't set
+
+        Debug.Log(StaticScript.itemsEnabled);
+        Debug.Log(StaticScript.suddenDeathEnabled);
+
         player1Alive = true;
         player2Alive = true;
 
@@ -56,6 +74,11 @@ public class GameController : MonoBehaviour {
         {
             Invoke("beginSuddenDeath",30.0f);
             
+
+        }
+        else
+        {
+            Debug.Log("sudden death not on");
 
         }
 
@@ -98,7 +121,7 @@ public class GameController : MonoBehaviour {
         }//end if
 
         //every 15 seconds potentially drop a powerup
-        if(Time.frameCount%600 == 0)
+        if(Time.frameCount%600 == 0 && StaticScript.itemsEnabled)
         {
             if (Random.Range(1, 3) == 1)
             {
@@ -235,7 +258,7 @@ public class GameController : MonoBehaviour {
 
     GameObject getRandomPowerup()
     {
-        return powerups[Random.Range(0, powerups.Count + 1)];
+        return powerups[Random.Range(0, powerups.Count)];
 
     }//end generatePowerup
 

@@ -45,7 +45,7 @@ public class PlayerWeaponPickup : MonoBehaviour
 
             //throw gun away
             Destroy(weaponSlot.gameObject);
-            Invoke("allowWeaponPickUp", 2f);
+            Invoke("allowWeaponPickUp", 0.5f);
             
 
         }//else if 
@@ -71,7 +71,7 @@ public class PlayerWeaponPickup : MonoBehaviour
                 
                 //reset altar to inert
                 collider.GetComponent<LiveWeaponAltarScript>().resetAltar();
-                Invoke("allowWeaponDrop", 2f);
+                Invoke("allowWeaponDrop", 0.5f);
 
 
             }//end if
@@ -84,7 +84,6 @@ public class PlayerWeaponPickup : MonoBehaviour
     void allowWeaponDrop()
     {
         weaponDroppable = true;
-        Debug.Log("Weapon can now be dropped");
         actionCanHappen = true;
 
     }
@@ -92,7 +91,6 @@ public class PlayerWeaponPickup : MonoBehaviour
     void allowWeaponPickUp()
     {
         weaponPickedUp = false;
-        Debug.Log("Weapon can now be picked up");
         actionCanHappen = true;
 
     }
@@ -113,20 +111,6 @@ public class PlayerWeaponPickup : MonoBehaviour
 
     }
 
-    /*public void assignAxis(int playerNum)
-    {
-        if (playerNum == 1)
-        {
-            playerPickupAxis = "p1_pickup";
-            playerFire = "p1_fire";
-        }
-        else
-        {
-            playerPickupAxis = "p1_move";
-            playerFire = "p1_jump";
-
-        }
-    }*/
     public string getFireAxis()
     {
         return playerFire;

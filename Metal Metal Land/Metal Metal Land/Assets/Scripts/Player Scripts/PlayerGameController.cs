@@ -28,6 +28,8 @@ public class PlayerGameController : MonoBehaviour {
         {
             transform.eulerAngles = (new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 90.0f));
             gameObject.GetComponent<PlayerMovement>().enabled = false;
+            gameObject.GetComponent<PlayerWeaponPickup>().enabled = false;
+            gameObject.GetComponentInChildren<GroundDetector>().enabled = false;
             gameObject.GetComponent<PlayerMovement>().changeAnimationState(0);
         }
 
@@ -47,9 +49,14 @@ public class PlayerGameController : MonoBehaviour {
 
     public void killPlayer()
     {
-        Debug.Log("You have been killed");
         alive = false;
+        /*
+        while(gameObject.transform.GetChild(0) != null)
+        {
+            Destroy(gameObject.transform.GetChild(0));
 
+        }//end while 
+        */
     }//end kill
 
     public bool getAlive()

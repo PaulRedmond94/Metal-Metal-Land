@@ -41,6 +41,12 @@ public class ExplosiveScript : MonoBehaviour {
 
             }// end else if bombbox
 
+            else if (collider.gameObject.tag.ToLower() == "powerup")
+            {
+                Destroy(collider.gameObject);
+
+            }
+
         }//end for each
 
     }

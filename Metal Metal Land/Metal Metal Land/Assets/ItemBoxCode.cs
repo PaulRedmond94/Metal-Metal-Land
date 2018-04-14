@@ -26,9 +26,16 @@ public class ItemBoxCode : MonoBehaviour {
         if (coll.gameObject.tag.ToLower() == "player")
         {
             coll.gameObject.GetComponent<PlayerPowerupController>().activatePowerup(gameObject.name.Substring(0, 3));
+            Destroy(gameObject);
 
         }//end if
 
     }//end OnTriggerEnter2D
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        Destroy(gameObject);
+
+    }
 
 }
