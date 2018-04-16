@@ -28,7 +28,7 @@ public class ShotgunFire : MonoBehaviour
         if (Input.GetAxis(fireAxis) > 0 && this.transform.parent.transform.parent.tag == "Player" && canFire == true && GetComponentInParent<PlayerGameController>().getAlive())
         {
             shootingPosition = GetComponentInChildren<Transform>().transform.position;
-            fireBullet(0, 5.0f, 1, 10);
+            fireBullet(0, 2.0f, 1, 10);
 
             //Debug.DrawRay(shootingPosition, Vector2.right, Color.green, 1.0f, false);
             canFire = false;
@@ -51,8 +51,9 @@ public class ShotgunFire : MonoBehaviour
 
         //calculate knockback
         float knockbackMod = this.gameObject.GetComponentInParent<PlayerMovement>().getKnockbackModifier();
-        knockbackVal = knockbackVal * knockbackMod;
+        knockbackVal = (knockbackVal * knockbackMod);
         Rigidbody2D playerRigBod2d = this.gameObject.GetComponentInParent<Rigidbody2D>();
+        playerRigBod2d.AddForce(new Vector2(knockbackVal * -dir,knockbackVal/2), ForceMode2D.Impulse);
 
         //instantiate shotgun pellets
         for (int i = 0; i< pelletCount; i++)
