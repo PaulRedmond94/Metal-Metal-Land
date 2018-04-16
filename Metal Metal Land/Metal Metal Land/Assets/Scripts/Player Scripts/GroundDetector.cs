@@ -27,7 +27,7 @@ public class GroundDetector : MonoBehaviour {
 
         else if(coll.gameObject.tag.ToLower() == "player")
         {
-            if (coll.gameObject.GetComponent<PlayerGameController>().getAlive())
+            if (coll.gameObject.GetComponentInParent<PlayerGameController>().getAlive())
             {
                 coll.gameObject.GetComponent<PlayerGameController>().killPlayer();
 

@@ -31,6 +31,7 @@ public class PlayerPowerupController : MonoBehaviour {
         if (power.ToLower() == "sky")
         {
             gameObject.GetComponent<PlayerMovement>().setJumpModifier(1.5f);
+            StartCoroutine("deactivatePowerup", "sky"); 
 
         }//end if power is skyhunter wings
 
@@ -38,7 +39,7 @@ public class PlayerPowerupController : MonoBehaviour {
         else if (power.ToLower() == "dio")
         {
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-            GameObject frozenPlayer;
+            GameObject frozenPlayer = null;
             foreach (GameObject player in players)
             {
 
@@ -51,34 +52,42 @@ public class PlayerPowerupController : MonoBehaviour {
                     frozenPlayer = player;
                 }
             }
+
+            StartCoroutine("deactivatePowerup", frozenPlayer);
+
         }
         //if the power is run to the hills (faster run speed)
         else if (power.ToLower() == "run")
         {
             gameObject.GetComponent<PlayerMovement>().setSpeedModifier(1.5f);
+            StartCoroutine("deactivatePowerup", "run");
 
         }//end if power is run to the hills
 
     }//end activatePowerup
 
     //function to revert power up changes
-    void deActivatePowerup(string power)
+    IEnumerator deActivatePowerup(string power)
     {
-        if(power.ToLower() == "sky")
+        yield return new WaitForSeconds(5.0f);
+        if (power.ToLower() == "sky")
         {
             gameObject.GetComponent<PlayerMovement>().setJumpModifier(1.0f);
 
         }//end if sky
-        else if(power.ToLower()== "run")
+        else if (power.ToLower() == "run")
         {
             gameObject.GetComponent<PlayerMovement>().setSpeedModifier(1.0f);
 
         }//end else if
-        else if (power.ToLower() == "dio")
-        {
 
+    }//end deactivatePowerup
 
-        }//end else if
+    IEnumerator deactivatePowerup(GameObject victim)
+    {
+        yield return new WaitForSeconds(5.0f);
+        victim.GetComponent<Rigidbody2D>().isKinematic = false;
+        victim.GetComponent<SpriteRenderer>().material = originalMaterial;
 
     }
 }

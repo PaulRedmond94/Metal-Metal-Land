@@ -62,7 +62,6 @@ public class GameController : MonoBehaviour {
         //powerups = Resources.LoadAll("Objects/Powerups") as List<GameObject>;
         foreach (GameObject powerupPrefab in Resources.LoadAll("Objects/Powerups"))
         {
-            Debug.Log(powerupPrefab.name);
             powerups.Add(powerupPrefab);
 
         }//end foreach

@@ -228,6 +228,7 @@ public class CharacterSelect : MonoBehaviour {
 
     void readInCharacterData()
     {
+        /* old file io code
         //Stream reader for reading character details
         StreamReader streamReader = new StreamReader("Assets/Resources/TextFiles/characterDetails.txt");
 
@@ -242,6 +243,16 @@ public class CharacterSelect : MonoBehaviour {
             characters.Add(new Character(attributes[0], attributes[1], attributes[2]));            
 
         }//end foreach
+        */
+
+        characters.Add(new Character("Ailbhe", "Irish", "Alt Metal"));
+        characters.Add(new Character("Space King Bradley", "Scottish", "Power Metal"));
+        characters.Add(new Character("Bruce Halford", "British", "Old-School British Metal"));
+        characters.Add(new Character("Captain Gregarrr Lagerstein", "Australian", "Pirate Metal"));
+        characters.Add(new Character("Goretusk Wartooth", "Metal Metal Land", "Metal Mascots"));
+        characters.Add(new Character("Dr. Leonard Lovestein", "Canadian", "Hair Metal"));
+        characters.Add(new Character("Mikhail Heksbrenner", "Norwegian", "Death Metal"));
+        characters.Add(new Character("Stuart Butler", "USA", "Thrash Metal"));
 
     }//end readInCharacterData
 

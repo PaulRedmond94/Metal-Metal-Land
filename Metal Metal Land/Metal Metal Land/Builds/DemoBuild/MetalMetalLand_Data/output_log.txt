@@ -14,29 +14,2257 @@ Platform assembly: C:\Users\Paul\Documents\College\Year 4\Final Year Project\Met
 Loading C:\Users\Paul\Documents\College\Year 4\Final Year Project\Metal Metal Land\Metal Metal Land\Builds\DemoBuild\MetalMetalLand_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Paul\Documents\College\Year 4\Final Year Project\Metal Metal Land\Metal Metal Land\Builds\DemoBuild\MetalMetalLand_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Paul\Documents\College\Year 4\Final Year Project\Metal Metal Land\Metal Metal Land\Builds\DemoBuild\MetalMetalLand_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.115 seconds
+- Completed reload, in  0.113 seconds
 Platform assembly: C:\Users\Paul\Documents\College\Year 4\Final Year Project\Metal Metal Land\Metal Metal Land\Builds\DemoBuild\MetalMetalLand_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Paul\Documents\College\Year 4\Final Year Project\Metal Metal Land\Metal Metal Land\Builds\DemoBuild\MetalMetalLand_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.751864 ms
+UnloadTime: 0.893567 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 7.279985 ms
+
+Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 219.
+Total: 0.239589 ms (FindLiveObjects: 0.025637 ms CreateObjectMapping: 0.018178 ms MarkObjects: 0.155686 ms  DeleteObjects: 0.017712 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.825512 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 368.
+Total: 0.218147 ms (FindLiveObjects: 0.015382 ms CreateObjectMapping: 0.010720 ms MarkObjects: 0.183654 ms  DeleteObjects: 0.007924 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.650714 ms
+
+Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 219.
+Total: 0.288999 ms (FindLiveObjects: 0.032162 ms CreateObjectMapping: 0.017712 ms MarkObjects: 0.206960 ms  DeleteObjects: 0.030764 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.469390 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 264.
+Total: 0.274083 ms (FindLiveObjects: 0.023772 ms CreateObjectMapping: 0.013517 ms MarkObjects: 0.225139 ms  DeleteObjects: 0.011187 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.495493 ms
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 219.
+Total: 0.202299 ms (FindLiveObjects: 0.023772 ms CreateObjectMapping: 0.010254 ms MarkObjects: 0.155220 ms  DeleteObjects: 0.012585 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.349129 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 368.
+Total: 0.205562 ms (FindLiveObjects: 0.023306 ms CreateObjectMapping: 0.009788 ms MarkObjects: 0.165475 ms  DeleteObjects: 0.006525 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.692666 ms
+
+Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 219.
+Total: 0.254971 ms (FindLiveObjects: 0.034027 ms CreateObjectMapping: 0.011653 ms MarkObjects: 0.180857 ms  DeleteObjects: 0.027967 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.458203 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 280.
+Total: 0.203231 ms (FindLiveObjects: 0.014916 ms CreateObjectMapping: 0.020975 ms MarkObjects: 0.160347 ms  DeleteObjects: 0.006991 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.428837 ms
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 219.
+Total: 0.204630 ms (FindLiveObjects: 0.028433 ms CreateObjectMapping: 0.007924 ms MarkObjects: 0.142635 ms  DeleteObjects: 0.016314 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.396208 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 352.
+Total: 0.348197 ms (FindLiveObjects: 0.014916 ms CreateObjectMapping: 0.011653 ms MarkObjects: 0.296923 ms  DeleteObjects: 0.024704 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.502019 ms
+
+Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 219.
+Total: 0.205096 ms (FindLiveObjects: 0.029832 ms CreateObjectMapping: 0.008390 ms MarkObjects: 0.146364 ms  DeleteObjects: 0.020043 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.347265 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 362.
+Total: 0.247047 ms (FindLiveObjects: 0.013517 ms CreateObjectMapping: 0.009322 ms MarkObjects: 0.215817 ms  DeleteObjects: 0.007458 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.768644 ms
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 220.
+Total: 0.235860 ms (FindLiveObjects: 0.044748 ms CreateObjectMapping: 0.007924 ms MarkObjects: 0.168272 ms  DeleteObjects: 0.014449 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.435829 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Recursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either eg. EditorGUIUtility.TextContent should be moved to OnEnable. See stacktrace.)
+ 
+(Filename:  Line: 1112)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 2273.
+Total: 1.299098 ms (FindLiveObjects: 0.169670 ms CreateObjectMapping: 0.050807 ms MarkObjects: 1.043194 ms  DeleteObjects: 0.034493 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.045369 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 194 unused Assets to reduce memory usage. Loaded Objects now: 2503.
+Total: 1.121969 ms (FindLiveObjects: 0.125854 ms CreateObjectMapping: 0.059198 ms MarkObjects: 0.858607 ms  DeleteObjects: 0.077377 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.268178 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 203 unused Assets to reduce memory usage. Loaded Objects now: 2821.
+Total: 0.942976 ms (FindLiveObjects: 0.193909 ms CreateObjectMapping: 0.061528 ms MarkObjects: 0.636264 ms  DeleteObjects: 0.050807 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+You've run out of cells, game should end soon...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.680701 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 195 unused Assets to reduce memory usage. Loaded Objects now: 2661.
+Total: 0.793349 ms (FindLiveObjects: 0.133312 ms CreateObjectMapping: 0.062927 ms MarkObjects: 0.547700 ms  DeleteObjects: 0.048477 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 3.000465 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 195 unused Assets to reduce memory usage. Loaded Objects now: 1979.
+Total: 0.758856 ms (FindLiveObjects: 0.114201 ms CreateObjectMapping: 0.055003 ms MarkObjects: 0.534182 ms  DeleteObjects: 0.055469 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.304536 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 203 unused Assets to reduce memory usage. Loaded Objects now: 2754.
+Total: 1.058110 ms (FindLiveObjects: 0.151491 ms CreateObjectMapping: 0.066656 ms MarkObjects: 0.763051 ms  DeleteObjects: 0.075978 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.615909 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 179 unused Assets to reduce memory usage. Loaded Objects now: 2754.
+Total: 0.853014 ms (FindLiveObjects: 0.139838 ms CreateObjectMapping: 0.061995 ms MarkObjects: 0.600372 ms  DeleteObjects: 0.049875 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Captain Gregarrr(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 3.904753 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 252 unused Assets to reduce memory usage. Loaded Objects now: 3273.
+Total: 1.683653 ms (FindLiveObjects: 0.204164 ms CreateObjectMapping: 0.088564 ms MarkObjects: 1.221255 ms  DeleteObjects: 0.169670 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
 Joystick disconnected ("Wireless Controller").
  
 (Filename:  Line: 714)
 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.961312 ms
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
 
-Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 218.
-Total: 0.267091 ms (FindLiveObjects: 0.019111 ms CreateObjectMapping: 0.019577 ms MarkObjects: 0.161746 ms  DeleteObjects: 0.019111 ms)
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 4.005903 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 194 unused Assets to reduce memory usage. Loaded Objects now: 2624.
+Total: 1.029676 ms (FindLiveObjects: 0.119794 ms CreateObjectMapping: 0.048943 ms MarkObjects: 0.788222 ms  DeleteObjects: 0.072715 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.653977 ms
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 339.
-Total: 0.259167 ms (FindLiveObjects: 0.019577 ms CreateObjectMapping: 0.015382 ms MarkObjects: 0.215351 ms  DeleteObjects: 0.007924 ms)
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 3.145430 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 189 unused Assets to reduce memory usage. Loaded Objects now: 2876.
+Total: 1.353635 ms (FindLiveObjects: 0.239123 ms CreateObjectMapping: 0.082504 ms MarkObjects: 0.964418 ms  DeleteObjects: 0.067122 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+You've run out of cells, game should end soon...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 3.838563 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 252 unused Assets to reduce memory usage. Loaded Objects now: 2299.
+Total: 0.924331 ms (FindLiveObjects: 0.121659 ms CreateObjectMapping: 0.060596 ms MarkObjects: 0.639061 ms  DeleteObjects: 0.102082 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+MissingMethodException: The best match for method deactivatePowerup has some invalid parameter.
+  at System.MonoType.InvokeMember (System.String name, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object target, System.Object[] args, System.Reflection.ParameterModifier[] modifiers, System.Globalization.CultureInfo culture, System.String[] namedParameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMember (System.Object behaviour, System.String name, System.Object variable) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine(String, Object)
+PlayerPowerupController:activatePowerup(String)
+ItemBoxCode:OnTriggerEnter2D(Collider2D)
+ 
+(Filename:  Line: -1)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 1.811372 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 273 unused Assets to reduce memory usage. Loaded Objects now: 2810.
+Total: 1.142013 ms (FindLiveObjects: 0.179459 ms CreateObjectMapping: 0.083903 ms MarkObjects: 0.798010 ms  DeleteObjects: 0.080640 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.855499 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 349 unused Assets to reduce memory usage. Loaded Objects now: 345.
+Total: 0.443287 ms (FindLiveObjects: 0.049409 ms CreateObjectMapping: 0.020043 ms MarkObjects: 0.230733 ms  DeleteObjects: 0.142169 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.507613 ms
+
+Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 234.
+Total: 0.288999 ms (FindLiveObjects: 0.027035 ms CreateObjectMapping: 0.019577 ms MarkObjects: 0.219080 ms  DeleteObjects: 0.022840 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.324425 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 264.
+Total: 0.246581 ms (FindLiveObjects: 0.026103 ms CreateObjectMapping: 0.011187 ms MarkObjects: 0.200434 ms  DeleteObjects: 0.008390 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.469856 ms
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 234.
+Total: 0.256836 ms (FindLiveObjects: 0.037290 ms CreateObjectMapping: 0.020509 ms MarkObjects: 0.185518 ms  DeleteObjects: 0.012585 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.343070 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 295.
+Total: 0.239123 ms (FindLiveObjects: 0.023772 ms CreateObjectMapping: 0.008856 ms MarkObjects: 0.199036 ms  DeleteObjects: 0.006525 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.407395 ms
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 234.
+Total: 0.255438 ms (FindLiveObjects: 0.030298 ms CreateObjectMapping: 0.020975 ms MarkObjects: 0.187383 ms  DeleteObjects: 0.015848 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.716904 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 383.
+Total: 0.260565 ms (FindLiveObjects: 0.017246 ms CreateObjectMapping: 0.013983 ms MarkObjects: 0.221876 ms  DeleteObjects: 0.006991 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.504350 ms
+
+Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 234.
+Total: 0.257768 ms (FindLiveObjects: 0.033561 ms CreateObjectMapping: 0.011187 ms MarkObjects: 0.192976 ms  DeleteObjects: 0.019111 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.389216 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 295.
+Total: 0.267091 ms (FindLiveObjects: 0.037290 ms CreateObjectMapping: 0.011653 ms MarkObjects: 0.210223 ms  DeleteObjects: 0.007924 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.523461 ms
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 234.
+Total: 0.255438 ms (FindLiveObjects: 0.028899 ms CreateObjectMapping: 0.007458 ms MarkObjects: 0.202299 ms  DeleteObjects: 0.016314 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.459602 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 279.
+Total: 0.264760 ms (FindLiveObjects: 0.013983 ms CreateObjectMapping: 0.011187 ms MarkObjects: 0.232131 ms  DeleteObjects: 0.007458 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.405531 ms
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 234.
+Total: 0.358918 ms (FindLiveObjects: 0.032162 ms CreateObjectMapping: 0.010720 ms MarkObjects: 0.295991 ms  DeleteObjects: 0.018645 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.428371 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 383.
+Total: 0.252175 ms (FindLiveObjects: 0.024238 ms CreateObjectMapping: 0.009788 ms MarkObjects: 0.211155 ms  DeleteObjects: 0.006059 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.593380 ms
+
+Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 234.
+Total: 0.279676 ms (FindLiveObjects: 0.034959 ms CreateObjectMapping: 0.010254 ms MarkObjects: 0.212088 ms  DeleteObjects: 0.021441 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.361715 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 295.
+Total: 0.305779 ms (FindLiveObjects: 0.012119 ms CreateObjectMapping: 0.013517 ms MarkObjects: 0.272684 ms  DeleteObjects: 0.007458 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.424176 ms
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 234.
+Total: 0.254505 ms (FindLiveObjects: 0.030764 ms CreateObjectMapping: 0.007924 ms MarkObjects: 0.199036 ms  DeleteObjects: 0.016780 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.344934 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 367.
+Total: 0.344468 ms (FindLiveObjects: 0.013517 ms CreateObjectMapping: 0.009788 ms MarkObjects: 0.309042 ms  DeleteObjects: 0.011653 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.528589 ms
+
+Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 234.
+Total: 0.281075 ms (FindLiveObjects: 0.031230 ms CreateObjectMapping: 0.024238 ms MarkObjects: 0.203697 ms  DeleteObjects: 0.021441 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.421845 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 377.
+Total: 0.300652 ms (FindLiveObjects: 0.022840 ms CreateObjectMapping: 0.009788 ms MarkObjects: 0.261497 ms  DeleteObjects: 0.006059 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.599440 ms
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 235.
+Total: 0.275015 ms (FindLiveObjects: 0.039154 ms CreateObjectMapping: 0.010254 ms MarkObjects: 0.210689 ms  DeleteObjects: 0.014449 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.336078 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Recursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either eg. EditorGUIUtility.TextContent should be moved to OnEnable. See stacktrace.)
+ 
+(Filename:  Line: 1112)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 2371.
+Total: 1.264138 ms (FindLiveObjects: 0.172001 ms CreateObjectMapping: 0.048477 ms MarkObjects: 1.004505 ms  DeleteObjects: 0.038688 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.464418 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 273 unused Assets to reduce memory usage. Loaded Objects now: 2399.
+Total: 0.858607 ms (FindLiveObjects: 0.144965 ms CreateObjectMapping: 0.049875 ms MarkObjects: 0.588719 ms  DeleteObjects: 0.074580 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Space King Bradley(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.241608 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 273 unused Assets to reduce memory usage. Loaded Objects now: 2350.
+Total: 0.838564 ms (FindLiveObjects: 0.127252 ms CreateObjectMapping: 0.065257 ms MarkObjects: 0.569608 ms  DeleteObjects: 0.075978 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.478868 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 189 unused Assets to reduce memory usage. Loaded Objects now: 2376.
+Total: 1.176040 ms (FindLiveObjects: 0.202765 ms CreateObjectMapping: 0.083436 ms MarkObjects: 0.796146 ms  DeleteObjects: 0.093225 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Space King Bradley(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.398227 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 203 unused Assets to reduce memory usage. Loaded Objects now: 2459.
+Total: 1.260409 ms (FindLiveObjects: 0.205562 ms CreateObjectMapping: 0.108607 ms MarkObjects: 0.868396 ms  DeleteObjects: 0.077377 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.369794 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 266 unused Assets to reduce memory usage. Loaded Objects now: 2124.
+Total: 0.910813 ms (FindLiveObjects: 0.139838 ms CreateObjectMapping: 0.044748 ms MarkObjects: 0.642324 ms  DeleteObjects: 0.083903 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.522684 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 267 unused Assets to reduce memory usage. Loaded Objects now: 2751.
+Total: 1.173243 ms (FindLiveObjects: 0.161746 ms CreateObjectMapping: 0.083436 ms MarkObjects: 0.814791 ms  DeleteObjects: 0.112802 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 4.002174 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 203 unused Assets to reduce memory usage. Loaded Objects now: 2733.
+Total: 2.919825 ms (FindLiveObjects: 0.236326 ms CreateObjectMapping: 0.125854 ms MarkObjects: 2.411279 ms  DeleteObjects: 0.145898 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+You've run out of cells, game should end soon...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.371658 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 179 unused Assets to reduce memory usage. Loaded Objects now: 2805.
+Total: 1.581105 ms (FindLiveObjects: 0.199502 ms CreateObjectMapping: 0.096488 ms MarkObjects: 1.196084 ms  DeleteObjects: 0.088564 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Space King Bradley(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 3.480110 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 260 unused Assets to reduce memory usage. Loaded Objects now: 2564.
+Total: 0.912212 ms (FindLiveObjects: 0.131448 ms CreateObjectMapping: 0.063393 ms MarkObjects: 0.610161 ms  DeleteObjects: 0.106743 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.613579 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 265 unused Assets to reduce memory usage. Loaded Objects now: 2625.
+Total: 1.167650 ms (FindLiveObjects: 0.177594 ms CreateObjectMapping: 0.061528 ms MarkObjects: 0.825046 ms  DeleteObjects: 0.103014 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.800496 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 267 unused Assets to reduce memory usage. Loaded Objects now: 2652.
+Total: 1.127563 ms (FindLiveObjects: 0.144965 ms CreateObjectMapping: 0.070851 ms MarkObjects: 0.799875 ms  DeleteObjects: 0.111404 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.610316 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 205 unused Assets to reduce memory usage. Loaded Objects now: 2239.
+Total: 0.798477 ms (FindLiveObjects: 0.122591 ms CreateObjectMapping: 0.066190 ms MarkObjects: 0.539309 ms  DeleteObjects: 0.070385 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Space King Bradley(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.406152 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 268 unused Assets to reduce memory usage. Loaded Objects now: 2317.
+Total: 1.087942 ms (FindLiveObjects: 0.137973 ms CreateObjectMapping: 0.062461 ms MarkObjects: 0.792417 ms  DeleteObjects: 0.094623 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+ArgumentOutOfRangeException: Argument is out of range.
+Parameter name: index
+  at System.Collections.Generic.List`1[UnityEngine.AudioClip].get_Item (Int32 index) [0x00000] in <filename unknown>:0 
+  at musicController.getRandomSong () [0x00000] in <filename unknown>:0 
+  at musicController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.464884 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 197 unused Assets to reduce memory usage. Loaded Objects now: 2767.
+Total: 1.583902 ms (FindLiveObjects: 0.185518 ms CreateObjectMapping: 0.052672 ms MarkObjects: 0.968147 ms  DeleteObjects: 0.376631 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 3.443286 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 260 unused Assets to reduce memory usage. Loaded Objects now: 3136.
+Total: 1.404443 ms (FindLiveObjects: 0.160347 ms CreateObjectMapping: 0.074580 ms MarkObjects: 1.080018 ms  DeleteObjects: 0.089030 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Space King Bradley(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 4.613733 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 195 unused Assets to reduce memory usage. Loaded Objects now: 2662.
+Total: 1.578775 ms (FindLiveObjects: 0.257302 ms CreateObjectMapping: 0.128185 ms MarkObjects: 1.046923 ms  DeleteObjects: 0.144499 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Space King Bradley(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.837320 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 260 unused Assets to reduce memory usage. Loaded Objects now: 2520.
+Total: 1.215195 ms (FindLiveObjects: 0.188781 ms CreateObjectMapping: 0.088564 ms MarkObjects: 0.767246 ms  DeleteObjects: 0.169204 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 3.136574 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 186 unused Assets to reduce memory usage. Loaded Objects now: 2856.
+Total: 2.777189 ms (FindLiveObjects: 0.301584 ms CreateObjectMapping: 0.529055 ms MarkObjects: 1.878495 ms  DeleteObjects: 0.067122 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.589340 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 265 unused Assets to reduce memory usage. Loaded Objects now: 2504.
+Total: 0.997047 ms (FindLiveObjects: 0.144033 ms CreateObjectMapping: 0.052206 ms MarkObjects: 0.701056 ms  DeleteObjects: 0.098819 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.493318 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 197 unused Assets to reduce memory usage. Loaded Objects now: 2569.
+Total: 1.040863 ms (FindLiveObjects: 0.259167 ms CreateObjectMapping: 0.058265 ms MarkObjects: 0.661435 ms  DeleteObjects: 0.061062 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Space King Bradley(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 3.653510 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 268 unused Assets to reduce memory usage. Loaded Objects now: 2663.
+Total: 1.270198 ms (FindLiveObjects: 0.199036 ms CreateObjectMapping: 0.082038 ms MarkObjects: 0.878184 ms  DeleteObjects: 0.110472 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Space King Bradley(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.628961 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 259 unused Assets to reduce memory usage. Loaded Objects now: 1651.
+Total: 1.034803 ms (FindLiveObjects: 0.110472 ms CreateObjectMapping: 0.237725 ms MarkObjects: 0.606898 ms  DeleteObjects: 0.078775 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 1.350838 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 257 unused Assets to reduce memory usage. Loaded Objects now: 2812.
+Total: 1.312149 ms (FindLiveObjects: 0.178993 ms CreateObjectMapping: 0.072715 ms MarkObjects: 0.977470 ms  DeleteObjects: 0.082038 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Space King Bradley(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.675107 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 265 unused Assets to reduce memory usage. Loaded Objects now: 2278.
+Total: 1.075823 ms (FindLiveObjects: 0.129117 ms CreateObjectMapping: 0.064791 ms MarkObjects: 0.762585 ms  DeleteObjects: 0.119328 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+MissingMethodException: The best match for method deactivatePowerup has some invalid parameter.
+  at System.MonoType.InvokeMember (System.String name, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object target, System.Object[] args, System.Reflection.ParameterModifier[] modifiers, System.Globalization.CultureInfo culture, System.String[] namedParameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMember (System.Object behaviour, System.String name, System.Object variable) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine(String, Object)
+PlayerPowerupController:activatePowerup(String)
+ItemBoxCode:OnTriggerEnter2D(Collider2D)
+ 
+(Filename:  Line: -1)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone), Space King Bradley(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone), Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 2.079862 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+DioPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RunToTheHillsPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+SkyhunterPowerupBox
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 363 unused Assets to reduce memory usage. Loaded Objects now: 346.
+Total: 0.931789 ms (FindLiveObjects: 0.251242 ms CreateObjectMapping: 0.039620 ms MarkObjects: 0.430236 ms  DeleteObjects: 0.207426 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.438160 ms
+
+Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 235.
+Total: 0.383623 ms (FindLiveObjects: 0.026569 ms CreateObjectMapping: 0.010254 ms MarkObjects: 0.316966 ms  DeleteObjects: 0.028899 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.342603 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 265.
+Total: 0.299720 ms (FindLiveObjects: 0.027501 ms CreateObjectMapping: 0.012119 ms MarkObjects: 0.241920 ms  DeleteObjects: 0.007924 ms)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.395742 ms
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 235.
+Total: 0.286202 ms (FindLiveObjects: 0.028899 ms CreateObjectMapping: 0.007924 ms MarkObjects: 0.234928 ms  DeleteObjects: 0.013517 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.427439 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 296.
+Total: 0.342137 ms (FindLiveObjects: 0.025170 ms CreateObjectMapping: 0.010254 ms MarkObjects: 0.298321 ms  DeleteObjects: 0.008390 ms)
+
+Exit button Clicked
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2de8 -> priority: 1 
+  Thread -> id: 3530 -> priority: 1 

@@ -12,6 +12,9 @@ public class BulletBehaviour : MonoBehaviour {
         {
             durability = 1;
 
+            //apply force to bullet
+            gameObject.GetComponent<Rigidbody2D>().AddForce(transform.right * (20), ForceMode2D.Impulse);
+
         }
     }
 	

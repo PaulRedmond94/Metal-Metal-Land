@@ -50,6 +50,7 @@ public class ProceduralGenScript : MonoBehaviour
         {
             terrainType = StaticScript.terrainGenType.ToLower();
 
+
         }
         else
         {
@@ -662,4 +663,4 @@ public class ProceduralGenScript : MonoBehaviour
 
     }
 
-}//end main class
+}//end main class]

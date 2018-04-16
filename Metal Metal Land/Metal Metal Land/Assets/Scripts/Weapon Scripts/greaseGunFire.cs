@@ -5,6 +5,7 @@ public class greaseGunFire : MonoBehaviour {
 
     GameObject bullet;
     bool canFire;
+    float bulletSpread;
     Vector2 shootingPosition;
     string fireAxis;
 
@@ -14,6 +15,7 @@ public class greaseGunFire : MonoBehaviour {
         bullet = Resources.Load("Objects/Ammo/BulletPrefab") as GameObject;
         canFire = true;
         fireAxis = transform.parent.transform.parent.GetComponent<PlayerWeaponPickup>().getFireAxis();
+        bulletSpread = 10.0f;
 
     }//end start
 
@@ -44,19 +46,13 @@ public class greaseGunFire : MonoBehaviour {
                 //playerRigBod2d.AddForce(new Vector2((knockbackVal * -dir), knockbackVal * 0.6f), ForceMode2D.Impulse);
                 */
                 //instantiate bullet
-               
-                GameObject firedBullet = Instantiate(bullet, shootingPosition, Quaternion.Euler(0,0,Random.Range(-0.30f, 0.30f))) as GameObject;
-
-                //set bullet to face right way
+                float angularOffset = (Random.Range(-bulletSpread, bulletSpread) * 0.8f);
                 if (dir == -1)
                 {
-                    firedBullet.GetComponent<Transform>().rotation = new Quaternion(0, 180, 0, 0);
+                    angularOffset = 180 - angularOffset;
 
                 }//end if
-
-                //apply force to bullet
-                Rigidbody2D bulletRigBod2d = firedBullet.GetComponent<Rigidbody2D>();
-                bulletRigBod2d.AddForce(transform.right * (20), ForceMode2D.Impulse);
+                GameObject firedBullet = Instantiate(bullet, shootingPosition, Quaternion.Euler(0, 0, angularOffset)) as GameObject;
 
                 Debug.Log(dir);
 
