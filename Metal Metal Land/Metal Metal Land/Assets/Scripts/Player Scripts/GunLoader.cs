@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//simple script for loading the new sprite for guns after picking them up
+// MAY BE USELESS
+
 public class GunLoader : MonoBehaviour {
 
 	// Use this for initialization

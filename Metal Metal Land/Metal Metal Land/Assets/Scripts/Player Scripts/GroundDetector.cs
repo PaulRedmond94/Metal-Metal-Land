@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿//Script which controls detecting whether a player is touching the ground or not 
+//also includes the code for killing opposing player by jumping on their head
+
+
+using UnityEngine;
 using System.Collections;
 
 public class GroundDetector : MonoBehaviour {
@@ -16,24 +20,29 @@ public class GroundDetector : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.tag.ToLower() == "environment"
+        if (gameObject.GetComponentInParent<PlayerGameController>().getAlive())
+        {
+            if (coll.gameObject.tag.ToLower() == "environment"
             || coll.gameObject.tag.ToLower() == "bombbox"
-            || coll.gameObject.tag.ToLower() == "livegrenade") 
-        {
-            if (!gameObject.GetComponentInParent<PlayerMovement>().getGrounded())
-                gameObject.GetComponentInParent<PlayerMovement>().setGrounded(true);
-        }
-        
-
-        else if(coll.gameObject.tag.ToLower() == "player")
-        {
-            if (coll.gameObject.GetComponentInParent<PlayerGameController>().getAlive())
+            || coll.gameObject.tag.ToLower() == "livegrenade")
             {
-                coll.gameObject.GetComponent<PlayerGameController>().killPlayer();
-
+                if (!gameObject.GetComponentInParent<PlayerMovement>().getGrounded())
+                    gameObject.GetComponentInParent<PlayerMovement>().setGrounded(true);
             }
 
-            gameObject.GetComponentInParent<PlayerMovement>().setGrounded(true);
+
+            else if (coll.gameObject.tag.ToLower() == "player")
+            {
+                if (coll.gameObject.GetComponentInParent<PlayerGameController>().getAlive())
+                {
+                    coll.gameObject.GetComponent<PlayerGameController>().killPlayer();
+
+                }
+
+                gameObject.GetComponentInParent<PlayerMovement>().setGrounded(true);
+            }
+
         }
+        
     }
 }

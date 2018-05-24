@@ -68,7 +68,7 @@ public class ShotgunFire : MonoBehaviour
             }//end if
             GameObject firedPellet = Instantiate(shotgunPellet, shootingPosition, Quaternion.Euler(0, 0, angularOffset)) as GameObject;
 
-            Destroy(firedPellet, 1.0f);
+            Destroy(firedPellet, 0.5f);
 
         }//end for
 

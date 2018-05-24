@@ -17,8 +17,6 @@ public class BulletScript : MonoBehaviour {
         Rigidbody2D rb;
         rb = GetComponent<Rigidbody2D>();
         rb.AddForce(transform.right * (100 * dir));
-        Debug.Log(transform.right * (100 * dir));
-        Debug.Log("Bullet Created");
 
     }//end start
 

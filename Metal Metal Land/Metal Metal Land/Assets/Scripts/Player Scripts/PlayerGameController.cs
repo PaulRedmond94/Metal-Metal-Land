@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//script which is used to control the players general game details and overall behaviour
 public class PlayerGameController : MonoBehaviour {
 
     int playerNumber;
@@ -33,7 +34,7 @@ public class PlayerGameController : MonoBehaviour {
             gameObject.GetComponent<PlayerMovement>().changeAnimationState(0);
         }
 
-        if(Time.frameCount% 60 == 0)
+        if(Time.frameCount% 60 == 0 && alive)
         {
             if(transform.position.y < deathPointVert.transform.position.y)
             {
@@ -50,13 +51,7 @@ public class PlayerGameController : MonoBehaviour {
     public void killPlayer()
     {
         alive = false;
-        /*
-        while(gameObject.transform.GetChild(0) != null)
-        {
-            Destroy(gameObject.transform.GetChild(0));
-
-        }//end while 
-        */
+        
     }//end kill
 
     public bool getAlive()

@@ -85,7 +85,7 @@ public class CameraTracking : MonoBehaviour {
         // save this code for later on to use it for zooming in and out as needed for players. 
         // Upper clamp is ~6.5f
         // lower clamp is ~2.0f
-        cam.orthographicSize = ((Map(4.0f,6.5f,8.0f,20.0f,Vector2.Distance(players[0].transform.position, players[1].transform.position))));
+        cam.orthographicSize = ((scaleOrtographicZoom(8.0f, 20.0f, 4.0f,6.5f,Vector2.Distance(players[0].transform.position, players[1].transform.position))));
         if (Input.GetKeyDown("h"))
         {
             cam.orthographicSize += 0.5f;
@@ -117,31 +117,26 @@ public class CameraTracking : MonoBehaviour {
 
 
     }//end update
-     /*
-     float findOrthographicScale(float value, float distanceMin, float distanceMax, float orthographicMin, float orthographicMax)
-     {
-         float distancePoint = (distanceMax - distanceMin);
-         float ortographicPoint = (orthographicMax - orthographicMin);
-         float returnVal = ((((value - distanceMin)* ortographicPoint)/distancePoint) + distanceMin)/2;
 
-         return returnVal;
-
-
-     }//end findOrt
-     */
-
-    public float Map(float from, float to, float from2, float to2, float value)
+    public float scaleOrtographicZoom(float playerDistanceMin, float playerDistanceMax, float orthoZoomMin, float orthoZoomMax,  float playerDistanceValue)
     {
-        if (value <= from2)
+        //if and else if to ensure that there is a cap to the orthographic zoom
+        //if players are currently below the minimum mandatory distance for the orthograph zoom to take place, return the min zoom
+        if (playerDistanceValue <= playerDistanceMin)
         {
-            return from;
+            return orthoZoomMin;
         }
-        else if (value >= to2)
+        //else if players are above the max mandatory distance, return max zoom
+        else if (playerDistanceValue >= playerDistanceMax)
         {
-            return to;
+            return orthoZoomMax;
         }
+        //otherwise scale the camera orthographic zoom as necessary
         else {
-            return (to - from) * ((value - from2) / (to2 - from2)) + from;
+            //calculate the player distance mapped to the minimum and maximum possible distances, return the difference between these and map it to the orthographic scale
+            float mappedPlayerDist = (playerDistanceValue - playerDistanceMin) / (playerDistanceMax - playerDistanceMin);
+            float orthoDifference = Mathf.Abs(orthoZoomMax - orthoZoomMin);
+            return orthoDifference * (mappedPlayerDist) + orthoZoomMin;
         }
     }
 

@@ -26,6 +26,7 @@
     public static int musicLevel = 100;
     public static int sfxLevel = 100;
 
+    //values for controlling whether or not the player has items or sudden death enabled
     public static bool suddenDeathEnabled = true;
     public static bool itemsEnabled = true;
 

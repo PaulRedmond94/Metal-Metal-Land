@@ -66,7 +66,7 @@ public class RevolverFire : MonoBehaviour
         Rigidbody2D bulletRigBod2d = firedBullet.GetComponent<Rigidbody2D>();
         bulletRigBod2d.AddForce(transform.right * (20), ForceMode2D.Impulse);
 
-        Destroy(firedBullet, 2.0f);
+        Destroy(firedBullet, 1.0f);
 
         Invoke("allowFiring", reLoadTime);
 

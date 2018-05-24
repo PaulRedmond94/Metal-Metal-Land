@@ -133,9 +133,9 @@ public class CharacterSelect : MonoBehaviour {
                 p1CurrentCharacter--;
                 if (p1CurrentCharacter < 0)
                     p1CurrentCharacter = 7;
-
                 if (p1CurrentCharacter == skipIndex)
-                    p1CurrentCharacter--; 
+                    p1CurrentCharacter--;
+
 
                 p1Change = true;
                 StartCoroutine("allowPlayerToMove", 1);
@@ -183,6 +183,8 @@ public class CharacterSelect : MonoBehaviour {
                 if (p2CurrentCharacter == skipIndex)
                     p2CurrentCharacter--;
 
+
+
                 p2Change = true;
                 StartCoroutine("allowPlayerToMove", 2);
 
@@ -193,7 +195,8 @@ public class CharacterSelect : MonoBehaviour {
                 p2Confirm = true;
                 StaticScript.player2Character = characters[p2CurrentCharacter].getName();
                 p2Icon.GetComponent<RectTransform>().position += new Vector3(0, -10.0f, 0);
-                if(!p1Confirm && p1CurrentCharacter == p2CurrentCharacter)
+                skipIndex = p2CurrentCharacter;
+                if (!p1Confirm && p1CurrentCharacter == p2CurrentCharacter)
                     lockIcon(2, ref p1CurrentCharacter);
 
             }//end else if

@@ -14,97 +14,2046 @@ Platform assembly: C:\Users\Paul\Documents\College\Year 4\Final Year Project\Met
 Loading C:\Users\Paul\Documents\College\Year 4\Final Year Project\Metal Metal Land\Metal Metal Land\Builds\DemoBuild\MetalMetalLand_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Paul\Documents\College\Year 4\Final Year Project\Metal Metal Land\Metal Metal Land\Builds\DemoBuild\MetalMetalLand_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Paul\Documents\College\Year 4\Final Year Project\Metal Metal Land\Metal Metal Land\Builds\DemoBuild\MetalMetalLand_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.090 seconds
+- Completed reload, in  0.295 seconds
 Platform assembly: C:\Users\Paul\Documents\College\Year 4\Final Year Project\Metal Metal Land\Metal Metal Land\Builds\DemoBuild\MetalMetalLand_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Paul\Documents\College\Year 4\Final Year Project\Metal Metal Land\Metal Metal Land\Builds\DemoBuild\MetalMetalLand_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.052983 ms
+UnloadTime: 0.979798 ms
+Joystick connected ("Wireless Controller").
+ 
+(Filename:  Line: 1353)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick connected ("Wireless Controller").
+ 
+(Filename:  Line: 1353)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 10.809044 ms
+UnloadTime: 9.165921 ms
 
 Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 219.
-Total: 0.342138 ms (FindLiveObjects: 0.027967 ms CreateObjectMapping: 0.028433 ms MarkObjects: 0.233064 ms  DeleteObjects: 0.027035 ms)
+Total: 0.323958 ms (FindLiveObjects: 0.031230 ms CreateObjectMapping: 0.024238 ms MarkObjects: 0.221876 ms  DeleteObjects: 0.024238 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.228092 ms
+UnloadTime: 0.706648 ms
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 368.
-Total: 0.641392 ms (FindLiveObjects: 0.051740 ms CreateObjectMapping: 0.032628 ms MarkObjects: 0.534182 ms  DeleteObjects: 0.020975 ms)
+Total: 0.219545 ms (FindLiveObjects: 0.015382 ms CreateObjectMapping: 0.010254 ms MarkObjects: 0.185518 ms  DeleteObjects: 0.008390 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.238036 ms
+UnloadTime: 1.543346 ms
 
 Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 219.
-Total: 0.596177 ms (FindLiveObjects: 0.056401 ms CreateObjectMapping: 0.025170 ms MarkObjects: 0.458670 ms  DeleteObjects: 0.055003 ms)
+Total: 0.501086 ms (FindLiveObjects: 0.083902 ms CreateObjectMapping: 0.043815 ms MarkObjects: 0.315101 ms  DeleteObjects: 0.056401 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.987259 ms
+UnloadTime: 0.439557 ms
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 264.
-Total: 0.769111 ms (FindLiveObjects: 0.049875 ms CreateObjectMapping: 0.035425 ms MarkObjects: 0.652113 ms  DeleteObjects: 0.031230 ms)
+Total: 0.188781 ms (FindLiveObjects: 0.013051 ms CreateObjectMapping: 0.007924 ms MarkObjects: 0.159415 ms  DeleteObjects: 0.007924 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.404599 ms
+UnloadTime: 1.070693 ms
 
 Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 219.
-Total: 0.386420 ms (FindLiveObjects: 0.041019 ms CreateObjectMapping: 0.024704 ms MarkObjects: 0.295059 ms  DeleteObjects: 0.023772 ms)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.842293 ms
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 368.
-Total: 0.526258 ms (FindLiveObjects: 0.036357 ms CreateObjectMapping: 0.025637 ms MarkObjects: 0.447482 ms  DeleteObjects: 0.015848 ms)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.793350 ms
-
-Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 219.
-Total: 0.567277 ms (FindLiveObjects: 0.053138 ms CreateObjectMapping: 0.024704 ms MarkObjects: 0.432566 ms  DeleteObjects: 0.055935 ms)
+Total: 0.481509 ms (FindLiveObjects: 0.051273 ms CreateObjectMapping: 0.032628 ms MarkObjects: 0.358917 ms  DeleteObjects: 0.035891 ms)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.739279 ms
+UnloadTime: 0.825510 ms
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 280.
-Total: 0.349129 ms (FindLiveObjects: 0.033095 ms CreateObjectMapping: 0.019111 ms MarkObjects: 0.283405 ms  DeleteObjects: 0.013051 ms)
+Total: 0.480110 ms (FindLiveObjects: 0.034493 ms CreateObjectMapping: 0.027035 ms MarkObjects: 0.397606 ms  DeleteObjects: 0.020043 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.596643 ms
+UnloadTime: 0.417183 ms
 
 Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 219.
-Total: 0.309509 ms (FindLiveObjects: 0.037756 ms CreateObjectMapping: 0.020509 ms MarkObjects: 0.224673 ms  DeleteObjects: 0.026103 ms)
+Total: 0.467059 ms (FindLiveObjects: 0.076910 ms CreateObjectMapping: 0.031696 ms MarkObjects: 0.306711 ms  DeleteObjects: 0.049875 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.536513 ms
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 301.
-Total: 0.377097 ms (FindLiveObjects: 0.024238 ms CreateObjectMapping: 0.021441 ms MarkObjects: 0.318831 ms  DeleteObjects: 0.012119 ms)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.525637 ms
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 219.
-Total: 0.442821 ms (FindLiveObjects: 0.040553 ms CreateObjectMapping: 0.024704 ms MarkObjects: 0.339341 ms  DeleteObjects: 0.037290 ms)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.841361 ms
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 280.
-Total: 0.551895 ms (FindLiveObjects: 0.048011 ms CreateObjectMapping: 0.040553 ms MarkObjects: 0.443753 ms  DeleteObjects: 0.017712 ms)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.470323 ms
-
-Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 219.
-Total: 0.582660 ms (FindLiveObjects: 0.045680 ms CreateObjectMapping: 0.024238 ms MarkObjects: 0.394810 ms  DeleteObjects: 0.116998 ms)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.025481 ms
+UnloadTime: 0.864665 ms
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 352.
-Total: 0.490366 ms (FindLiveObjects: 0.036357 ms CreateObjectMapping: 0.020975 ms MarkObjects: 0.418116 ms  DeleteObjects: 0.013517 ms)
+Total: 0.676816 ms (FindLiveObjects: 0.052206 ms CreateObjectMapping: 0.039154 ms MarkObjects: 0.564479 ms  DeleteObjects: 0.020043 ms)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.260407 ms
+
+Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 219.
+Total: 0.523460 ms (FindLiveObjects: 0.065257 ms CreateObjectMapping: 0.025170 ms MarkObjects: 0.370104 ms  DeleteObjects: 0.061062 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.886107 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 362.
+Total: 0.592913 ms (FindLiveObjects: 0.051740 ms CreateObjectMapping: 0.015848 ms MarkObjects: 0.512739 ms  DeleteObjects: 0.011653 ms)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.739277 ms
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 220.
+Total: 0.227469 ms (FindLiveObjects: 0.023306 ms CreateObjectMapping: 0.009788 ms MarkObjects: 0.177594 ms  DeleteObjects: 0.016314 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.066498 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Recursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either eg. EditorGUIUtility.TextContent should be moved to OnEnable. See stacktrace.)
+ 
+(Filename:  Line: 1112)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 2917.
+Total: 2.398223 ms (FindLiveObjects: 0.343535 ms CreateObjectMapping: 0.116531 ms MarkObjects: 1.851456 ms  DeleteObjects: 0.084368 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Captain Gregarrr(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 9.136089 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 189 unused Assets to reduce memory usage. Loaded Objects now: 2491.
+Total: 2.243003 ms (FindLiveObjects: 0.280608 ms CreateObjectMapping: 0.151491 ms MarkObjects: 1.662208 ms  DeleteObjects: 0.147762 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 5.175874 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 179 unused Assets to reduce memory usage. Loaded Objects now: 2271.
+Total: 1.572712 ms (FindLiveObjects: 0.217681 ms CreateObjectMapping: 0.153355 ms MarkObjects: 1.111246 ms  DeleteObjects: 0.089496 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 5.739888 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 276 unused Assets to reduce memory usage. Loaded Objects now: 2250.
+Total: 3.356114 ms (FindLiveObjects: 0.407395 ms CreateObjectMapping: 0.266158 ms MarkObjects: 2.424792 ms  DeleteObjects: 0.255437 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 6.719220 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 181 unused Assets to reduce memory usage. Loaded Objects now: 2870.
+Total: 3.099278 ms (FindLiveObjects: 0.476381 ms CreateObjectMapping: 0.244716 ms MarkObjects: 2.213637 ms  DeleteObjects: 0.163610 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Captain Gregarrr(Clone), Captain Gregarrr(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Captain Gregarrr(Clone), Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 7.532146 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 267 unused Assets to reduce memory usage. Loaded Objects now: 2178.
+Total: 1.761027 ms (FindLiveObjects: 0.246115 ms CreateObjectMapping: 0.161279 ms MarkObjects: 1.221252 ms  DeleteObjects: 0.131913 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 7.143862 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 189 unused Assets to reduce memory usage. Loaded Objects now: 3217.
+Total: 3.258227 ms (FindLiveObjects: 0.529054 ms CreateObjectMapping: 0.201832 ms MarkObjects: 2.274233 ms  DeleteObjects: 0.251242 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Captain Gregarrr(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 18.433926 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 187 unused Assets to reduce memory usage. Loaded Objects now: 2634.
+Total: 2.353009 ms (FindLiveObjects: 0.360316 ms CreateObjectMapping: 0.178992 ms MarkObjects: 1.659412 ms  DeleteObjects: 0.152889 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 9.590564 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 179 unused Assets to reduce memory usage. Loaded Objects now: 2337.
+Total: 1.529362 ms (FindLiveObjects: 0.239589 ms CreateObjectMapping: 0.110472 ms MarkObjects: 1.079084 ms  DeleteObjects: 0.099285 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 5.972485 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 261 unused Assets to reduce memory usage. Loaded Objects now: 2073.
+Total: 2.528739 ms (FindLiveObjects: 0.279210 ms CreateObjectMapping: 0.130981 ms MarkObjects: 1.920909 ms  DeleteObjects: 0.195773 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Captain Gregarrr(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 6.344920 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 197 unused Assets to reduce memory usage. Loaded Objects now: 2881.
+Total: 2.668111 ms (FindLiveObjects: 0.324890 ms CreateObjectMapping: 0.258700 ms MarkObjects: 1.935825 ms  DeleteObjects: 0.146363 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 11.979465 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 195 unused Assets to reduce memory usage. Loaded Objects now: 2133.
+Total: 1.571780 ms (FindLiveObjects: 0.264760 ms CreateObjectMapping: 0.068986 ms MarkObjects: 1.122899 ms  DeleteObjects: 0.114667 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+You've run out of cells, game should end soon...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 5.655985 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 203 unused Assets to reduce memory usage. Loaded Objects now: 2529.
+Total: 2.629422 ms (FindLiveObjects: 0.405530 ms CreateObjectMapping: 0.256835 ms MarkObjects: 1.816963 ms  DeleteObjects: 0.149626 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Captain Gregarrr(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 6.078296 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 261 unused Assets to reduce memory usage. Loaded Objects now: 2767.
+Total: 1.665937 ms (FindLiveObjects: 0.222808 ms CreateObjectMapping: 0.108141 ms MarkObjects: 1.241762 ms  DeleteObjects: 0.092759 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Captain Gregarrr(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 11.331547 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 178 unused Assets to reduce memory usage. Loaded Objects now: 2272.
+Total: 1.431942 ms (FindLiveObjects: 0.181323 ms CreateObjectMapping: 0.105344 ms MarkObjects: 1.045989 ms  DeleteObjects: 0.098818 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Goretusk Wartooth(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 6.546287 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 268 unused Assets to reduce memory usage. Loaded Objects now: 345.
+Total: 1.140612 ms (FindLiveObjects: 0.110472 ms CreateObjectMapping: 0.088098 ms MarkObjects: 0.626008 ms  DeleteObjects: 0.314169 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.471096 ms
+
+Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 234.
+Total: 0.849283 ms (FindLiveObjects: 0.069452 ms CreateObjectMapping: 0.041951 ms MarkObjects: 0.660035 ms  DeleteObjects: 0.075512 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.488501 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 264.
+Total: 0.361248 ms (FindLiveObjects: 0.027967 ms CreateObjectMapping: 0.014449 ms MarkObjects: 0.304847 ms  DeleteObjects: 0.012119 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.547699 ms
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 234.
+Total: 0.335145 ms (FindLiveObjects: 0.029366 ms CreateObjectMapping: 0.011653 ms MarkObjects: 0.273616 ms  DeleteObjects: 0.020043 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.326755 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 295.
+Total: 0.271285 ms (FindLiveObjects: 0.019111 ms CreateObjectMapping: 0.014916 ms MarkObjects: 0.228402 ms  DeleteObjects: 0.008390 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.491297 ms
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 234.
+Total: 0.261031 ms (FindLiveObjects: 0.029366 ms CreateObjectMapping: 0.009322 ms MarkObjects: 0.201366 ms  DeleteObjects: 0.020043 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.923863 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 367.
+Total: 0.519731 ms (FindLiveObjects: 0.034027 ms CreateObjectMapping: 0.019111 ms MarkObjects: 0.450744 ms  DeleteObjects: 0.015382 ms)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.291637 ms
+
+Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 234.
+Total: 0.719700 ms (FindLiveObjects: 0.065723 ms CreateObjectMapping: 0.050341 ms MarkObjects: 0.535113 ms  DeleteObjects: 0.067122 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.070693 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 377.
+Total: 1.605807 ms (FindLiveObjects: 0.075046 ms CreateObjectMapping: 0.073181 ms MarkObjects: 1.428679 ms  DeleteObjects: 0.026103 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.011029 ms
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 235.
+Total: 0.503883 ms (FindLiveObjects: 0.044748 ms CreateObjectMapping: 0.019111 ms MarkObjects: 0.396207 ms  DeleteObjects: 0.042417 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.775169 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Recursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either eg. EditorGUIUtility.TextContent should be moved to OnEnable. See stacktrace.)
+ 
+(Filename:  Line: 1112)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 2068.
+Total: 3.136102 ms (FindLiveObjects: 0.474983 ms CreateObjectMapping: 0.185984 ms MarkObjects: 2.376315 ms  DeleteObjects: 0.096954 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 8.262568 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 198 unused Assets to reduce memory usage. Loaded Objects now: 2261.
+Total: 1.985701 ms (FindLiveObjects: 0.234461 ms CreateObjectMapping: 0.156152 ms MarkObjects: 1.483682 ms  DeleteObjects: 0.110005 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Captain Gregarrr(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 9.317412 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 195 unused Assets to reduce memory usage. Loaded Objects now: 2700.
+Total: 3.082031 ms (FindLiveObjects: 0.381758 ms CreateObjectMapping: 0.168737 ms MarkObjects: 2.334364 ms  DeleteObjects: 0.195773 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 10.747956 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 179 unused Assets to reduce memory usage. Loaded Objects now: 2018.
+Total: 2.052823 ms (FindLiveObjects: 0.241919 ms CreateObjectMapping: 0.109539 ms MarkObjects: 1.563856 ms  DeleteObjects: 0.136109 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 7.083732 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 179 unused Assets to reduce memory usage. Loaded Objects now: 2667.
+Total: 3.051267 ms (FindLiveObjects: 0.346798 ms CreateObjectMapping: 0.205562 ms MarkObjects: 2.356738 ms  DeleteObjects: 0.140770 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Captain Gregarrr(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 8.360920 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 268 unused Assets to reduce memory usage. Loaded Objects now: 1866.
+Total: 2.360933 ms (FindLiveObjects: 0.285269 ms CreateObjectMapping: 0.119328 ms MarkObjects: 1.745645 ms  DeleteObjects: 0.209291 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 7.239884 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 205 unused Assets to reduce memory usage. Loaded Objects now: 2068.
+Total: 1.418424 ms (FindLiveObjects: 0.197637 ms CreateObjectMapping: 0.104878 ms MarkObjects: 0.997045 ms  DeleteObjects: 0.117464 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 7.226833 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 203 unused Assets to reduce memory usage. Loaded Objects now: 2228.
+Total: 2.934269 ms (FindLiveObjects: 0.415319 ms CreateObjectMapping: 0.287600 ms MarkObjects: 2.082189 ms  DeleteObjects: 0.147296 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 6.116518 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 252 unused Assets to reduce memory usage. Loaded Objects now: 2261.
+Total: 2.546451 ms (FindLiveObjects: 0.336543 ms CreateObjectMapping: 0.164076 ms MarkObjects: 1.843532 ms  DeleteObjects: 0.200900 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+MissingMethodException: The best match for method deactivatePowerup has some invalid parameter.
+  at System.MonoType.InvokeMember (System.String name, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object target, System.Object[] args, System.Reflection.ParameterModifier[] modifiers, System.Globalization.CultureInfo culture, System.String[] namedParameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.SetupCoroutine.InvokeMember (System.Object behaviour, System.String name, System.Object variable) [0x00000] in <filename unknown>:0 
+UnityEngine.MonoBehaviour:StartCoroutine(String, Object)
+PlayerPowerupController:activatePowerup(String)
+ItemBoxCode:OnTriggerEnter2D(Collider2D)
+ 
+(Filename:  Line: -1)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 5.425252 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 281 unused Assets to reduce memory usage. Loaded Objects now: 1377.
+Total: 2.513356 ms (FindLiveObjects: 0.332814 ms CreateObjectMapping: 0.164076 ms MarkObjects: 1.715813 ms  DeleteObjects: 0.299253 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Captain Gregarrr(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 3.489426 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 267 unused Assets to reduce memory usage. Loaded Objects now: 2596.
+Total: 3.183181 ms (FindLiveObjects: 0.308576 ms CreateObjectMapping: 0.254971 ms MarkObjects: 2.408012 ms  DeleteObjects: 0.210223 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 13.392761 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 281 unused Assets to reduce memory usage. Loaded Objects now: 2805.
+Total: 3.122584 ms (FindLiveObjects: 0.654442 ms CreateObjectMapping: 0.217215 ms MarkObjects: 1.990828 ms  DeleteObjects: 0.258700 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Captain Gregarrr(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 7.648212 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 189 unused Assets to reduce memory usage. Loaded Objects now: 1792.
+Total: 1.578306 ms (FindLiveObjects: 0.192510 ms CreateObjectMapping: 0.101149 ms MarkObjects: 1.180699 ms  DeleteObjects: 0.103014 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Captain Gregarrr(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 7.448243 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 179 unused Assets to reduce memory usage. Loaded Objects now: 1995.
+Total: 1.405372 ms (FindLiveObjects: 0.184586 ms CreateObjectMapping: 0.104412 ms MarkObjects: 1.013360 ms  DeleteObjects: 0.101615 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Captain Gregarrr(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 5.704462 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 260 unused Assets to reduce memory usage. Loaded Objects now: 2475.
+Total: 3.393404 ms (FindLiveObjects: 0.436294 ms CreateObjectMapping: 0.309974 ms MarkObjects: 2.429920 ms  DeleteObjects: 0.215816 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 7.716266 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+here's the pointless error and look at it do nothing at all
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 265 unused Assets to reduce memory usage. Loaded Objects now: 1854.
+Total: 2.329236 ms (FindLiveObjects: 0.248445 ms CreateObjectMapping: 0.154754 ms MarkObjects: 1.711152 ms  DeleteObjects: 0.213486 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Captain Gregarrr(Clone), Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Captain Gregarrr(Clone), Captain Gregarrr(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Captain Gregarrr(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 4.439393 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 212 unused Assets to reduce memory usage. Loaded Objects now: 2161.
+Total: 2.614972 ms (FindLiveObjects: 0.454473 ms CreateObjectMapping: 0.183187 ms MarkObjects: 1.821158 ms  DeleteObjects: 0.154754 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Captain Gregarrr(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 8.952435 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 187 unused Assets to reduce memory usage. Loaded Objects now: 2865.
+Total: 3.012578 ms (FindLiveObjects: 0.462397 ms CreateObjectMapping: 0.174797 ms MarkObjects: 2.229951 ms  DeleteObjects: 0.143567 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Captain Gregarrr(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 14.525450 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 268 unused Assets to reduce memory usage. Loaded Objects now: 1668.
+Total: 1.149469 ms (FindLiveObjects: 0.125388 ms CreateObjectMapping: 0.069452 ms MarkObjects: 0.836231 ms  DeleteObjects: 0.117464 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Mikhail Heksbrenner(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 1 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 4.150861 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 181 unused Assets to reduce memory usage. Loaded Objects now: 2128.
+Total: 2.982746 ms (FindLiveObjects: 0.388283 ms CreateObjectMapping: 0.144033 ms MarkObjects: 2.213637 ms  DeleteObjects: 0.234928 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Please stop moshing, the ground can only take so much
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 8.334817 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 260 unused Assets to reduce memory usage. Loaded Objects now: 2804.
+Total: 1.678989 ms (FindLiveObjects: 0.203697 ms CreateObjectMapping: 0.100683 ms MarkObjects: 1.255280 ms  DeleteObjects: 0.117464 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+-1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+In round victory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Captain Gregarrr(Clone)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Player 2 gets a point
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Round is over
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+UnloadTime: 6.469842 ms
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+
+Unloading 276 unused Assets to reduce memory usage. Loaded Objects now: 346.
+Total: 0.998444 ms (FindLiveObjects: 0.069919 ms CreateObjectMapping: 0.050341 ms MarkObjects: 0.619016 ms  DeleteObjects: 0.257768 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.984460 ms
+
+Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 235.
+Total: 0.698258 ms (FindLiveObjects: 0.034959 ms CreateObjectMapping: 0.024704 ms MarkObjects: 0.591515 ms  DeleteObjects: 0.046146 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.379427 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 265.
+Total: 0.321161 ms (FindLiveObjects: 0.029832 ms CreateObjectMapping: 0.012585 ms MarkObjects: 0.268023 ms  DeleteObjects: 0.009788 ms)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.652577 ms
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 235.
+Total: 0.546766 ms (FindLiveObjects: 0.041485 ms CreateObjectMapping: 0.020975 ms MarkObjects: 0.462397 ms  DeleteObjects: 0.020509 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.501086 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 296.
+Total: 0.365443 ms (FindLiveObjects: 0.021441 ms CreateObjectMapping: 0.013983 ms MarkObjects: 0.319297 ms  DeleteObjects: 0.010254 ms)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Joystick disconnected ("Wireless Controller").
+ 
+(Filename:  Line: 714)
+
+Joystick reconnected ("Wireless Controller").
+ 
+(Filename:  Line: 1325)
+
+Exit button Clicked
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1750 -> priority: 1 
+  Thread -> id: 11c0 -> priority: 1 

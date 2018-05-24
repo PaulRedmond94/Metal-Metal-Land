@@ -104,6 +104,12 @@ public class GameController : MonoBehaviour {
                 }
 
             }
+            if (Input.GetKey("b"))
+            {
+                StaticScript.nextSceneToLoad = "Scenes/MainMenu";
+                SceneManager.LoadScene("Scenes/LoadingManager", LoadSceneMode.Single);
+
+            }
 
         }
         catch(System.NullReferenceException nre)

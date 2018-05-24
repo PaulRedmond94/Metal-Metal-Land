@@ -57,7 +57,7 @@ public class greaseGunFire : MonoBehaviour {
                 Debug.Log(dir);
 
 
-                Destroy(firedBullet, 2.0f);
+                Destroy(firedBullet, 0.75f);
 
                 Invoke("allowFiring", 0.2f);
 
