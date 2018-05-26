@@ -69,9 +69,6 @@ public class PlayerMovement : MonoBehaviour {
             {
                 grounded = false;
                 playerRigBod2d.AddForce(new Vector2(0, jumpForceYVal * jumpModifier), ForceMode2D.Impulse);
-                //Bryan's Suggestion
-                //playerRigBod2d.AddForce(new Vector2(0, Time.deltaTime * jumpForceYVal), ForceMode2D.Impulse);
-
                 knockbackModifier = 1.5f;
                 changeAnimationState(2);
 

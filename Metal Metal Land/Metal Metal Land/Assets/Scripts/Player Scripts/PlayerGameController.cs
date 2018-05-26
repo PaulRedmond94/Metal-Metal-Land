@@ -11,6 +11,7 @@ public class PlayerGameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
+        //find where on the stage the user should die if they fall off the map
         deathPointVert = GameObject.FindGameObjectWithTag("BoundaryPoint");
 
 	}//end awake
@@ -25,6 +26,7 @@ public class PlayerGameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //rotate user to kill them and disable behaviours
 	    if(alive == false)
         {
             transform.eulerAngles = (new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 90.0f));
@@ -34,19 +36,18 @@ public class PlayerGameController : MonoBehaviour {
             gameObject.GetComponent<PlayerMovement>().changeAnimationState(0);
         }
 
+        //check if user has fallen out of bounds
         if(Time.frameCount% 60 == 0 && alive)
         {
             if(transform.position.y < deathPointVert.transform.position.y)
             {
-                
                 killPlayer();
-                
 
-            }
+            }//end vertical position ifif 
 
-        }//end time
+        }//end time if
 
-	}
+	}//end update
 
     public void killPlayer()
     {
