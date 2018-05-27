@@ -8,19 +8,12 @@ public class PlayerPowerupController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-
         originalMaterial = gameObject.GetComponent<SpriteRenderer>().material;
         negativeMaterial = Resources.Load<Material>("Shaders/NegativeMaterial");
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown("i"))
-        {
-            activatePowerup("dio");
-
-        }
 
     }
 
@@ -42,9 +35,6 @@ public class PlayerPowerupController : MonoBehaviour {
             GameObject frozenPlayer = null;
             foreach (GameObject player in players)
             {
-
-                Debug.Log(gameObject.name + ", " + player.name);
-
                 if (player.name != gameObject.name)
                 {
                     player.GetComponent<Rigidbody2D>().isKinematic = true;
@@ -55,7 +45,8 @@ public class PlayerPowerupController : MonoBehaviour {
 
             StartCoroutine("deactivatePowerup", frozenPlayer);
 
-        }
+        }//end if dio powerup
+
         //if the power is run to the hills (faster run speed)
         else if (power.ToLower() == "run")
         {

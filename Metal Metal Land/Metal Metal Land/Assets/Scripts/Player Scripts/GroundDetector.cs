@@ -40,9 +40,9 @@ public class GroundDetector : MonoBehaviour {
                 }
 
                 gameObject.GetComponentInParent<PlayerMovement>().setGrounded(true);
-            }
+            }//end if object is player
 
-        }
+        }//if player is alive
         
-    }
+    }//end onCollsionEnter2D
 }

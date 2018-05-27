@@ -50,7 +50,6 @@ public class RevolverFire : MonoBehaviour
         float knockbackMod = this.gameObject.GetComponentInParent<PlayerMovement>().getKnockbackModifier();
         knockbackVal = knockbackVal * knockbackMod;
         Rigidbody2D playerRigBod2d = this.gameObject.GetComponentInParent<Rigidbody2D>();
-        //playerRigBod2d.AddForce(new Vector2((knockbackVal * -dir), knockbackVal * 0.6f), ForceMode2D.Impulse);
 
         //instantiate bullet
         GameObject firedBullet = Instantiate(bullet, shootingPosition, transform.rotation) as GameObject;

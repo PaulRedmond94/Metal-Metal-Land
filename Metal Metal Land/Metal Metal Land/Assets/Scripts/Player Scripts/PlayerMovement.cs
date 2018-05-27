@@ -78,7 +78,6 @@ public class PlayerMovement : MonoBehaviour {
             if (grounded)
             {
                 changeAnimationState(0);
-                //grounded = true;
                 knockbackModifier = 1.0f;
 
             }// end if not grounded
@@ -108,7 +107,6 @@ public class PlayerMovement : MonoBehaviour {
             //character is no longer running, make the character stand still
             if (Input.GetAxis(playerMove) > -0.5f && Input.GetAxis(playerMove) < 0.5f)
             {
-                //rigBod.velocity.x= rigBod.velocity.x*0.2f;
                 stopChar = playerRigBod2d.velocity;
                 stopChar.x = 0;
 
@@ -152,6 +150,7 @@ public class PlayerMovement : MonoBehaviour {
 
             }//end if
 
+            //code to control moshing ability
             if (canPlayerMosh())
             {
                 canMosh = false;

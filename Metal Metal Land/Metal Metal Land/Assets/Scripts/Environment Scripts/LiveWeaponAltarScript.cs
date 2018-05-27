@@ -31,7 +31,6 @@ public class LiveWeaponAltarScript : MonoBehaviour {
         weapons.Add(shotgun);
         weapons.Add(grenade);
         weapons.Add(greaseGun);
-        //Debug.Log(eapons.Count);
 
         //decide what weapon the altar will use
         //hard coded values for testing
@@ -46,19 +45,12 @@ public class LiveWeaponAltarScript : MonoBehaviour {
 
         inertAltar = Resources.Load("Objects/waltar_inert") as GameObject;
 
+        //set weapon sprite 
         SpriteRenderer weaponSprite = altarWeapon.gameObject.GetComponent<SpriteRenderer>();
 
-        //weaponSprite.sprite = revolver.GetComponent<SpriteRenderer>().sprite;
-        //weaponSprite.sprite = rpg.GetComponent<SpriteRenderer>().sprite;
         altarItem = Instantiate(altarWeapon, transform.position, transform.rotation) as GameObject;
         altarItem.transform.parent = gameObject.transform;
 
-        /*Vector3 childObj = this.transform.GetChild(0).position;
-        Destroy(transform.GetChild(0));
-        GameObject altarGun = Instantiate(revolver, transform.GetChild(0).position, this.transform.rotation) as GameObject;
-        altarGun.transform.parent = this.gameObject.transform;
-        
-       */
 	}
 	
 	// Update is called once per frame

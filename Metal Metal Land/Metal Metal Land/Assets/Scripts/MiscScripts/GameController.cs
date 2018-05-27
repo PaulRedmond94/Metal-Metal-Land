@@ -98,20 +98,14 @@ public class GameController : MonoBehaviour {
                             deathDetected = true;
                             Invoke("roundVictory", 3);
 
-                        }
-                    }
+                        }//end deathDetected == false
+                    }// end if player died
 
-                }
+                }//end for loop
 
-            }
-            if (Input.GetKey("b"))
-            {
-                StaticScript.nextSceneToLoad = "Scenes/MainMenu";
-                SceneManager.LoadScene("Scenes/LoadingManager", LoadSceneMode.Single);
+            }//end if
 
-            }
-
-        }
+        }//end try
         catch(System.NullReferenceException nre)
         {
             //this catch is here in the event that the game has loaded the characters too slowly
@@ -141,8 +135,6 @@ public class GameController : MonoBehaviour {
 
     public void roundVictory()
     {
-        Debug.Log("In round victory");
-        
         foreach(GameObject charObj in players)
         {
             if (charObj.GetComponent<PlayerGameController>().getAlive())

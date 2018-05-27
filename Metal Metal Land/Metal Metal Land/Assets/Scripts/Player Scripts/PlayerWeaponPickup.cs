@@ -56,30 +56,30 @@ public class PlayerWeaponPickup : MonoBehaviour
     {
         if (collider.tag == "LiveAltar")
         {
+            //if player can pick up a weapon
             if (Input.GetAxis(playerPickupAxis) == 1 && weaponPickedUp == false && actionCanHappen == true)
             {
+                //stop user from automatically dropping weapon due to frame count
                 actionCanHappen = false;
                 weaponPickedUp = true;
-                pickupPosition = gameObject.GetComponentInChildren<Transform>().transform.position;
+                //get reference to sprites hand
                 weaponSlot = transform.GetChild(0).gameObject;
                 GameObject equipItem = collider.GetComponentInChildren<ItemObjectReference>().equipReference;
+                //get name of weapon and update UI as needed
                 string equipName = equipItem.name.Replace("Clone", "");
                 updateUI(equipName);
-                weaponSlot = Instantiate(equipItem, transform.GetChild(0).transform.position, transform.rotation) as GameObject;
-                //weaponSlot.transform.position = pickupPosition;
+                //spawn weapon in hand and assign it as a child to this object
+                weaponSlot = Instantiate(equipItem, weaponSlot.transform.position, transform.rotation) as GameObject;
                 weaponSlot.transform.parent = this.transform;
-                
                 //reset altar to inert
                 collider.GetComponent<LiveWeaponAltarScript>().resetAltar();
                 Invoke("allowWeaponDrop", 0.5f);
 
+            }//end if player input
 
-            }//end if
+        }//end if collider
 
-        }
-
-
-    }//end onTriggerEnter
+    }//end onTriggerStay
 
     void allowWeaponDrop()
     {

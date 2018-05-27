@@ -43,17 +43,6 @@ public class musicController : MonoBehaviour {
             objMusicController.volume = 100;
 
         }//end if
-
-        if (Input.GetKeyDown("m"))
-        {
-            objMusicController.Stop();
-            AudioClip song = getRandomSong();
-            objMusicController.clip = song;
-            objMusicController.Play();
-
-            Debug.Log("Now playing: " + song.name);
-
-        }//end if
         
 	}
 

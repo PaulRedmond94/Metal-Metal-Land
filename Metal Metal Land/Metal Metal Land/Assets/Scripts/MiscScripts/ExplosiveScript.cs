@@ -9,14 +9,12 @@ public class ExplosiveScript : MonoBehaviour {
         {
             if (collider.tag.ToLower() == "environment")
             {
-
                 collider.GetComponent<CellBehaviourScript>().explode();
 
             }//end if environment
 
             else if (collider.tag.ToLower() == "player")
             {
-
                 collider.GetComponent<PlayerGameController>().killPlayer();
 
             } //end else if player

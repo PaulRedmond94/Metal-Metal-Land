@@ -124,7 +124,6 @@ public class ProceduralGenScript : MonoBehaviour
                     else if (vPoints[z].getManhattanDistance(i, j) < minManHatDist)
                     {
                         //item is not a voronoi point, continue examining closest points 
-                        // NOTE::: Potentially include function to skip over voronoi points which are too far away to consider
                         minManHatDist = vPoints[z].getManhattanDistance(i, j);
                         vPoint = vPoints[z];
 
@@ -173,10 +172,9 @@ public class ProceduralGenScript : MonoBehaviour
 
         int rand = Random.Range(1, 11);
 
-        //if(StaticScript.terrainGenType.ToLower() == "standard")
-        if (terrainType.ToLower() == "standard") //temp variable, use later when basis for algorithm types are set
+        if (terrainType.ToLower() == "standard")
         {
-            //set upper y to be at 20% height
+            //set upper y to be at 20% height and lower y to be 80%
             upperY = (int)(terrYLength * 0.2);
             lowerY = (int)(terrYLength * 0.8);
 
@@ -253,7 +251,7 @@ public class ProceduralGenScript : MonoBehaviour
                 return "land";
             }
 
-        }//end else if 1==1
+        }//end else if canyon
 
         else if (terrainType.ToLower() == "megarandom")
         {
@@ -288,10 +286,9 @@ public class ProceduralGenScript : MonoBehaviour
 
     }//end generateVoronoiPoints
 
+    //function to update all terrain cells sprites
     void updateTerrainArt()
     {
-        //Sprite terrainTop =  Resources.Load("Images/EnvironmentArt/BlockSprites/TerrainATop", typeof(Sprite)) as Sprite;
-        //Sprite terrainBelowMoss = Resources.Load("Images/EnvironmentArt/BlockSprites/TerrainAInterior", typeof(Sprite)) as Sprite;
         for(int i = 0; i < terrXLength; i++)
         {
             for(int j = 0; j < terrYLength; j++)
@@ -378,8 +375,8 @@ public class ProceduralGenScript : MonoBehaviour
         Special terrain is prioritized as: (Most to least important)
             1. Player Spawns
             2. Weapon Spawns
-            3. Spike Pits
-            4. Elevators
+            3. Hazards
+
     */
     void insertSpecialTerrain()
     {
@@ -489,7 +486,7 @@ public class ProceduralGenScript : MonoBehaviour
                 {
                     int terrainDepth = 0;
                     
-                    // an error happens here, game doesn't crash or anything and works perfectly fine despite it, I just want to get rid of the warning
+                    
                     try
                     {
                         while (terrainArray[(int)spikePitLocation.x, (int)spikePitLocation.y + terrainDepth + 2] != null)
@@ -511,7 +508,7 @@ public class ProceduralGenScript : MonoBehaviour
                     }//end try
                     catch(System.IndexOutOfRangeException ioore)
                     {
-                        Debug.Log("here's the pointless error and look at it do nothing at all");
+                        
 
                     }//end catch
 

@@ -29,7 +29,6 @@ public class GrenadeFire : MonoBehaviour {
             GameObject liveGrenade = Instantiate(liveGrenadePrefab, shootingPosition, gameObject.transform.rotation) as GameObject;
             Rigidbody2D grenadeRigBod2D = liveGrenade.GetComponent<Rigidbody2D>();
             grenadeRigBod2D.AddForce((transform.right * grenadeRigBod2D.mass) * 5.0f + (transform.up*grenadeRigBod2D.mass) * 4.0f, ForceMode2D.Impulse);
-            //Debug.DrawRay(shootingPosition, Vector2.right, Color.green, 1.0f, false);
             canFire = false;
             Invoke("enableFire", .3f);
 
