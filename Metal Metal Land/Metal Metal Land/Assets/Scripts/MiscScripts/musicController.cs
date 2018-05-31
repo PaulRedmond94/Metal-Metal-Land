@@ -40,7 +40,7 @@ public class musicController : MonoBehaviour {
             AudioClip song = getRandomSong();
             objMusicController.clip = song;
             objMusicController.Play();
-            objMusicController.volume = 100;
+            objMusicController.volume = StaticScript.musicLevel/100;
 
         }//end if
         
