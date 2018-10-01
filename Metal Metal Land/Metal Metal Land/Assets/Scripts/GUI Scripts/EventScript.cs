@@ -10,6 +10,7 @@ public class EventScript : MonoBehaviour {
     public Button btnControls;
     public Button btnOptions;
     public Button btnExit;
+    private Button firstSelected;
 
 	// Use this for initialization
 	void Start () {
@@ -19,13 +20,29 @@ public class EventScript : MonoBehaviour {
         btnControls.GetComponent<Button>().onClick.AddListener(controlsFunction);
         btnOptions.GetComponent<Button>().onClick.AddListener(optionsFunction);
         btnExit.GetComponent<Button>().onClick.AddListener(exitFunction);
-
+        
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-	
+        /*if (Input.GetAxisRaw("p1_ui_vert")==1 || Input.GetAxisRaw("p1_ui_vert")==-1 )
+        {
+            Debug.Log(Input.GetAxisRaw("p1_ui_vert"));
+
+        }
+        if (Input.GetAxis("p2_jump")>.1)
+        {
+            Debug.Log("This is p2");
+
+        }
+        if (Input.GetAxis("p1_jump") > .1)
+        {
+            Debug.Log("This is p1");
+
+        }
+       */
+        
 	}
 
     void playFunction()
